@@ -1,6 +1,6 @@
 ﻿namespace CFria_HorasExtra
 {
-    partial class Form1
+    partial class FrmPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,20 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // Form1
+            // txtNombre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 455);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.txtNombre.Location = new System.Drawing.Point(29, 49);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(171, 20);
+            this.txtNombre.TabIndex = 0;
+            // 
+            // FrmPrincipal
+            // 
+            this.ClientSize = new System.Drawing.Size(565, 329);
+            this.Controls.Add(this.txtNombre);
+            this.Name = "FrmPrincipal";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }
 

@@ -1,0 +1,11 @@
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\bin\Debug\CFria_HorasExtra.exe.config
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\bin\Debug\CFria_HorasExtra.exe
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\bin\Debug\CFria_HorasExtra.pdb
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.csproj.AssemblyReference.cache
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.csproj.SuggestedBindingRedirects.cache
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.FrmPrincipal.resources
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.Properties.Resources.resources
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.csproj.GenerateResource.cache
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.csproj.CoreCompileInputs.cache
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.exe
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.pdb
