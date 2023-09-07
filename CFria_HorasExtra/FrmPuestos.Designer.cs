@@ -28,19 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtPuesto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPuestos = new System.Windows.Forms.DataGridView();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuestos)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox2
+            // TxtPuesto
             // 
-            this.textBox2.Location = new System.Drawing.Point(172, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 20);
-            this.textBox2.TabIndex = 24;
+            this.TxtPuesto.Location = new System.Drawing.Point(172, 101);
+            this.TxtPuesto.Name = "TxtPuesto";
+            this.TxtPuesto.Size = new System.Drawing.Size(164, 20);
+            this.TxtPuesto.TabIndex = 24;
             // 
             // label2
             // 
@@ -65,18 +68,49 @@
             // dgvPuestos
             // 
             this.dgvPuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPuestos.Location = new System.Drawing.Point(367, 101);
+            this.dgvPuestos.Location = new System.Drawing.Point(52, 138);
             this.dgvPuestos.Name = "dgvPuestos";
-            this.dgvPuestos.Size = new System.Drawing.Size(307, 146);
+            this.dgvPuestos.Size = new System.Drawing.Size(327, 193);
             this.dgvPuestos.TabIndex = 25;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(443, 101);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(89, 33);
+            this.btnGuardar.TabIndex = 26;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(443, 140);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(89, 33);
+            this.btnEditar.TabIndex = 27;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(443, 179);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(89, 33);
+            this.btnActualizar.TabIndex = 28;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
             // 
             // FrmPuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 385);
+            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.dgvPuestos);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TxtPuesto);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmPuestos";
@@ -90,9 +124,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtPuesto;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPuestos;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }

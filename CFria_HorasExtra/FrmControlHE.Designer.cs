@@ -39,9 +39,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.TxtNombreE = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.TxtHoraEntrada = new System.Windows.Forms.TextBox();
             this.TxtHorasExtras = new System.Windows.Forms.TextBox();
-            this.TxtHoraSalida = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtSueldoNeto = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -54,8 +52,10 @@
             this.TxtPuesto = new System.Windows.Forms.TextBox();
             this.BtnGuardarRegistro = new System.Windows.Forms.Button();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
-            this.TxtSalidaExtra = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.dtpHoraEntrada = new System.Windows.Forms.DateTimePicker();
+            this.dtpHoraSalida = new System.Windows.Forms.DateTimePicker();
+            this.dtpHoraExtra = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -169,26 +169,12 @@
             this.label10.TabIndex = 10;
             this.label10.Text = "Hora de salida (Extraordinaria):";
             // 
-            // TxtHoraEntrada
-            // 
-            this.TxtHoraEntrada.Location = new System.Drawing.Point(549, 173);
-            this.TxtHoraEntrada.Name = "TxtHoraEntrada";
-            this.TxtHoraEntrada.Size = new System.Drawing.Size(118, 20);
-            this.TxtHoraEntrada.TabIndex = 15;
-            // 
             // TxtHorasExtras
             // 
             this.TxtHorasExtras.Location = new System.Drawing.Point(180, 45);
             this.TxtHorasExtras.Name = "TxtHorasExtras";
             this.TxtHorasExtras.Size = new System.Drawing.Size(118, 20);
             this.TxtHorasExtras.TabIndex = 16;
-            // 
-            // TxtHoraSalida
-            // 
-            this.TxtHoraSalida.Location = new System.Drawing.Point(549, 201);
-            this.TxtHoraSalida.Name = "TxtHoraSalida";
-            this.TxtHoraSalida.Size = new System.Drawing.Size(118, 20);
-            this.TxtHoraSalida.TabIndex = 17;
             // 
             // panel1
             // 
@@ -204,9 +190,9 @@
             this.panel1.Controls.Add(this.TxtHorasExtras);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(38, 153);
+            this.panel1.Location = new System.Drawing.Point(57, 153);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(367, 190);
+            this.panel1.Size = new System.Drawing.Size(355, 190);
             this.panel1.TabIndex = 18;
             // 
             // TxtSueldoNeto
@@ -262,12 +248,13 @@
             // 
             // BtnCalcularHoras
             // 
-            this.BtnCalcularHoras.Location = new System.Drawing.Point(250, 139);
+            this.BtnCalcularHoras.Location = new System.Drawing.Point(244, 142);
             this.BtnCalcularHoras.Name = "BtnCalcularHoras";
             this.BtnCalcularHoras.Size = new System.Drawing.Size(99, 32);
             this.BtnCalcularHoras.TabIndex = 19;
             this.BtnCalcularHoras.Text = "Calcular";
             this.BtnCalcularHoras.UseVisualStyleBackColor = true;
+            this.BtnCalcularHoras.Click += new System.EventHandler(this.BtnCalcularHoras_Click);
             // 
             // TxtSueldo
             // 
@@ -302,13 +289,6 @@
             this.TxtBuscar.Size = new System.Drawing.Size(133, 20);
             this.TxtBuscar.TabIndex = 22;
             // 
-            // TxtSalidaExtra
-            // 
-            this.TxtSalidaExtra.Location = new System.Drawing.Point(482, 256);
-            this.TxtSalidaExtra.Name = "TxtSalidaExtra";
-            this.TxtSalidaExtra.Size = new System.Drawing.Size(118, 20);
-            this.TxtSalidaExtra.TabIndex = 17;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(454, 60);
@@ -319,10 +299,34 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dtpHoraEntrada
+            // 
+            this.dtpHoraEntrada.Location = new System.Drawing.Point(549, 169);
+            this.dtpHoraEntrada.Name = "dtpHoraEntrada";
+            this.dtpHoraEntrada.Size = new System.Drawing.Size(141, 20);
+            this.dtpHoraEntrada.TabIndex = 27;
+            // 
+            // dtpHoraSalida
+            // 
+            this.dtpHoraSalida.Location = new System.Drawing.Point(549, 200);
+            this.dtpHoraSalida.Name = "dtpHoraSalida";
+            this.dtpHoraSalida.Size = new System.Drawing.Size(141, 20);
+            this.dtpHoraSalida.TabIndex = 28;
+            // 
+            // dtpHoraExtra
+            // 
+            this.dtpHoraExtra.Location = new System.Drawing.Point(466, 256);
+            this.dtpHoraExtra.Name = "dtpHoraExtra";
+            this.dtpHoraExtra.Size = new System.Drawing.Size(141, 20);
+            this.dtpHoraExtra.TabIndex = 29;
+            // 
             // FrmControlHE
             // 
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(715, 385);
+            this.ClientSize = new System.Drawing.Size(708, 380);
+            this.Controls.Add(this.dtpHoraExtra);
+            this.Controls.Add(this.dtpHoraSalida);
+            this.Controls.Add(this.dtpHoraEntrada);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.BtnGuardarRegistro);
@@ -333,10 +337,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.TxtHoraEntrada);
-            this.Controls.Add(this.TxtSalidaExtra);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.TxtHoraSalida);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -363,9 +364,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TxtNombreE;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox TxtHoraEntrada;
         private System.Windows.Forms.TextBox TxtHorasExtras;
-        private System.Windows.Forms.TextBox TxtHoraSalida;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -378,8 +377,10 @@
         private System.Windows.Forms.TextBox TxtPuesto;
         private System.Windows.Forms.Button BtnGuardarRegistro;
         private System.Windows.Forms.TextBox TxtBuscar;
-        private System.Windows.Forms.TextBox TxtSalidaExtra;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dtpHoraEntrada;
+        private System.Windows.Forms.DateTimePicker dtpHoraSalida;
+        private System.Windows.Forms.DateTimePicker dtpHoraExtra;
     }
 }
 
