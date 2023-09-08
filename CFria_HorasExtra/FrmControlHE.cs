@@ -291,7 +291,8 @@ namespace CFria_HorasExtra
 
             // Mostrar los resultados en los controles correspondientes
             MessageBox.Show(horasHastaCorte1.ToString() + " " + horasHastaCorte2.ToString() + " " + horasHastaCorte3.ToString());
-            MessageBox.Show(fechaSalida.Hour.ToString());
+            //MessageBox.Show(fechaSalida.Hour.ToString());
+            MessageBox.Show(horasHastaCorte3.ToString());
             //txtHorasHasta19.Text = horasHastaCorte1.ToString();
             //txtHorasHasta21.Text = horasHastaCorte2.ToString();
             //txtHorasHasta00.Text = horasHastaCorte3.ToString();
