@@ -30,5 +30,12 @@ namespace CFria_HorasExtra
             FrmPuestos puestos = new FrmPuestos();
             puestos.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmEmpleados frmEmpleados = new FrmEmpleados();
+            frmEmpleados.Show();
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,6 @@ namespace CFria_HorasExtra
 {
     public partial class FrmControlHE : Form
     {
-        private DateTimePicker timePicker;
         ClConexion conexion = new ClConexion();
 
         public FrmControlHE()
@@ -60,7 +60,7 @@ namespace CFria_HorasExtra
 
         private void FrmControlHE_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,13 +75,13 @@ namespace CFria_HorasExtra
                 esto es verificado por el reader.Read() donde establece si esto trae algo
                 entrará dentro de la funcion y realizará lo requerido de otra manera dará error
                  */
-                SqlCommand cmd = new SqlCommand("SELECT dbo.Empleados.EmpleadoNombre, dbo.Empleados.EmpleadoSalarioMensual, dbo.Puestos.Nombre_Puesto, dbo.Empleados.PuestoId FROM dbo.Empleados INNER JOIN dbo.Puestos ON dbo.Empleados.PuestoId = dbo.Puestos.Id_Puesto WHERE dbo.Empleados.Id_Empleado = " + Convert.ToInt32(TxtBuscar.Text) + "", conexion.Sc);
+                SqlCommand cmd = new SqlCommand("SELECT dbo.Empleados.EmpleadoNombreCompleto, dbo.Empleados.EmpleadoSalarioMensual, dbo.Puestos.Nombre_Puesto, dbo.Empleados.PuestoId FROM dbo.Empleados INNER JOIN dbo.Puestos ON dbo.Empleados.PuestoId = dbo.Puestos.Id_Puesto WHERE dbo.Empleados.Id_Empleado = " + Convert.ToInt32(TxtBuscar.Text) + "", conexion.Sc);
                 cmd.ExecuteNonQuery();
                 //Este ejecuta la sentencia mientras que almacena esa informacion en una variable
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    TxtNombreE.Text = reader["EmpleadoNombre"].ToString();
+                    TxtNombreE.Text = reader["EmpleadoNombreCompleto"].ToString();
                     TxtPuesto.Text = reader["Nombre_Puesto"].ToString();
                     TxtSueldo.Text = reader["EmpleadoSalarioMensual"].ToString();
                 } else
@@ -109,80 +109,9 @@ namespace CFria_HorasExtra
 
         private void BtnCalcularHoras_Click(object sender, EventArgs e)
         {
+
             // Obtener las fechas seleccionadas de los DateTimePicker
             //DateTime fechaEntrada = dtpHoraEntrada.Value;
-            //DateTime fechaSalida = dtpHoraSalida.Value;
-            //DateTime fechaExtra = dtpHoraExtra.Value;
-
-            // Calcular la diferencia en horas
-            //TimeSpan diferencia = fechaExtra - fechaSalida;
-            //double horasDiferencia = diferencia.TotalHours;
-
-            // Obtener la hora de entrada
-            //int horaEntrada = fechaEntrada.Hour;
-            // Obtener la hora de salida
-            //int horaSalida = fechaSalida.Hour;
-            // Obtener la hora de salida extraordinaria
-            //int horaSalidaExtra = fechaExtra.Hour;
-
-            // Definir las tarifas de recargo
-            //double recargo = 0.0;
-
-            //if (horaEntrada == 5 && horaSalida == 12
-                //|| horaEntrada == 7 && horaSalida == 15
-                //|| horaEntrada == 14 && horaSalida == 21
-                //|| horaEntrada == 12 && horaSalida == 19
-                //|| horaEntrada == 7 && horaSalida == 15)
-            //{
-                //recargo = 0.0;
-                // Evaluar la hora de salida y aplicar los recargos correspondientes
-            //}
-            //else if (horaSalidaExtra >= 15 && horaSalidaExtra < 19)
-            //{
-                // Recargo del 25% para salidas entre 3 PM y 7 PM
-                //recargo = 0.25;
-            //}
-            //else if (horaSalidaExtra >= 19 && horaSalidaExtra < 21)
-            //{
-                // Recargo del 50% para salidas entre 7 PM y 9 PM
-                //recargo = 0.5;
-            //}
-            //else if (horaSalidaExtra >= 21 && horaSalidaExtra < 24)
-            //{
-                // Recargo del 75% para salidas entre 9 PM y 12 AM
-                //recargo = 0.75;
-            //}
-            //else if (horaSalidaExtra >= 0 && horaSalidaExtra < 7)
-            //{
-                // Recargo del 100% para salidas en horas de la madrugada
-                //recargo = 1.0;
-            //}
-            //Calcular sueldo diario del empleado
-            //double sueldoDiario = Convert.ToDouble(TxtSueldo.Text)/30;
-            //Calcular sueldo por hora del empleado
-            //double sueldoHora = sueldoDiario/8;
-            // Aplicar el recargo a el sueldo por hora
-            //double sueldoPorHoraConRecargo = (double)Math.Round((sueldoHora * recargo)+sueldoHora,2);
-
-            // Redondear el resultado al número entero más cercano
-            //double horasRedondeadas = (double)Math.Round(horasDiferencia,2);
-
-            //Calcular el pago total de las horas extras
-            //double totalPagoExtras = sueldoPorHoraConRecargo * Convert.ToDouble(horasRedondeadas);
-
-            // Redondear el resultado al número entero más cercano
-            //double sueldoRedondeado = Convert.ToDouble(TxtSueldo.Text) + totalPagoExtras;
-
-            // Mostrar el resultado en un cuadro de texto u otro control
-            //TxtSueldoNeto.Text = sueldoRedondeado.ToString() + " lps";
-            //TxtHorasExtras.Text = horasRedondeadas.ToString() + " hrs";
-            //TxtCostoHora.Text = sueldoPorHoraConRecargo.ToString() + " lps";
-            //TxtPagoHorasE.Text = totalPagoExtras.ToString() + " lps";
-
-            //CODIGO NUEVO
-
-            // Obtener las fechas seleccionadas de los DateTimePicker
-            DateTime fechaEntrada = dtpHoraEntrada.Value;
             DateTime fechaSalida = dtpHoraSalida.Value;
             DateTime fechaExtra = dtpHoraExtra.Value;
 
@@ -221,11 +150,11 @@ namespace CFria_HorasExtra
                 }
                 else if (fechaExtra.Hour < horaCorte2)
                 {
-                    horasHastaCorte1 = (horaCorte1 - fechaSalida.Hour) + (fechaExtra.Hour - horaCorte1);
+                    horasHastaCorte1 = (horaCorte1 - fechaSalida.Hour);
                 }
                 else if (fechaExtra.Hour < horaCorte3)
                 {
-                    horasHastaCorte1 = (horaCorte1 - fechaSalida.Hour) + (horaCorte2 - horaCorte1);
+                    horasHastaCorte1 = (horaCorte1 - fechaSalida.Hour);
                     horasHastaCorte2 = fechaExtra.Hour - horaCorte2;
                 }
                 else
@@ -235,11 +164,11 @@ namespace CFria_HorasExtra
                     horasHastaCorte3 = fechaExtra.Hour - horaCorte3;
                 }
             }
-            else if (fechaSalida.Hour < horaCorte2)
+            if (fechaSalida.Hour < horaCorte2)
             {
                 if (fechaExtra.Hour < horaCorte2)
                 {
-                    horasHastaCorte2 = horasDiferencia;
+                    horasHastaCorte2 = horasDiferencia - horasHastaCorte1;
                 }
                 else if (fechaExtra.Hour < horaCorte3)
                 {
@@ -251,11 +180,13 @@ namespace CFria_HorasExtra
                     horasHastaCorte3 = fechaExtra.Hour - horaCorte3;
                 }
             }
-            else if (fechaSalida.Hour < horaCorte3)
+            if (fechaSalida.Hour < horaCorte3)
             {
                 if (fechaExtra.Hour < horaCorte3)
                 {
-                    horasHastaCorte3 = horasDiferencia;
+                    //horasHastaCorte3 = horasDiferencia;
+                    horasHastaCorte3 = horasDiferencia - (horasHastaCorte2 + horasHastaCorte1);
+                    //MessageBox.Show(horasHastaCorte3.ToString());
                 }
                 else
                 {
@@ -264,47 +195,47 @@ namespace CFria_HorasExtra
             }
 
             //Calcular sueldo diario del empleado
-            double sueldoDiario = Convert.ToDouble(TxtSueldo.Text) / 30;
+            double sueldoDiario = Math.Round(Convert.ToDouble(TxtSueldo.Text) / 30, 2);
 
             //Calcular sueldo por hora del empleado
-            double sueldoHora = sueldoDiario / 8;
+            double sueldoHora = Math.Round(sueldoDiario / 8, 2);
 
             // Aplicar los recargos a las horas trabajadas en cada rango
             double sueldoConRecargoCorte1 = ((sueldoHora * recargoCorte1) + sueldoHora) * horasHastaCorte1;
             double sueldoConRecargoCorte2 = ((sueldoHora * recargoCorte2) + sueldoHora) * horasHastaCorte2;
             double sueldoConRecargoCorte3 = ((sueldoHora * recargoCorte3) + sueldoHora) * horasHastaCorte3;
-            //double sueldoConRecargoCorte1 = horasHastaCorte1 * recargoCorte1;
-            //double sueldoConRecargoCorte2 = horasHastaCorte2 * recargoCorte2;
-            //double sueldoConRecargoCorte3 = horasHastaCorte3 * recargoCorte3;
-
-            //Calcular sueldo diario del empleado
-            //double sueldoDiario = Convert.ToDouble(TxtSueldo.Text)/30;
-            //Calcular sueldo por hora del empleado
-            //double sueldoHora = sueldoDiario/8;   horasHastaCorte1 * recargoCorte1;
-            // Aplicar el recargo a el sueldo por hora
-            //double sueldoPorHoraConRecargo = (double)Math.Round((sueldoHora * recargo)+sueldoHora,2);
-
-            // Redondear los resultados al número entero más cercano
-            //int sueldoRedondeadoCorte1 = (int)Math.Round(sueldoConRecargoCorte1);
-            //int sueldoRedondeadoCorte2 = (int)Math.Round(sueldoConRecargoCorte2);
-            //int sueldoRedondeadoCorte3 = (int)Math.Round(sueldoConRecargoCorte3);
-
-            // Mostrar los resultados en los controles correspondientes
-            MessageBox.Show(horasHastaCorte1.ToString() + " " + horasHastaCorte2.ToString() + " " + horasHastaCorte3.ToString());
-            //MessageBox.Show(fechaSalida.Hour.ToString());
-            MessageBox.Show(horasHastaCorte3.ToString());
-            //txtHorasHasta19.Text = horasHastaCorte1.ToString();
-            //txtHorasHasta21.Text = horasHastaCorte2.ToString();
-            //txtHorasHasta00.Text = horasHastaCorte3.ToString();
-
+            
             double pagoHorasExtra = sueldoConRecargoCorte1+sueldoConRecargoCorte2+sueldoConRecargoCorte3;
+
             // Redondear el resultado al número entero más cercano
             double sueldoRedondeado = Convert.ToDouble(TxtSueldo.Text) + pagoHorasExtra;
 
-            TxtPagoHorasE.Text = pagoHorasExtra.ToString();
-            TxtHorasExtras.Text = horasDiferencia.ToString();
-            TxtSueldoNeto.Text = sueldoRedondeado.ToString();
-            TxtCostoHora.Text = sueldoHora.ToString();
+            TxtPagoHorasE.Text = pagoHorasExtra.ToString() + " lps";
+            TxtHorasExtras.Text = horasDiferencia.ToString() + " hrs";
+            TxtSueldoNeto.Text = sueldoRedondeado.ToString() + " lps";
+            TxtCostoHora.Text = sueldoHora.ToString() + " lps";
+            TxtPagoCorte1.Text = sueldoConRecargoCorte1.ToString() + " lps";
+            TxtPagoCorte2.Text = sueldoConRecargoCorte2.ToString() + " lps";
+            TxtPagoCorte3.Text = sueldoConRecargoCorte3.ToString() + " lps";
+            TxtHasta7.Text = horasHastaCorte1.ToString() + " hrs";
+            TxtHasta9.Text = horasHastaCorte2.ToString() + " hrs";
+            TxtHasta12.Text = horasHastaCorte3.ToString() + " hrs";
+            TxtDiferencia.Text = horasDiferencia.ToString() + " hrs";
+
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmPrincipal frmPrincipal = new FrmPrincipal();
+            frmPrincipal.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FrmPrincipal frmPrincipal = new FrmPrincipal();
+            this.Close();
+            frmPrincipal.Show();
         }
     }
 }

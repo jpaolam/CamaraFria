@@ -47,12 +47,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClConexion.cs" />
-    <Compile Include="ClFunciones.cs" />
     <Compile Include="FrmControlHE.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmControlHE.Designer.cs">
       <DependentUpon>FrmControlHE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpleados.Designer.cs">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -70,6 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmControlHE.resx">
       <DependentUpon>FrmControlHE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -101,9 +109,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\dot.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\Leyde Logo1.png" />
+    <None Include="Resources\reloj %281%29.png" />
+    <None Include="Resources\trabajo-en-equipo.png" />
+    <None Include="Resources\reporte.png" />
+    <None Include="Resources\LogoLeydeSmall.png" />
+    <None Include="Resources\empleado.png" />
+    <None Include="Resources\empleado %281%29.png" />
+    <None Include="Resources\regreso.png" />
+    <None Include="Resources\buscar.png" />
+    <None Include="Resources\guardar-el-archivo.png" />
+    <None Include="Resources\guardar-el-archivo %281%29.png" />
+    <None Include="Resources\editar-codigo.png" />
+    <None Include="Resources\basura.png" />
     <Content Include="Scripts\script.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
