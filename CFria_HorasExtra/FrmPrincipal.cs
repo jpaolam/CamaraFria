@@ -12,23 +12,66 @@ namespace CFria_HorasExtra
 {
     public partial class FrmPrincipal : Form
     {
-        public FrmPrincipal()
+        public FrmPrincipal(string nombre)
         {
             InitializeComponent();
+            lblNombre.Text = nombre;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmControlHE controlHE = new FrmControlHE();
-            controlHE.Show();
+            try
+            {
+                this.Hide();
+                FrmControlHE controlHE = new FrmControlHE();
+                controlHE.Show();
+            }
+            catch(Exception x){
+                MessageBox.Show("Error de navegación","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmPuestos puestos = new FrmPuestos();
-            puestos.Show();
+            try
+            {
+                this.Hide();
+                FrmPuestos puestos = new FrmPuestos();
+                puestos.Show();
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Error de navegación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Hide();
+                FrmEmpleados frmEmpleados = new FrmEmpleados();
+                frmEmpleados.Show();
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Error de navegación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmLogin login = new FrmLogin();
+                login.Show();
+                this.Close();
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Error de navegación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
