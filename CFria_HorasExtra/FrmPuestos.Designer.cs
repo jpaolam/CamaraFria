@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPuestos));
             this.TxtPuesto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,24 +41,27 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.epNombre = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuestos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epNombre)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtPuesto
             // 
             this.TxtPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPuesto.Location = new System.Drawing.Point(395, 180);
+            this.TxtPuesto.Location = new System.Drawing.Point(349, 169);
             this.TxtPuesto.Name = "TxtPuesto";
             this.TxtPuesto.Size = new System.Drawing.Size(276, 26);
             this.TxtPuesto.TabIndex = 24;
+            this.TxtPuesto.TextChanged += new System.EventHandler(this.TxtPuesto_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(212, 183);
+            this.label2.Location = new System.Drawing.Point(155, 172);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 20);
             this.label2.TabIndex = 22;
@@ -70,47 +74,54 @@
             this.dgvPuestos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvPuestos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgvPuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPuestos.Location = new System.Drawing.Point(208, 224);
+            this.dgvPuestos.Location = new System.Drawing.Point(86, 211);
             this.dgvPuestos.Name = "dgvPuestos";
-            this.dgvPuestos.Size = new System.Drawing.Size(351, 193);
+            this.dgvPuestos.Size = new System.Drawing.Size(424, 242);
             this.dgvPuestos.TabIndex = 25;
             this.dgvPuestos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPuestos_CellContentClick);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnGuardar.Location = new System.Drawing.Point(575, 224);
+            this.btnGuardar.Image = global::CFria_HorasExtra.Properties.Resources.guardar_el_archivo__1_;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(590, 254);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(172, 45);
+            this.btnGuardar.Size = new System.Drawing.Size(120, 45);
             this.btnGuardar.TabIndex = 26;
             this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEditar.Location = new System.Drawing.Point(575, 275);
+            this.btnEditar.Image = global::CFria_HorasExtra.Properties.Resources.editar_codigo;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(590, 305);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(172, 45);
+            this.btnEditar.Padding = new System.Windows.Forms.Padding(5, 3, 3, 0);
+            this.btnEditar.Size = new System.Drawing.Size(120, 45);
             this.btnEditar.TabIndex = 27;
             this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // TxtCodigo
             // 
             this.TxtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCodigo.Location = new System.Drawing.Point(341, 180);
+            this.TxtCodigo.Location = new System.Drawing.Point(284, 169);
             this.TxtCodigo.Name = "TxtCodigo";
-            this.TxtCodigo.Size = new System.Drawing.Size(38, 26);
+            this.TxtCodigo.Size = new System.Drawing.Size(59, 26);
             this.TxtCodigo.TabIndex = 29;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(302, 36);
+            this.label3.Location = new System.Drawing.Point(329, 46);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(181, 43);
             this.label3.TabIndex = 31;
@@ -119,11 +130,15 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnLimpiar.Location = new System.Drawing.Point(575, 326);
+            this.btnLimpiar.Image = global::CFria_HorasExtra.Properties.Resources.basura;
+            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpiar.Location = new System.Drawing.Point(590, 356);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(172, 45);
+            this.btnLimpiar.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.btnLimpiar.Size = new System.Drawing.Size(120, 56);
             this.btnLimpiar.TabIndex = 32;
             this.btnLimpiar.Text = "Limpiar Campos";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
@@ -132,7 +147,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.Location = new System.Drawing.Point(285, 469);
+            this.label1.Location = new System.Drawing.Point(291, 469);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(198, 23);
             this.label1.TabIndex = 33;
@@ -156,6 +171,10 @@
             this.pictureBox1.Size = new System.Drawing.Size(155, 102);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
+            // 
+            // epNombre
+            // 
+            this.epNombre.ContainerControl = this;
             // 
             // FrmPuestos
             // 
@@ -185,6 +204,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuestos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epNombre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,5 +223,6 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ErrorProvider epNombre;
     }
 }

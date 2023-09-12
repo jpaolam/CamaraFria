@@ -113,6 +113,16 @@ namespace CFria_HorasExtra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exit {
+            get {
+                object obj = ResourceManager.GetObject("exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap guardar_el_archivo {
             get {
                 object obj = ResourceManager.GetObject("guardar-el-archivo", resourceCulture);
@@ -186,6 +196,26 @@ namespace CFria_HorasExtra.Properties {
         internal static System.Drawing.Bitmap trabajo_en_equipo {
             get {
                 object obj = ResourceManager.GetObject("trabajo-en-equipo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap txt {
+            get {
+                object obj = ResourceManager.GetObject("txt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap txt1 {
+            get {
+                object obj = ResourceManager.GetObject("txt1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

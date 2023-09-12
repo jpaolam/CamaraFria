@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpleados));
             this.label3 = new System.Windows.Forms.Label();
             this.dtpFechaContratacion = new System.Windows.Forms.DateTimePicker();
@@ -51,10 +52,16 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.epNoPersonal = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epNombre = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epSueldo = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epNoPersonal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epNombre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epSueldo)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -144,6 +151,7 @@
             this.TxtNombreCompleto.Name = "TxtNombreCompleto";
             this.TxtNombreCompleto.Size = new System.Drawing.Size(278, 24);
             this.TxtNombreCompleto.TabIndex = 44;
+            this.TxtNombreCompleto.TextChanged += new System.EventHandler(this.TxtNombreCompleto_TextChanged);
             // 
             // TxtNoPersonal
             // 
@@ -152,6 +160,7 @@
             this.TxtNoPersonal.Name = "TxtNoPersonal";
             this.TxtNoPersonal.Size = new System.Drawing.Size(134, 24);
             this.TxtNoPersonal.TabIndex = 45;
+            this.TxtNoPersonal.TextChanged += new System.EventHandler(this.TxtNoPersonal_TextChanged);
             // 
             // TxtSueldoMensual
             // 
@@ -160,6 +169,7 @@
             this.TxtSueldoMensual.Name = "TxtSueldoMensual";
             this.TxtSueldoMensual.Size = new System.Drawing.Size(154, 24);
             this.TxtSueldoMensual.TabIndex = 46;
+            this.TxtSueldoMensual.TextChanged += new System.EventHandler(this.TxtSueldoMensual_TextChanged);
             // 
             // rbActivo
             // 
@@ -220,47 +230,50 @@
             // dgvEmpleados
             // 
             this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpleados.Location = new System.Drawing.Point(45, 317);
+            this.dgvEmpleados.Location = new System.Drawing.Point(23, 317);
             this.dgvEmpleados.Name = "dgvEmpleados";
-            this.dgvEmpleados.Size = new System.Drawing.Size(530, 124);
+            this.dgvEmpleados.Size = new System.Drawing.Size(597, 145);
             this.dgvEmpleados.TabIndex = 53;
+            this.dgvEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleados_CellContentClick);
             // 
             // BtnEditar
             // 
             this.BtnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.Image = global::CFria_HorasExtra.Properties.Resources.editar_codigo;
             this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditar.Location = new System.Drawing.Point(626, 368);
+            this.BtnEditar.Location = new System.Drawing.Point(637, 361);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
-            this.BtnEditar.Size = new System.Drawing.Size(115, 44);
+            this.BtnEditar.Size = new System.Drawing.Size(118, 44);
             this.BtnEditar.TabIndex = 55;
             this.BtnEditar.Text = "Editar";
             this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::CFria_HorasExtra.Properties.Resources.basura;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(626, 418);
+            this.button1.Location = new System.Drawing.Point(637, 411);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(115, 44);
+            this.button1.Size = new System.Drawing.Size(118, 58);
             this.button1.TabIndex = 54;
-            this.button1.Text = "Eliminar";
+            this.button1.Text = "Limpiar Campos";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = global::CFria_HorasExtra.Properties.Resources.guardar_el_archivo__1_;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(626, 318);
+            this.btnGuardar.Location = new System.Drawing.Point(637, 311);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(115, 44);
+            this.btnGuardar.Size = new System.Drawing.Size(118, 44);
             this.btnGuardar.TabIndex = 51;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -285,6 +298,18 @@
             this.pictureBox1.Size = new System.Drawing.Size(155, 102);
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
+            // 
+            // epNoPersonal
+            // 
+            this.epNoPersonal.ContainerControl = this;
+            // 
+            // epNombre
+            // 
+            this.epNombre.ContainerControl = this;
+            // 
+            // epSueldo
+            // 
+            this.epSueldo.ContainerControl = this;
             // 
             // FrmEmpleados
             // 
@@ -323,6 +348,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epNoPersonal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epNombre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epSueldo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +380,8 @@
         private System.Windows.Forms.DataGridView dgvEmpleados;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button BtnEditar;
+        private System.Windows.Forms.ErrorProvider epNoPersonal;
+        private System.Windows.Forms.ErrorProvider epNombre;
+        private System.Windows.Forms.ErrorProvider epSueldo;
     }
 }

@@ -20,6 +20,7 @@ namespace CFria_HorasExtra
 
         ClConexion conexion = new ClConexion();
         int i;
+        bool errorNombre;
 
         private void FrmPuestos_Load(object sender, EventArgs e)
         {
@@ -101,9 +102,33 @@ namespace CFria_HorasExtra
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            FrmPrincipal frmPrincipal = new FrmPrincipal();
+            FrmPrincipal frmPrincipal = new FrmPrincipal("Leyde");
             this.Close();
             frmPrincipal.Show();
+        }
+
+        private void TxtPuesto_TextChanged(object sender, EventArgs e)
+        {
+            foreach (char caracter in TxtPuesto.Text)
+            {
+                if (char.IsDigit(caracter))
+                {
+                    errorNombre = true;
+                    break;
+                }
+                else
+                {
+                    errorNombre = false;
+                }
+            }
+            if (errorNombre == true)
+            {
+                epNombre.SetError(TxtPuesto, "Solo caracteres");
+            }
+            else
+            {
+                epNombre.Clear();
+            }
         }
     }
 }

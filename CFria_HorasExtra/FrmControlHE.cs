@@ -60,7 +60,7 @@ namespace CFria_HorasExtra
 
         private void FrmControlHE_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -172,7 +172,7 @@ namespace CFria_HorasExtra
                 }
                 else if (fechaExtra.Hour < horaCorte3)
                 {
-                    horasHastaCorte2 = fechaExtra.Hour - horaCorte2;
+                    horasHastaCorte2 = fechaExtra.Hour - horaCorte1;
                 }
                 else
                 {
@@ -190,7 +190,7 @@ namespace CFria_HorasExtra
                 }
                 else
                 {
-                    horasHastaCorte3 = fechaExtra.Hour - horaCorte3;
+                    horasHastaCorte3 = fechaExtra.Hour - horaCorte2;
                 }
             }
 
@@ -227,13 +227,13 @@ namespace CFria_HorasExtra
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
-            FrmPrincipal frmPrincipal = new FrmPrincipal();
+            FrmPrincipal frmPrincipal = new FrmPrincipal("Leyde");
             frmPrincipal.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            FrmPrincipal frmPrincipal = new FrmPrincipal();
+            FrmPrincipal frmPrincipal = new FrmPrincipal("Leyde");
             this.Close();
             frmPrincipal.Show();
         }

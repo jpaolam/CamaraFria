@@ -12,9 +12,10 @@ namespace CFria_HorasExtra
 {
     public partial class FrmPrincipal : Form
     {
-        public FrmPrincipal()
+        public FrmPrincipal(string nombre)
         {
             InitializeComponent();
+            lblNombre.Text = nombre;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,6 +37,13 @@ namespace CFria_HorasExtra
             this.Hide();
             FrmEmpleados frmEmpleados = new FrmEmpleados();
             frmEmpleados.Show();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            FrmLogin login = new FrmLogin();
+            login.Show();
+            this.Close();
         }
     }
 }
