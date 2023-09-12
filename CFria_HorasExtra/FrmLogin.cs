@@ -64,21 +64,29 @@ namespace CFria_HorasExtra
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (TxtUsuario.Text == "" || TxtContrasena.Text == "")
+            try
             {
-                MessageBox.Show("Error, ingresar valores al textbox.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                TxtContrasena.Clear();
-                TxtUsuario.Clear();
-                TxtUsuario.Focus();
-            }
+                if (TxtUsuario.Text == "" || TxtContrasena.Text == "")
+                {
+                    MessageBox.Show("Error, ingresar valores al textbox.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    TxtContrasena.Clear();
+                    TxtUsuario.Clear();
+                    TxtUsuario.Focus();
+                }
 
-            else
-            {
-                logearAdmin(this.TxtUsuario.Text, this.TxtContrasena.Text);
-                TxtContrasena.Clear();
-                TxtUsuario.Clear();
-                TxtUsuario.Focus();
+                else
+                {
+                    logearAdmin(this.TxtUsuario.Text, this.TxtContrasena.Text);
+                    TxtContrasena.Clear();
+                    TxtUsuario.Clear();
+                    TxtUsuario.Focus();
+                }
             }
+            catch(Exception x)
+            {
+                MessageBox.Show("Error al ingresar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

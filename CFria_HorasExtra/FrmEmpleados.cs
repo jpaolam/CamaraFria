@@ -27,9 +27,17 @@ namespace CFria_HorasExtra
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            FrmPrincipal frmPrincipal = new FrmPrincipal("Leyde");
-            this.Close();
-            frmPrincipal.Show();
+            try
+            {
+                FrmPrincipal frmPrincipal = new FrmPrincipal("Leyde");
+                this.Close();
+                frmPrincipal.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error de navegación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -129,7 +137,6 @@ namespace CFria_HorasExtra
                 epNoPersonal.Clear();
             }
         }
-
         private void TxtNombreCompleto_TextChanged(object sender, EventArgs e)
         {
             foreach (char caracter in TxtNombreCompleto.Text)
@@ -153,7 +160,6 @@ namespace CFria_HorasExtra
                 epNombre.Clear();
             }
         }
-
         private void BtnEditar_Click(object sender, EventArgs e)
         {
             try
@@ -187,14 +193,13 @@ namespace CFria_HorasExtra
             catch (Exception x)
             {
                 //en caso de que falle y no se ejecute la sentencia SQL enviará este mensaje
-                MessageBox.Show("Error de Base de datos" + x);
+                MessageBox.Show("Establezca los datos a editar","Campos incompletos",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
             finally
             {
                 conexion.cerrar();
             }
         }
-
         private void dgvEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -222,7 +227,6 @@ namespace CFria_HorasExtra
             {
                 conexion.cerrar();
             }
-            
         }
     }
 }

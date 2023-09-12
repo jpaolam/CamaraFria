@@ -21,6 +21,7 @@ namespace CFria_HorasExtra
         ClConexion conexion = new ClConexion();
         int i;
         bool errorNombre;
+        ClValidaciones validaciones = new ClValidaciones();
 
         private void FrmPuestos_Load(object sender, EventArgs e)
         {
@@ -34,18 +35,27 @@ namespace CFria_HorasExtra
         {
             try
             {
-                conexion.abrir();
-                SqlCommand cmd = new SqlCommand("INSERT INTO Puestos VALUES ('" + TxtPuesto.Text + "',1)",conexion.Sc);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro guardado");
-                conexion.cargarDatos(dgvPuestos, "Puestos");
-                TxtCodigo.Clear();
-                TxtPuesto.Clear();
+                string texto = TxtPuesto.Text;
+                if (string.IsNullOrWhiteSpace(texto))
+                {
+                    MessageBox.Show("Campo de nombre incompleto","Campo incompleto",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+                else
+                {
+                    conexion.abrir();
+                    SqlCommand cmd = new SqlCommand("INSERT INTO Puestos VALUES ('" + TxtPuesto.Text + "',1)", conexion.Sc);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Registro guardado");
+                    conexion.cargarDatos(dgvPuestos, "Puestos");
+                    TxtCodigo.Clear();
+                    TxtPuesto.Clear();
+                }
+                
             }
             catch (Exception x)
             {
                 //en caso de que falle y no se ejecute la sentencia SQL enviará este mensaje
-                MessageBox.Show("Error de Base de datos" + x);
+                MessageBox.Show("Error de base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             finally
             {
@@ -57,13 +67,21 @@ namespace CFria_HorasExtra
         {
             try
             {
-                conexion.abrir();
-                SqlCommand cmd = new SqlCommand("UPDATE Puestos SET Nombre_Puesto = '" + TxtPuesto.Text + "' , EstadoPuesto = 1 WHERE Id_Puesto = " + Convert.ToInt32(TxtCodigo.Text), conexion.Sc);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro actualizado");
-                conexion.cargarDatos(dgvPuestos, "Puestos");
-                TxtCodigo.Clear();
-                TxtPuesto.Clear();
+                string text = TxtPuesto.Text;
+                if (string.IsNullOrWhiteSpace(text))
+                {
+                    MessageBox.Show("Campo de nombre incompleto, elija un registro a actualizar", "Campo incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    conexion.abrir();
+                    SqlCommand cmd = new SqlCommand("UPDATE Puestos SET Nombre_Puesto = '" + TxtPuesto.Text + "' , EstadoPuesto = 1 WHERE Id_Puesto = " + Convert.ToInt32(TxtCodigo.Text), conexion.Sc);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Registro actualizado");
+                    conexion.cargarDatos(dgvPuestos, "Puestos");
+                    TxtCodigo.Clear();
+                    TxtPuesto.Clear();
+                }
             }
             catch (Exception x)
             {

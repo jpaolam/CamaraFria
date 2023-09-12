@@ -74,6 +74,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
+            this.dtpDiaRegistro = new System.Windows.Forms.DateTimePicker();
+            this.TxtCodPuesto = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -83,7 +85,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(111, 125);
+            this.label2.Location = new System.Drawing.Point(53, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 20);
             this.label2.TabIndex = 1;
@@ -114,11 +116,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(88, 77);
+            this.label5.Location = new System.Drawing.Point(6, 80);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 20);
+            this.label5.Size = new System.Drawing.Size(200, 20);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Costo por hora:";
+            this.label5.Text = "Costo por hora sin recargo:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
@@ -145,7 +147,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(471, 125);
+            this.label8.Location = new System.Drawing.Point(392, 125);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 20);
             this.label8.TabIndex = 7;
@@ -155,7 +157,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(225, 84);
+            this.label9.Location = new System.Drawing.Point(185, 80);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(120, 20);
             this.label9.TabIndex = 8;
@@ -164,7 +166,7 @@
             // TxtNombreE
             // 
             this.TxtNombreE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombreE.Location = new System.Drawing.Point(262, 121);
+            this.TxtNombreE.Location = new System.Drawing.Point(204, 121);
             this.TxtNombreE.Name = "TxtNombreE";
             this.TxtNombreE.ReadOnly = true;
             this.TxtNombreE.Size = new System.Drawing.Size(164, 26);
@@ -285,10 +287,10 @@
             // TxtPuesto
             // 
             this.TxtPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPuesto.Location = new System.Drawing.Point(540, 122);
+            this.TxtPuesto.Location = new System.Drawing.Point(540, 121);
             this.TxtPuesto.Name = "TxtPuesto";
             this.TxtPuesto.ReadOnly = true;
-            this.TxtPuesto.Size = new System.Drawing.Size(118, 26);
+            this.TxtPuesto.Size = new System.Drawing.Size(226, 26);
             this.TxtPuesto.TabIndex = 20;
             // 
             // BtnGuardarRegistro
@@ -300,11 +302,12 @@
             this.BtnGuardarRegistro.TabIndex = 21;
             this.BtnGuardarRegistro.Text = "Ingresar Registro";
             this.BtnGuardarRegistro.UseVisualStyleBackColor = true;
+            this.BtnGuardarRegistro.Click += new System.EventHandler(this.BtnGuardarRegistro_Click);
             // 
             // TxtBuscar
             // 
             this.TxtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBuscar.Location = new System.Drawing.Point(344, 84);
+            this.TxtBuscar.Location = new System.Drawing.Point(304, 80);
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(133, 26);
             this.TxtBuscar.TabIndex = 22;
@@ -499,7 +502,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::CFria_HorasExtra.Properties.Resources.buscar;
-            this.button1.Location = new System.Drawing.Point(494, 85);
+            this.button1.Location = new System.Drawing.Point(454, 81);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(73, 26);
             this.button1.TabIndex = 26;
@@ -517,11 +520,32 @@
             this.label22.TabIndex = 46;
             this.label22.Text = "CONTROL HORAS EXTRAS";
             // 
+            // dtpDiaRegistro
+            // 
+            this.dtpDiaRegistro.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDiaRegistro.CalendarMonthBackground = System.Drawing.SystemColors.InactiveCaption;
+            this.dtpDiaRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDiaRegistro.Location = new System.Drawing.Point(553, 81);
+            this.dtpDiaRegistro.Name = "dtpDiaRegistro";
+            this.dtpDiaRegistro.Size = new System.Drawing.Size(200, 22);
+            this.dtpDiaRegistro.TabIndex = 47;
+            // 
+            // TxtCodPuesto
+            // 
+            this.TxtCodPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCodPuesto.Location = new System.Drawing.Point(461, 122);
+            this.TxtCodPuesto.Name = "TxtCodPuesto";
+            this.TxtCodPuesto.ReadOnly = true;
+            this.TxtCodPuesto.Size = new System.Drawing.Size(73, 26);
+            this.TxtCodPuesto.TabIndex = 48;
+            // 
             // FrmControlHE
             // 
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(778, 501);
             this.ControlBox = false;
+            this.Controls.Add(this.TxtCodPuesto);
+            this.Controls.Add(this.dtpDiaRegistro);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label21);
@@ -622,6 +646,8 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.DateTimePicker dtpDiaRegistro;
+        private System.Windows.Forms.TextBox TxtCodPuesto;
     }
 }
 

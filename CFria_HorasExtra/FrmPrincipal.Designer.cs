@@ -45,6 +45,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(226, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(352, 59);
@@ -72,7 +73,7 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Gainsboro;
+            this.button4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Image = global::CFria_HorasExtra.Properties.Resources.empleado__1_;
@@ -97,7 +98,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Gainsboro;
+            this.button3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button3.Image = global::CFria_HorasExtra.Properties.Resources.trabajo_en_equipo;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -112,7 +113,7 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Gainsboro;
+            this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button2.Image = global::CFria_HorasExtra.Properties.Resources.reporte;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -126,7 +127,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::CFria_HorasExtra.Properties.Resources.reloj__1_;
@@ -143,14 +144,14 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Red;
+            this.btnCerrar.BackColor = System.Drawing.Color.DimGray;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.Location = new System.Drawing.Point(648, 12);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(118, 23);
+            this.btnCerrar.Size = new System.Drawing.Size(118, 29);
             this.btnCerrar.TabIndex = 10;
             this.btnCerrar.Text = "Cerrar Sesion";
             this.btnCerrar.UseVisualStyleBackColor = false;
@@ -160,7 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(778, 501);
             this.ControlBox = false;
             this.Controls.Add(this.btnCerrar);
