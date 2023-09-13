@@ -17,12 +17,16 @@ namespace CFria_HorasExtra
         public FrmEmpleados()
         {
             InitializeComponent();
+            //conexion.cargarDatos(dgvEmpleados, "Empleados");
             conexion.cargarDatosEmpleado(dgvEmpleados);
         }
-
+        //instanciar la clase ClConexion
         ClConexion conexion = new ClConexion();
+        //declarar variables
         int codpuesto, estado, i;
+        //instanciar la clase ClValidaciones
         ClValidaciones validaciones = new ClValidaciones();
+        //declarar variables para las validaciones
         bool errorcod, errorNombre, errorSueldo;
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -42,9 +46,11 @@ namespace CFria_HorasExtra
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            //validar los campos
             validaciones.validar(this);
             try
             {
+                //validar que el campo de estado este seleccionado
                 if (rbActivo.Checked == true)
                 {
                     estado = 1;
@@ -53,13 +59,16 @@ namespace CFria_HorasExtra
                 {
                     estado = 0;
                 }
+                //obtener la fecha seleccionada
                 DateTime fechaSeleccionada = dtpFechaContratacion.Value;
                 // Formatear la fecha en el formato "yy-MM-dd"
                 string fechaFormateada = fechaSeleccionada.ToString("yyyy-MM-dd");
-
+                //abrir la conexion
                 conexion.abrir();
+                //ejecutar la sentencia SQL
                 SqlCommand cmd = new SqlCommand("INSERT INTO Empleados VALUES (" + Convert.ToInt32(TxtNoPersonal.Text) + " ,'" + TxtNombreCompleto.Text + "','" + fechaFormateada + "'," + codpuesto + "," + Convert.ToDouble(TxtSueldoMensual.Text )+", "+ estado +")", conexion.Sc);
                 cmd.ExecuteNonQuery();
+                //enviar mensaje de confirmación
                 MessageBox.Show("Registro guardado");
                 conexion.cargarDatos(dgvEmpleados, "Empleados");
             }
@@ -78,6 +87,7 @@ namespace CFria_HorasExtra
         {
             // Establecer el formato personalizado en YY-MM-DD
             dtpFechaContratacion.Format = DateTimePickerFormat.Custom;
+            // Establecer el formato personalizado en YY-MM-DD
             dtpFechaContratacion.CustomFormat = "yy-MM-dd";
             conexion.abrir();
             SqlCommand command = new SqlCommand("Select * from Puestos", conexion.Sc);
@@ -116,6 +126,7 @@ namespace CFria_HorasExtra
 
         private void TxtNoPersonal_TextChanged(object sender, EventArgs e)
         {
+            //validar que solo se ingresen datos numericos
             foreach (char caracter in TxtNoPersonal.Text)
             {
                 if (!char.IsDigit(caracter))
@@ -139,6 +150,7 @@ namespace CFria_HorasExtra
         }
         private void TxtNombreCompleto_TextChanged(object sender, EventArgs e)
         {
+            //validar que solo se ingresen caracteres
             foreach (char caracter in TxtNombreCompleto.Text)
             {
                 if (char.IsDigit(caracter))
@@ -162,6 +174,7 @@ namespace CFria_HorasExtra
         }
         private void BtnEditar_Click(object sender, EventArgs e)
         {
+            //validar los campos
             try
             {
                 if (rbActivo.Checked == true)
@@ -204,6 +217,7 @@ namespace CFria_HorasExtra
         {
             try
             {
+                //obtener los datos de la fila seleccionada
                 i = e.RowIndex;
                 TxtNoPersonal.Enabled = false;
                 TxtNoPersonal.Text = dgvEmpleados.CurrentRow.Cells[0].Value.ToString();

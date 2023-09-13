@@ -6,51 +6,51 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>41.42712mm</Width>
+              <Width>1.23762in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>28.85629mm</Width>
+              <Width>1.11229in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>7.56045mm</Width>
+              <Width>0.50145in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.70837mm</Width>
+              <Width>0.34679in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>16.55629mm</Width>
+              <Width>0.6647in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>11.79379mm</Width>
+              <Width>0.65429in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>11.65837mm</Width>
+              <Width>0.6875in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>11.00004mm</Width>
+              <Width>0.62475in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>11.79379mm</Width>
+              <Width>0.62953in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>12.68077mm</Width>
+              <Width>0.64754in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>12.85212mm</Width>
+              <Width>0.63345in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>13.38129mm</Width>
+              <Width>0.68554in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>11.5292mm</Width>
+              <Width>0.63345in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>19.20212mm</Width>
+              <Width>0.83137in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>15mm</Height>
+              <Height>0.35in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -62,10 +62,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Nombre Completo</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox2</rd:DefaultName>
@@ -92,10 +96,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Puesto</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox20</rd:DefaultName>
@@ -122,10 +130,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Hora Entrada</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox18</rd:DefaultName>
@@ -152,10 +164,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Hora Salida</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox16</rd:DefaultName>
@@ -182,10 +198,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Hora Extraordinaria</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox14</rd:DefaultName>
@@ -212,10 +232,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Horas hasta el 25%</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox12</rd:DefaultName>
@@ -242,10 +266,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Horas hasta el 50%</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox28</rd:DefaultName>
@@ -272,10 +300,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Horas hasta el 75%</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox26</rd:DefaultName>
@@ -302,10 +334,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Pago hrs extra al 25%</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox24</rd:DefaultName>
@@ -332,10 +368,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Pago hrs extra al 50%</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox22</rd:DefaultName>
@@ -362,10 +402,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Pago hrs extra al 75%</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox10</rd:DefaultName>
@@ -392,10 +436,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Total de pago hrs extra</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox8</rd:DefaultName>
@@ -422,10 +470,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Total de horas extras</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox4</rd:DefaultName>
@@ -452,10 +504,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Fecha de ingreso del registro</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox6</rd:DefaultName>
@@ -475,7 +531,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>15mm</Height>
+              <Height>0.35in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -487,10 +543,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!EmpleadoNombreCompleto.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>EmpleadoNombreCompleto</rd:DefaultName>
@@ -517,10 +577,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Nombre_Puesto.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Nombre_Puesto</rd:DefaultName>
@@ -547,10 +611,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!HoraEntrada.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>HoraEntrada</rd:DefaultName>
@@ -577,10 +645,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!HoraSalida.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>HoraSalida</rd:DefaultName>
@@ -607,10 +679,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!HoraExtraordinaria.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>HoraExtraordinaria</rd:DefaultName>
@@ -637,10 +713,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!HorasHasta25.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>HorasHasta25</rd:DefaultName>
@@ -667,10 +747,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!HorasHasta50.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>HorasHasta50</rd:DefaultName>
@@ -697,10 +781,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!HorasHasta75.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>HorasHasta75</rd:DefaultName>
@@ -727,10 +815,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Pago_HrsExtra25.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Pago_HrsExtra25</rd:DefaultName>
@@ -757,10 +849,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Pago_HrsExtra50.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Pago_HrsExtra50</rd:DefaultName>
@@ -787,10 +883,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Pago_HrsExtra75.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Pago_HrsExtra75</rd:DefaultName>
@@ -817,10 +917,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Pago_HrsExtra.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Pago_HrsExtra</rd:DefaultName>
@@ -847,10 +951,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!HorasExtras.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>HorasExtras</rd:DefaultName>
@@ -877,10 +985,14 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!FechaRegistro.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>6.5pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>FechaRegistro</rd:DefaultName>
@@ -930,10 +1042,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.21391cm</Top>
-        <Left>0.89641cm</Left>
-        <Height>30mm</Height>
-        <Width>216mm</Width>
+        <Top>0.79058cm</Top>
+        <Left>6.35mm</Left>
+        <Height>0.7in</Height>
+        <Width>9.89028in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -945,10 +1057,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>14.49366in</Height>
+    <Height>100mm</Height>
     <Style />
   </Body>
-  <Width>14.10292in</Width>
+  <Width>261.93293mm</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -959,8 +1071,8 @@
           <Source>Embedded</Source>
           <Value>LogoLeydeSmall</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.21097cm</Top>
-          <Left>8.36891cm</Left>
+          <Top>0.28153cm</Top>
+          <Left>3.77856cm</Left>
           <Height>2.15264cm</Height>
           <Width>3.53729cm</Width>
           <Style>
@@ -988,7 +1100,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox29</rd:DefaultName>
           <Top>0.71865cm</Top>
-          <Left>12.97828cm</Left>
+          <Left>7.87746cm</Left>
           <Height>1.10271cm</Height>
           <Width>12.81813cm</Width>
           <ZIndex>1</ZIndex>

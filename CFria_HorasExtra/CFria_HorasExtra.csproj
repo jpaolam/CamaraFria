@@ -225,6 +225,10 @@
     <None Include="Resources\txt.png" />
     <None Include="Resources\txt1.png" />
     <None Include="Resources\exit.png" />
+    <None Include="Resources\empleado %282%29.png" />
+    <None Include="Resources\calendario-anual.png" />
+    <None Include="Resources\calendario.png" />
+    <None Include="Resources\semanal.png" />
     <Content Include="Scripts\script.sql" />
   </ItemGroup>
   <ItemGroup>

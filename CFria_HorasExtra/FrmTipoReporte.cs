@@ -26,18 +26,21 @@ namespace CFria_HorasExtra
         {
             try
             {
+                //Se instancia el formulario y se muestra
                 FrmReporteMensual frmReporteMensual = new FrmReporteMensual();
                 frmReporteMensual.Show();
                 this.Hide();
             }
             catch (Exception x)
             {
+                //Si ocurre un error se muestra un mensaje de error
                 MessageBox.Show("Error de navegación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //Se instancia el formulario y se muestra
             try
             {
                 FrmReporteAnual frm = new FrmReporteAnual();
@@ -52,6 +55,7 @@ namespace CFria_HorasExtra
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            //Se instancia el formulario y se muestra
             try
             {
                 FrmPrincipal frm = new FrmPrincipal("Usuario");

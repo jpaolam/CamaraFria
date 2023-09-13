@@ -19,9 +19,11 @@ namespace CFria_HorasExtra
     {
         public FrmControlHE()
         {
+            //Inicializar los componentes
             InitializeComponent();
             InitializeTimePickers();
         }
+
         ClConexion conexion = new ClConexion();
         ClValidaciones validaciones = new ClValidaciones();
         //hacerlo más facil
@@ -79,6 +81,7 @@ namespace CFria_HorasExtra
                 cmd.ExecuteNonQuery();
                 //Este ejecuta la sentencia mientras que almacena esa informacion en una variable
                 SqlDataReader reader = cmd.ExecuteReader();
+                //Si el reader.Read() trae algo entrará dentro de la condicional
                 if (reader.Read())
                 {
                     TxtNombreE.Text = reader["EmpleadoNombreCompleto"].ToString();
@@ -164,6 +167,7 @@ namespace CFria_HorasExtra
                     }
                     else
                     {
+                        
                         horasHastaCorte1 = (horaCorte1 - fechaSalida.Hour) + (horaCorte2 - horaCorte1);
                         horasHastaCorte2 = horaCorte3 - horaCorte2;
                         horasHastaCorte3 = fechaExtra.Hour - horaCorte3;
@@ -306,7 +310,7 @@ namespace CFria_HorasExtra
                 MessageBox.Show("Ocurrió un error","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
-            {
+            {//Se cierra la conexion
                 conexion.cerrar();
             }
         }

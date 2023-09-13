@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,15 +23,9 @@ namespace CFria_HorasExtra
         
         private void FrmReporteMensual_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'dataSet11.VistaInforme' Puede moverla o quitarla según sea necesario.
-            //this.vistaInformeTableAdapter.Fill(this.dataSet11.VistaInforme);
-            //int valor = Convert.ToInt32(txtMes.Text);
-            // TODO: This line of code loads data into the 'DataSetPrestamos.Prestamos' table. You can move, or remove it, as needed.
-            //this.DTInformeMensualTableAdapter.Fill(this.DataSet1.DTInformeMensual, 12);
-            //this.RVMensual.RefreshReport();
-            //this.RVMensual.RefreshReport();
+            this.RVMensual.RefreshReport();
         }
-
+        0
         private void RVMensual_Load(object sender, EventArgs e)
         {
 
@@ -41,17 +36,32 @@ namespace CFria_HorasExtra
         DSReporteM reporteM = new DSReporteM();
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            int valor = Convert.ToInt32(txtMes.Text);
-            // TODO: This line of code loads data into the 'DataSetPrestamos.Prestamos' table. You can move, or remove it, as needed.
-            this.DataTableMensualTableAdapter.Fill(this.dSReporteM.DataTableMensual,valor);
-            this.RVMensual.RefreshReport();
+            try
+            {
+                string texto = txtMes.Text;
+                if (string.IsNullOrWhiteSpace(texto))
+                {
+                    MessageBox.Show("Campo de mes incompleto", "Campo incompleto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    int valor = Convert.ToInt32(txtMes.Text);
+                    // TODO: This line of code loads data into the 'DataSetPrestamos.Prestamos' table. You can move, or remove it, as needed.
+                    this.DataTableMensualTableAdapter.Fill(this.dSReporteM.DataTableMensual, valor);
+                    this.RVMensual.RefreshReport();
+                }
+
+            }catch(Exception x)
+            {
+                MessageBox.Show("Error al cargar los datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            FrmPrincipal frmPrincipal = new FrmPrincipal("Leyde");
+            FrmTipoReporte frm = new FrmTipoReporte();
             this.Close();
-            frmPrincipal.Show();
+            frm.Show();
         }
     }
 }

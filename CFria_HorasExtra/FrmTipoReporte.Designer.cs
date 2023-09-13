@@ -29,36 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTipoReporte));
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::CFria_HorasExtra.Properties.Resources.regreso;
-            this.pictureBox2.Location = new System.Drawing.Point(730, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 35);
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CFria_HorasExtra.Properties.Resources.LogoLeydeSmall;
-            this.pictureBox1.Location = new System.Drawing.Point(36, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(155, 102);
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -82,71 +63,90 @@
             this.label1.TabIndex = 38;
             this.label1.Text = "© 2023 - Jessie Martel";
             // 
-            // button1
+            // button4
             // 
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::CFria_HorasExtra.Properties.Resources.reloj__1_;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(82, 198);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.button1.Size = new System.Drawing.Size(280, 78);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Reporte Mensual";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::CFria_HorasExtra.Properties.Resources.reloj__1_;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(82, 282);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.button2.Size = new System.Drawing.Size(280, 78);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "Reporte Semanal";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.button4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Image = global::CFria_HorasExtra.Properties.Resources.empleado__2_;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(140, 172);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.button4.Size = new System.Drawing.Size(259, 78);
+            this.button4.TabIndex = 42;
+            this.button4.Text = "Reporte por Empleado";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::CFria_HorasExtra.Properties.Resources.reloj__1_;
+            this.button3.Image = global::CFria_HorasExtra.Properties.Resources.calendario_anual;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(401, 198);
+            this.button3.Location = new System.Drawing.Point(465, 279);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.button3.Size = new System.Drawing.Size(280, 78);
+            this.button3.Size = new System.Drawing.Size(259, 78);
             this.button3.TabIndex = 41;
             this.button3.Text = "Reporte Anual";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // button2
             // 
-            this.button4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::CFria_HorasExtra.Properties.Resources.reloj__1_;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(401, 282);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.button4.Size = new System.Drawing.Size(280, 78);
-            this.button4.TabIndex = 42;
-            this.button4.Text = "Reporte por Empleado";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = false;
+            this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::CFria_HorasExtra.Properties.Resources.semanal;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(465, 172);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.button2.Size = new System.Drawing.Size(259, 78);
+            this.button2.TabIndex = 40;
+            this.button2.Text = "Reporte Semanal";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::CFria_HorasExtra.Properties.Resources.calendario;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(140, 279);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.button1.Size = new System.Drawing.Size(259, 78);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Reporte Mensual";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CFria_HorasExtra.Properties.Resources.regreso;
+            this.pictureBox2.Location = new System.Drawing.Point(730, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CFria_HorasExtra.Properties.Resources.LogoLeydeSmall;
+            this.pictureBox1.Location = new System.Drawing.Point(36, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(155, 102);
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmTipoReporte
             // 

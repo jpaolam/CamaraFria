@@ -83,6 +83,26 @@ namespace CFria_HorasExtra.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calendario {
+            get {
+                object obj = ResourceManager.GetObject("calendario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendario_anual {
+            get {
+                object obj = ResourceManager.GetObject("calendario-anual", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap editar_codigo {
             get {
                 object obj = ResourceManager.GetObject("editar-codigo", resourceCulture);
@@ -106,6 +126,16 @@ namespace CFria_HorasExtra.Properties {
         internal static System.Drawing.Bitmap empleado__1_ {
             get {
                 object obj = ResourceManager.GetObject("empleado (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap empleado__2_ {
+            get {
+                object obj = ResourceManager.GetObject("empleado (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +216,16 @@ namespace CFria_HorasExtra.Properties {
         internal static System.Drawing.Bitmap reporte {
             get {
                 object obj = ResourceManager.GetObject("reporte", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap semanal {
+            get {
+                object obj = ResourceManager.GetObject("semanal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
