@@ -73,5 +73,19 @@ namespace CFria_HorasExtra
                 MessageBox.Show("Error de navegación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmTipoReporte frmTipoReporte = new FrmTipoReporte();
+                frmTipoReporte.Show();
+                this.Hide();
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Error de navegación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
