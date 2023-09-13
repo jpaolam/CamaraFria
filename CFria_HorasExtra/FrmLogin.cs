@@ -22,21 +22,26 @@ namespace CFria_HorasExtra
         {
             try
             {
+                //Se abre la conexion
                 conexion.abrir();
-
+                //Se realiza la consulta
                 SqlCommand cmd = new SqlCommand("SELECT username FROM Usuarios WHERE username = @usuario AND password = @pass", conexion.Sc);
+                //Se agregan los parametros
                 cmd.Parameters.AddWithValue("usuario", usuario);
                 cmd.Parameters.AddWithValue("pass", contra);
 
+                //Se ejecuta la consulta
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
+                //Se crea una tabla
                 DataTable dt = new DataTable();
-
+                //Se llena la tabla
                 da.Fill(dt);
 
+                //Se valida que la consulta tenga un resultado
                 if (dt.Rows.Count == 1)
                 {
                     this.Hide();
-
+                    //Se instancia el formulario y se muestra
                     new FrmPrincipal(dt.Rows[0][0].ToString()).ShowDialog();
                 }
 
@@ -66,6 +71,7 @@ namespace CFria_HorasExtra
         {
             try
             {
+                //Se valida que los campos no esten vacios
                 if (TxtUsuario.Text == "" || TxtContrasena.Text == "")
                 {
                     MessageBox.Show("Error, ingresar valores al textbox.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -75,7 +81,7 @@ namespace CFria_HorasExtra
                 }
 
                 else
-                {
+                {//Se llama al metodo logearAdmin
                     logearAdmin(this.TxtUsuario.Text, this.TxtContrasena.Text);
                     TxtContrasena.Clear();
                     TxtUsuario.Clear();
@@ -91,6 +97,7 @@ namespace CFria_HorasExtra
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            //Se cierra la aplicacion
             Application.Exit();
         }
     }

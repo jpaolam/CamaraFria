@@ -76,6 +76,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.dtpDiaRegistro = new System.Windows.Forms.DateTimePicker();
             this.TxtCodPuesto = new System.Windows.Forms.TextBox();
+            this.tableAdapterManager1 = new CFria_HorasExtra.DSAnualTableAdapters.TableAdapterManager();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -539,6 +540,12 @@
             this.TxtCodPuesto.Size = new System.Drawing.Size(73, 26);
             this.TxtCodPuesto.TabIndex = 48;
             // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.Connection = null;
+            this.tableAdapterManager1.UpdateOrder = CFria_HorasExtra.DSAnualTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // FrmControlHE
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -648,6 +655,7 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.DateTimePicker dtpDiaRegistro;
         private System.Windows.Forms.TextBox TxtCodPuesto;
+        private DSAnualTableAdapters.TableAdapterManager tableAdapterManager1;
     }
 }
 
