@@ -18,14 +18,10 @@ namespace CFria_HorasExtra
         {
             InitializeComponent();
         }
-
-
-        
         private void FrmReporteMensual_Load(object sender, EventArgs e)
         {
             this.RVMensual.RefreshReport();
         }
-        0
         private void RVMensual_Load(object sender, EventArgs e)
         {
 

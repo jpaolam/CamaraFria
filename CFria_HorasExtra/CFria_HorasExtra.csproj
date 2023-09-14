@@ -86,6 +86,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSReporteM.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DSReporteSemanal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSReporteSemanal.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FrmControlHE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +133,12 @@
     <Compile Include="FrmReporteMensual.Designer.cs">
       <DependentUpon>FrmReporteMensual.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReporteSemanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteSemanal.Designer.cs">
+      <DependentUpon>FrmReporteSemanal.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTipoReporte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +168,9 @@
     <EmbeddedResource Include="FrmReporteMensual.resx">
       <DependentUpon>FrmReporteMensual.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteSemanal.resx">
+      <DependentUpon>FrmReporteSemanal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmTipoReporte.resx">
       <DependentUpon>FrmTipoReporte.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +181,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RAnual.rdlc" />
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="RSemanal.rdlc" />
     <None Include="DSAnual.xsc">
       <DependentUpon>DSAnual.xsd</DependentUpon>
     </None>
@@ -188,6 +203,17 @@
     </None>
     <None Include="DSReporteM.xss">
       <DependentUpon>DSReporteM.xsd</DependentUpon>
+    </None>
+    <None Include="DSReporteSemanal.xsc">
+      <DependentUpon>DSReporteSemanal.xsd</DependentUpon>
+    </None>
+    <None Include="DSReporteSemanal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSReporteSemanal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSReporteSemanal.xss">
+      <DependentUpon>DSReporteSemanal.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

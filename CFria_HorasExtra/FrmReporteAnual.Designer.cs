@@ -36,8 +36,8 @@
             this.RVAnual = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnIngresar = new System.Windows.Forms.Button();
-            this.txtYear = new System.Windows.Forms.TextBox();
             this.dataTableAnualTableAdapter1 = new CFria_HorasExtra.DSAnualTableAdapters.DataTableAnualTableAdapter();
+            this.dtpYear = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableAnualBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSAnual)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -87,17 +87,22 @@
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
-            // txtYear
-            // 
-            this.txtYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtYear.Location = new System.Drawing.Point(364, 12);
-            this.txtYear.Name = "txtYear";
-            this.txtYear.Size = new System.Drawing.Size(100, 29);
-            this.txtYear.TabIndex = 37;
-            // 
             // dataTableAnualTableAdapter1
             // 
             this.dataTableAnualTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dtpYear
+            // 
+            this.dtpYear.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.dtpYear.CustomFormat = "yyyy";
+            this.dtpYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpYear.Location = new System.Drawing.Point(333, 16);
+            this.dtpYear.MaxDate = new System.DateTime(2500, 12, 31, 0, 0, 0, 0);
+            this.dtpYear.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtpYear.Name = "dtpYear";
+            this.dtpYear.Size = new System.Drawing.Size(117, 29);
+            this.dtpYear.TabIndex = 40;
             // 
             // FrmReporteAnual
             // 
@@ -105,9 +110,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.dtpYear);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.txtYear);
             this.Controls.Add(this.RVAnual);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -119,7 +124,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dSAnual)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -128,9 +132,9 @@
         private Microsoft.Reporting.WinForms.ReportViewer RVAnual;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnIngresar;
-        private System.Windows.Forms.TextBox txtYear;
         private System.Windows.Forms.BindingSource dataTableAnualBindingSource;
         private DSAnual dSAnual;
         private DSAnualTableAdapters.DataTableAnualTableAdapter dataTableAnualTableAdapter1;
+        private System.Windows.Forms.DateTimePicker dtpYear;
     }
 }

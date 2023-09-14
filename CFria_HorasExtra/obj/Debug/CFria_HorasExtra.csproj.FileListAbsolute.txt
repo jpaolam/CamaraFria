@@ -89,3 +89,4 @@ C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\bin\Debug\zh-CHS\M
 C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.FrmTipoReporte.resources
 C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.FrmReporteAnual.resources
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.FrmReporteSemanal.resources
