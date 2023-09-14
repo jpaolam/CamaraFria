@@ -27,7 +27,9 @@ namespace CFria_HorasExtra
         // Función para obtener el inicio de la semana a partir de una fecha dada
         private DateTime GetStartOfWeek(DateTime date)
         {
+            // Obtiene el día de la semana de la fecha dada
             int daysUntilSunday = (int)date.DayOfWeek;
+            // Resta el día de la semana a la fecha para obtener el inicio de la semana
             return date.AddDays(-(daysUntilSunday-1));
         }
 
@@ -57,11 +59,14 @@ namespace CFria_HorasExtra
         {
             try
             {
+                //Se toman los valores de los DateTimePicker
                 DateTime fechaIncioSemana = dtpIncioSemana.Value;
                 DateTime fechaFinalSemana = dtpFinalSemana.Value;
+                
                 // Formatear la fecha en el formato "yy-MM-dd"
                 string fechaInicioFormateada = fechaIncioSemana.ToString("yyyy-MM-dd");
                 string fechaFinalFormateada = fechaFinalSemana.ToString("yyyy-MM-dd");
+                
                 // TODO: This line of code loads data into the 'DataSetPrestamos.Prestamos' table. You can move, or remove it, as needed.
                 this.DataTableSemanalTableAdapter.Fill(this.dSReporteSemanal.DataTableSemanal, fechaInicioFormateada, fechaFinalFormateada);
                 this.RVSemanal.RefreshReport();
@@ -74,8 +79,14 @@ namespace CFria_HorasExtra
 
         private void FrmReporteSemanal_Load(object sender, EventArgs e)
         {
-
             this.RVSemanal.RefreshReport();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FrmTipoReporte frm = new FrmTipoReporte();
+            this.Close();
+            frm.Show();
         }
     }
 }

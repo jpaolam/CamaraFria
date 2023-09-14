@@ -96,6 +96,7 @@
             this.TxtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContrasena.Location = new System.Drawing.Point(292, 350);
             this.TxtContrasena.Name = "TxtContrasena";
+            this.TxtContrasena.PasswordChar = '*';
             this.TxtContrasena.Size = new System.Drawing.Size(172, 26);
             this.TxtContrasena.TabIndex = 13;
             // 

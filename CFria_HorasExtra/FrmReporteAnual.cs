@@ -27,7 +27,6 @@ namespace CFria_HorasExtra
 
         //Se instancian las clases de la tabla y el dataset
         DataTableAnualTableAdapter DataTableAnualTableAdapter = new DataTableAnualTableAdapter();
-        DSAnual anual = new DSAnual();
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             try

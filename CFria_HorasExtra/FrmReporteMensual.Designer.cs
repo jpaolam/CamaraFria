@@ -90,6 +90,7 @@
             this.RVMensual.ServerReport.BearerToken = null;
             this.RVMensual.Size = new System.Drawing.Size(984, 389);
             this.RVMensual.TabIndex = 3;
+            this.RVMensual.Load += new System.EventHandler(this.RVMensual_Load_1);
             // 
             // dataTableMensualTableAdapter
             // 

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReporteSemanal));
             this.dtpIncioSemana = new System.Windows.Forms.DateTimePicker();
             this.dtpFinalSemana = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,8 +40,10 @@
             this.dSReporteSemanal = new CFria_HorasExtra.DSReporteSemanal();
             this.dataTableSemanalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTableSemanalTableAdapter1 = new CFria_HorasExtra.DSReporteSemanalTableAdapters.DataTableSemanalTableAdapter();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dSReporteSemanal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableSemanalBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpIncioSemana
@@ -121,22 +124,38 @@
             // 
             this.dataTableSemanalTableAdapter1.ClearBeforeFill = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CFria_HorasExtra.Properties.Resources.regreso;
+            this.pictureBox2.Location = new System.Drawing.Point(936, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox2.TabIndex = 37;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // FrmReporteSemanal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 450);
+            this.ControlBox = false;
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.RVSemanal);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpFinalSemana);
             this.Controls.Add(this.dtpIncioSemana);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmReporteSemanal";
             this.Text = "FrmReporteSemanal";
             this.Load += new System.EventHandler(this.FrmReporteSemanal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dSReporteSemanal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableSemanalBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,5 +172,6 @@
         private System.Windows.Forms.BindingSource dataTableSemanalBindingSource;
         private DSReporteSemanal dSReporteSemanal;
         private DSReporteSemanalTableAdapters.DataTableSemanalTableAdapter dataTableSemanalTableAdapter1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
