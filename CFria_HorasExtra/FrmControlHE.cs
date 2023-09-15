@@ -314,5 +314,30 @@ namespace CFria_HorasExtra
                 conexion.cerrar();
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            TxtBuscar.Clear();
+            TxtCodPuesto.Clear();
+            TxtCostoHora.Clear();
+            TxtDiferencia.Clear();
+            TxtHasta12.Clear();
+            TxtHasta7.Clear();
+            TxtHasta9.Clear();
+            TxtHorasExtras.Clear();
+            TxtNombreE.Clear();
+            TxtPagoCorte1.Clear();
+            TxtPagoCorte2.Clear();
+            TxtPagoCorte3.Clear();
+            TxtPagoHorasE.Clear();
+            TxtPuesto.Clear();
+            TxtSueldo.Clear();
+            TxtSueldoNeto.Clear();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -1,10 +1,12 @@
 ﻿using CFria_HorasExtra.DSReporteMTableAdapters;
+using Microsoft.Reporting.WebForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,22 +20,16 @@ namespace CFria_HorasExtra
         {
             InitializeComponent();
         }
-
-
-        
         private void FrmReporteMensual_Load(object sender, EventArgs e)
         {
             this.RVMensual.RefreshReport();
         }
-        0
         private void RVMensual_Load(object sender, EventArgs e)
         {
 
         }
-
-        DataTableMensualTableAdapter DataTableMensualTableAdapter = new DataTableMensualTableAdapter();
         //ORIGEN DE DATOS
-        DSReporteM reporteM = new DSReporteM();
+        DataTableMensualTableAdapter DataTableMensualTableAdapter = new DataTableMensualTableAdapter();
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             try
@@ -62,6 +58,11 @@ namespace CFria_HorasExtra
             FrmTipoReporte frm = new FrmTipoReporte();
             this.Close();
             frm.Show();
+        }
+
+        private void RVMensual_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

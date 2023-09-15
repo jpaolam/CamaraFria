@@ -40,6 +40,7 @@
             this.RVMensual = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dataTableMensualTableAdapter = new CFria_HorasExtra.DSReporteMTableAdapters.DataTableMensualTableAdapter();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableMensualBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSReporteM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dTInformeMensualBindingSource)).BeginInit();
@@ -59,16 +60,17 @@
             // 
             // txtMes
             // 
-            this.txtMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMes.Location = new System.Drawing.Point(380, 19);
+            this.txtMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMes.Location = new System.Drawing.Point(425, 22);
             this.txtMes.Name = "txtMes";
-            this.txtMes.Size = new System.Drawing.Size(100, 29);
+            this.txtMes.Size = new System.Drawing.Size(55, 26);
             this.txtMes.TabIndex = 1;
+            this.txtMes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnIngresar
             // 
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(525, 16);
+            this.btnIngresar.Location = new System.Drawing.Point(498, 16);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(106, 39);
             this.btnIngresar.TabIndex = 2;
@@ -88,6 +90,7 @@
             this.RVMensual.ServerReport.BearerToken = null;
             this.RVMensual.Size = new System.Drawing.Size(984, 389);
             this.RVMensual.TabIndex = 3;
+            this.RVMensual.Load += new System.EventHandler(this.RVMensual_Load_1);
             // 
             // dataTableMensualTableAdapter
             // 
@@ -103,12 +106,23 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(222, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(197, 20);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Ingrese el mes en número:";
+            // 
             // FrmReporteMensual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.RVMensual);
             this.Controls.Add(this.btnIngresar);
@@ -139,5 +153,6 @@
         private DSReporteM dSReporteM;
         private DSReporteMTableAdapters.DataTableMensualTableAdapter dataTableMensualTableAdapter;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
     }
 }

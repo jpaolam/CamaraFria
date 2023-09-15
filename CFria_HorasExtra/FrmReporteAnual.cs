@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,15 +24,15 @@ namespace CFria_HorasExtra
             //Se hace la consulta de todos los datos
             this.RVAnual.RefreshReport();
         }
+
         //Se instancian las clases de la tabla y el dataset
         DataTableAnualTableAdapter DataTableAnualTableAdapter = new DataTableAnualTableAdapter();
-        DSAnual anual = new DSAnual();
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             try
             {
                 //Se valida que el campo no este vacio
-                string texto = txtYear.Text;
+                string texto = dtpYear.Text;
                 if (string.IsNullOrWhiteSpace(texto))
                 {
                     //Si el campo esta vacio se muestra un mensaje de error
@@ -40,7 +41,7 @@ namespace CFria_HorasExtra
                 else
                 {
                     //Si el campo no esta vacio se realiza la consulta
-                    int valor = Convert.ToInt32(txtYear.Text);
+                    int valor = Convert.ToInt32(dtpYear.Text);
                     // TODO: This line of code loads data into the 'DataSetPrestamos.Prestamos' table. You can move, or remove it, as needed.
                     this.DataTableAnualTableAdapter.Fill(this.dSAnual.DataTableAnual, valor);
                     //Se muestra el reporte
@@ -60,6 +61,11 @@ namespace CFria_HorasExtra
             FrmTipoReporte frm = new FrmTipoReporte();  
             this.Close();
             frm.Show();
+        }
+
+        private void cmbYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

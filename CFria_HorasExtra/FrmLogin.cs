@@ -100,5 +100,34 @@ namespace CFria_HorasExtra
             //Se cierra la aplicacion
             Application.Exit();
         }
+
+        private void FrmLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                // Llamar al evento Click del botón
+                btnIngresar.PerformClick();
+            }
+        }
+
+        private void btnIngresar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
