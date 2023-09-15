@@ -90,3 +90,7 @@ C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\bin\Debug\zh-CHT\M
 C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.FrmTipoReporte.resources
 C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.FrmReporteAnual.resources
 C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.FrmReporteSemanal.resources
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\bin\Debug\CFria_HorasExtra.exe.manifest
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\bin\Debug\CFria_HorasExtra.application
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.exe.manifest
+C:\Users\jessi\source\repos\CFria_HorasExtra\CFria_HorasExtra\obj\Debug\CFria_HorasExtra.application
