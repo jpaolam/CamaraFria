@@ -70,7 +70,12 @@ namespace CFria_HorasExtra
                 cmd.ExecuteNonQuery();
                 //enviar mensaje de confirmación
                 MessageBox.Show("Registro guardado");
-                conexion.cargarDatos(dgvEmpleados, "Empleados");
+                conexion.cargarDatosEmpleado(dgvEmpleados);
+                TxtNombreCompleto.Clear();
+                TxtNoPersonal.Clear();
+                TxtSueldoMensual.Clear();
+                cmbPuesto.SelectedIndex = 0;
+                TxtNoPersonal.Enabled = true;
             }
             catch (Exception x)
             {
@@ -117,9 +122,20 @@ namespace CFria_HorasExtra
             TxtNoPersonal.Clear();
             TxtSueldoMensual.Clear();
             cmbPuesto.SelectedIndex = 0;
+            TxtNoPersonal.Enabled = true;
         }
 
         private void TxtSueldoMensual_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
