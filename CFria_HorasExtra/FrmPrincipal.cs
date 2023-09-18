@@ -62,16 +62,7 @@ namespace CFria_HorasExtra
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                FrmLogin login = new FrmLogin();
-                login.Show();
-                this.Close();
-            }
-            catch (Exception x)
-            {
-                MessageBox.Show("Error de navegación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -81,6 +72,20 @@ namespace CFria_HorasExtra
                 FrmTipoReporte frmTipoReporte = new FrmTipoReporte();
                 frmTipoReporte.Show();
                 this.Hide();
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Error de navegación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmLogin login = new FrmLogin();
+                login.Show();
+                this.Close();
             }
             catch (Exception x)
             {

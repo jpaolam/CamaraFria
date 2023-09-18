@@ -288,6 +288,8 @@
     <None Include="Resources\calendario.png" />
     <None Include="Resources\semanal.png" />
     <Content Include="milk-amber_109466.ico" />
+    <None Include="Resources\flecha.png" />
+    <None Include="Resources\cerrar.png" />
     <Content Include="Scripts\script.sql" />
   </ItemGroup>
   <ItemGroup>

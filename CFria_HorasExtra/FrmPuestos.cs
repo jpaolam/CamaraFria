@@ -111,6 +111,7 @@ namespace CFria_HorasExtra
         {
             TxtCodigo.Clear();
             TxtPuesto.Clear();
+            TxtCodigo.Enabled = true;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -147,6 +148,16 @@ namespace CFria_HorasExtra
             {
                 epNombre.Clear();
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
