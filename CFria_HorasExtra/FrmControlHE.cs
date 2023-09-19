@@ -178,10 +178,8 @@ namespace CFria_HorasExtra
                     horas hasta corte 1 agarra las horas de diferencia.
                      */
                     if (fechaExtra.Hour < horaCorte1)
-                        //01<19 SI
                     {
                         horasHastaCorte1 = horasDiferencia;
-                        //10
                     }
                     else if (fechaExtra.Hour < horaCorte2)
                     {
@@ -203,9 +201,9 @@ namespace CFria_HorasExtra
                     }
                 }
                 if (fechaSalida.Hour < horaCorte2)
-                {//15<21 SI
+                {
                     if (fechaExtra.Hour < horaCorte2)
-                    {//01<21 SI
+                    {
                         horasHastaCorte2 = horasDiferencia - horasHastaCorte1;
 
                     }
@@ -228,21 +226,11 @@ namespace CFria_HorasExtra
                     }
                 }
                 if (fechaSalida.Hour < horaCorte3)
-                {//15<24 SI
+                {
                     if (fechaExtra.Hour < horaCorte3)
-                    {//01<24 SI
+                    {
                         //horasHastaCorte3 = horasDiferencia;
-                        //if (fechaExtra.Hour < horaCorte4)
-                        //{
-                        //    horasHastaCorte3 = horasDiferencia - (horasHastaCorte2 - horasHastaCorte1);
-                        //    horasHastaCorte2 = horasHastaCorte3 - horasHastaCorte2;
-                        //    //horasHastaCorte2=6
-                        //    //horasHastaCorte1=4
-                        //}
-                        //else
-                        //{
-                            horasHastaCorte3 = horasDiferencia - (horasHastaCorte2 + horasHastaCorte1);
-                        //}
+                        horasHastaCorte3 = horasDiferencia - (horasHastaCorte2 + horasHastaCorte1);
 
                     }
                     else
