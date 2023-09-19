@@ -1067,8 +1067,8 @@
           <Source>Embedded</Source>
           <Value>LogoLeydeSmall</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0.3168cm</Top>
-          <Left>4.0989cm</Left>
+          <Top>0.14716cm</Top>
+          <Left>2.25153cm</Left>
           <Height>2.15264cm</Height>
           <Width>3.53729cm</Width>
           <Style>
@@ -1084,22 +1084,124 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reporte Horas Extras Semanal</Value>
+                  <Value>Solicitud de autorización de horas extras después del horario normal de trabajo</Value>
                   <Style>
                     <FontFamily>Arial Black</FontFamily>
-                    <FontSize>20pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Leche y Derivados S.A.</Value>
+                  <Style>
+                    <FontFamily>Arial Black</FontFamily>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox29</rd:DefaultName>
+          <Top>0.33734cm</Top>
+          <Left>7.77919cm</Left>
+          <Height>1.10271cm</Height>
+          <Width>15.71424cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox17">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>PLANILLA:</Value>
+                  <Style>
+                    <FontSize>6.5pt</FontSize>
                   </Style>
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox29</rd:DefaultName>
-          <Top>1.07142cm</Top>
-          <Left>8.1978cm</Left>
-          <Height>1.10271cm</Height>
-          <Width>12.81813cm</Width>
-          <ZIndex>1</ZIndex>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>1.75756cm</Top>
+          <Left>17.50904cm</Left>
+          <Height>0.6cm</Height>
+          <Width>1.33583cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Line Name="Line7">
+          <Top>2.04804cm</Top>
+          <Left>10.61653cm</Left>
+          <Height>0cm</Height>
+          <Width>4.85479cm</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Line Name="Line8">
+          <Top>2.16269cm</Top>
+          <Left>18.87489cm</Left>
+          <Height>0cm</Height>
+          <Width>4.85479cm</Width>
+          <ZIndex>4</ZIndex>
+          <Style>
+            <Border>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
+        <Textbox Name="Textbox15">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>DEPARTAMENTO SOLICITANTE:</Value>
+                  <Style>
+                    <FontSize>6.5pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>1.79284cm</Top>
+          <Left>6.71404cm</Left>
+          <Height>0.6cm</Height>
+          <Width>3.87398cm</Width>
+          <ZIndex>5</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>

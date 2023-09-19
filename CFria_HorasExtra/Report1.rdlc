@@ -1347,8 +1347,8 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>2.37808cm</Top>
-            <Left>6.35mm</Left>
+            <Top>2.90326cm</Top>
+            <Left>6.3499mm</Left>
             <Height>0.91538in</Height>
             <Width>9.76377in</Width>
             <Style>
@@ -1358,6 +1358,21 @@
               <FontSize>8pt</FontSize>
             </Style>
           </Tablix>
+          <Image Name="Image1">
+            <Source>Embedded</Source>
+            <Value>LogoLeydeSmall</Value>
+            <Sizing>FitProportional</Sizing>
+            <Top>0.19016cm</Top>
+            <Left>1.46526cm</Left>
+            <Height>2.15264cm</Height>
+            <Width>3.53729cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
           <Textbox Name="Textbox29">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -1365,22 +1380,36 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Reporte Horas Extras Mensual</Value>
+                    <Value>Solicitud de autorización de horas extras después del horario normal de trabajo</Value>
                     <Style>
                       <FontFamily>Arial Black</FontFamily>
-                      <FontSize>20pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Leche y Derivados S.A.</Value>
+                    <Style>
+                      <FontFamily>Arial Black</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox29</rd:DefaultName>
-            <Top>0.75889cm</Top>
-            <Left>8.80875cm</Left>
+            <Top>0.38034cm</Top>
+            <Left>6.99292cm</Left>
             <Height>1.10271cm</Height>
-            <Width>12.81813cm</Width>
-            <ZIndex>1</ZIndex>
+            <Width>15.71424cm</Width>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1391,20 +1420,94 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Image Name="Image1">
-            <Source>Embedded</Source>
-            <Value>LogoLeydeSmall</Value>
-            <Sizing>FitProportional</Sizing>
-            <Left>5.20972cm</Left>
-            <Height>2.20169cm</Height>
-            <Width>3.45792cm</Width>
-            <ZIndex>2</ZIndex>
+          <Textbox Name="Textbox17">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>PLANILLA:</Value>
+                    <Style>
+                      <FontSize>6.5pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>1.80055cm</Top>
+            <Left>16.72277cm</Left>
+            <Height>0.6cm</Height>
+            <Width>1.33583cm</Width>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
             </Style>
-          </Image>
+          </Textbox>
+          <Line Name="Line7">
+            <Top>2.09104cm</Top>
+            <Left>9.83026cm</Left>
+            <Height>0cm</Height>
+            <Width>4.85479cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line8">
+            <Top>2.20569cm</Top>
+            <Left>18.08862cm</Left>
+            <Height>0cm</Height>
+            <Width>4.85479cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox15">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>DEPARTAMENTO SOLICITANTE:</Value>
+                    <Style>
+                      <FontSize>6.5pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>1.83583cm</Top>
+            <Left>5.92777cm</Left>
+            <Height>0.6cm</Height>
+            <Width>3.87398cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
         <Height>103.18889mm</Height>
         <Style />

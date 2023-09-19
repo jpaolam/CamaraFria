@@ -120,14 +120,42 @@ namespace CFria_HorasExtra
                 DateTime fechaSalida = dtpHoraSalida.Value;
                 DateTime fechaExtra = dtpHoraExtra.Value;
 
-                // Calcular la diferencia en horas
-                TimeSpan diferencia = fechaExtra - fechaSalida;
-                double horasDiferencia = diferencia.TotalHours;
+                TimeSpan diferencia;
+                double horasDiferencia;
 
+                // Calcular la diferencia en horas
+                if (fechaExtra.Hour < fechaSalida.Hour)
+                {
+                    switch (fechaExtra.Hour)
+                    {
+                        case 01:
+                            fechaExtra = fechaExtra.AddHours(24);
+                            break;
+                        case 02:
+                            fechaExtra = fechaExtra.AddHours(25);
+                            break;
+                        case 03:
+                            fechaExtra = fechaExtra.AddHours(26);
+                            break;
+                        case 04:
+                            fechaExtra = fechaExtra.AddHours(27);
+                            break;
+                    }
+
+                    diferencia = fechaExtra - fechaSalida;
+                    horasDiferencia = diferencia.TotalHours;
+                }
+                else
+                {
+                    diferencia = fechaExtra - fechaSalida;
+                    horasDiferencia = diferencia.TotalHours;
+                }
+                
                 // Definir las horas de corte
                 int horaCorte1 = 19;  // 19:00
                 int horaCorte2 = 21;  // 21:00
                 int horaCorte3 = 24;  // 00:00 (medianoche)
+                int horaCorte4 = 6;   // 06:00
 
                 // Inicializar las variables para contar las horas en cada rango
                 double horasHastaCorte1 = 0.0;
@@ -144,26 +172,25 @@ namespace CFria_HorasExtra
                  Entra a la condicional que evalua si la fecha extra es menor que la de corte
                  */
                 if (fechaSalida.Hour < horaCorte1)
-                {
+                {//15<19 SI
                     /*
                         Si la fecha extra es menor a la hora de corte 1 : 19:00 
                     horas hasta corte 1 agarra las horas de diferencia.
                      */
                     if (fechaExtra.Hour < horaCorte1)
-                        //22 < 19 no
                     {
                         horasHastaCorte1 = horasDiferencia;
                     }
                     else if (fechaExtra.Hour < horaCorte2)
-                    {//22<21 NO
+                    {
                         horasHastaCorte1 = (horaCorte1 - fechaSalida.Hour);
                     }
                     else if (fechaExtra.Hour < horaCorte3)
-                    {//22<24
+                    {
                         horasHastaCorte1 = (horaCorte1 - fechaSalida.Hour);
-                        //19-15 = 4
+                        
                         horasHastaCorte2 = fechaExtra.Hour - horaCorte2;
-                        //22-21 = 1
+                        
                     }
                     else
                     {
@@ -174,21 +201,22 @@ namespace CFria_HorasExtra
                     }
                 }
                 if (fechaSalida.Hour < horaCorte2)
-                {//15<21
+                {
                     if (fechaExtra.Hour < horaCorte2)
-                    {//22<21 NO
+                    {
                         horasHastaCorte2 = horasDiferencia - horasHastaCorte1;
+
                     }
                     else if (fechaExtra.Hour < horaCorte3)
-                    {//22<24
+                    {
                         if(fechaExtra.Hour == horaCorte2)
-                        {//22==21 no
+                        {
                             horasHastaCorte2 = fechaExtra.Hour - horaCorte1;
                         }
                         else
                         {
                             horasHastaCorte2 = fechaExtra.Hour - (horaCorte2 - 1);
-                            //22-21=1
+                            
                         }
                     }
                     else
@@ -198,20 +226,19 @@ namespace CFria_HorasExtra
                     }
                 }
                 if (fechaSalida.Hour < horaCorte3)
-                {//15<24 SI
+                {
                     if (fechaExtra.Hour < horaCorte3)
-                    {//22<24 SI
+                    {
                         //horasHastaCorte3 = horasDiferencia;
                         horasHastaCorte3 = horasDiferencia - (horasHastaCorte2 + horasHastaCorte1);
-                        //7-(1+4)=2
-                        //MessageBox.Show(horasHastaCorte3.ToString());
+
                     }
                     else
                     {
                         horasHastaCorte3 = fechaExtra.Hour - horaCorte2;
                     }
                 }
-
+                
                 //Calcular sueldo diario del empleado
                 double sueldoDiario = Math.Round(Convert.ToDouble(TxtSueldo.Text) / 30, 2);
 

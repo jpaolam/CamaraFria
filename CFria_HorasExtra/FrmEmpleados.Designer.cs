@@ -53,12 +53,12 @@
             this.epSueldo = new System.Windows.Forms.ErrorProvider(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
-            this.BtnEditar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.BtnEditar = new System.Windows.Forms.Button();
+            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -68,9 +68,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.epSueldo)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -316,54 +316,17 @@
             this.panel3.Size = new System.Drawing.Size(1074, 189);
             this.panel3.TabIndex = 57;
             // 
-            // panel5
+            // panel4
             // 
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.pictureBox1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(181, 19);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1074, 157);
-            this.panel5.TabIndex = 58;
-            // 
-            // dgvEmpleados
-            // 
-            this.dgvEmpleados.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpleados.Location = new System.Drawing.Point(39, 19);
-            this.dgvEmpleados.Name = "dgvEmpleados";
-            this.dgvEmpleados.Size = new System.Drawing.Size(734, 293);
-            this.dgvEmpleados.TabIndex = 53;
-            this.dgvEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleados_CellContentClick);
-            // 
-            // BtnEditar
-            // 
-            this.BtnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEditar.Image = global::CFria_HorasExtra.Properties.Resources.editar_codigo;
-            this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditar.Location = new System.Drawing.Point(841, 143);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
-            this.BtnEditar.Size = new System.Drawing.Size(118, 44);
-            this.BtnEditar.TabIndex = 55;
-            this.BtnEditar.Text = "Editar";
-            this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEditar.UseVisualStyleBackColor = true;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Image = global::CFria_HorasExtra.Properties.Resources.guardar_el_archivo__1_;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(841, 93);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(118, 44);
-            this.btnGuardar.TabIndex = 51;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btnGuardar);
+            this.panel4.Controls.Add(this.BtnEditar);
+            this.panel4.Controls.Add(this.dgvEmpleados);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(181, 377);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1074, 329);
+            this.panel4.TabIndex = 57;
             // 
             // button1
             // 
@@ -380,17 +343,54 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel4
+            // btnGuardar
             // 
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.btnGuardar);
-            this.panel4.Controls.Add(this.BtnEditar);
-            this.panel4.Controls.Add(this.dgvEmpleados);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(181, 377);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1074, 329);
-            this.panel4.TabIndex = 57;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Image = global::CFria_HorasExtra.Properties.Resources.guardar_el_archivo__1_;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(841, 93);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(118, 44);
+            this.btnGuardar.TabIndex = 51;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // BtnEditar
+            // 
+            this.BtnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEditar.Image = global::CFria_HorasExtra.Properties.Resources.editar_codigo;
+            this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnEditar.Location = new System.Drawing.Point(841, 143);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Padding = new System.Windows.Forms.Padding(5, 3, 0, 0);
+            this.BtnEditar.Size = new System.Drawing.Size(118, 44);
+            this.BtnEditar.TabIndex = 55;
+            this.BtnEditar.Text = "Editar";
+            this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // dgvEmpleados
+            // 
+            this.dgvEmpleados.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleados.Location = new System.Drawing.Point(39, 19);
+            this.dgvEmpleados.Name = "dgvEmpleados";
+            this.dgvEmpleados.Size = new System.Drawing.Size(734, 293);
+            this.dgvEmpleados.TabIndex = 53;
+            this.dgvEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleados_CellContentClick);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.pictureBox1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(181, 19);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1074, 157);
+            this.panel5.TabIndex = 58;
             // 
             // label9
             // 
@@ -410,12 +410,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label8);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FrmEmpleados";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmEmpleados_Load);
@@ -430,10 +428,10 @@
             this.tableLayoutPanel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
