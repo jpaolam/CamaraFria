@@ -117,6 +117,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSReporteM.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DSReporteSemanal.cs">
+      <DependentUpon>DSReporteSemanal.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DSReporteSemanal.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -158,17 +161,35 @@
     <Compile Include="FrmReporteAnual.Designer.cs">
       <DependentUpon>FrmReporteAnual.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReporteAnualGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteAnualGeneral.Designer.cs">
+      <DependentUpon>FrmReporteAnualGeneral.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmReporteMensual.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmReporteMensual.Designer.cs">
       <DependentUpon>FrmReporteMensual.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReporteMensualGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteMensualGeneral.Designer.cs">
+      <DependentUpon>FrmReporteMensualGeneral.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmReporteSemanal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmReporteSemanal.Designer.cs">
       <DependentUpon>FrmReporteSemanal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteSGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteSGeneral.Designer.cs">
+      <DependentUpon>FrmReporteSGeneral.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTipoReporte.cs">
       <SubType>Form</SubType>
@@ -196,11 +217,20 @@
     <EmbeddedResource Include="FrmReporteAnual.resx">
       <DependentUpon>FrmReporteAnual.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteAnualGeneral.resx">
+      <DependentUpon>FrmReporteAnualGeneral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteMensual.resx">
       <DependentUpon>FrmReporteMensual.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteMensualGeneral.resx">
+      <DependentUpon>FrmReporteMensualGeneral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteSemanal.resx">
       <DependentUpon>FrmReporteSemanal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteSGeneral.resx">
+      <DependentUpon>FrmReporteSGeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTipoReporte.resx">
       <DependentUpon>FrmTipoReporte.cs</DependentUpon>
@@ -210,9 +240,12 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="RAnualGeneral.rdlc" />
     <EmbeddedResource Include="RAnual.rdlc" />
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="RMensualGeneral.rdlc" />
     <EmbeddedResource Include="RSemanal.rdlc" />
+    <EmbeddedResource Include="RSemanalGeneral.rdlc" />
     <None Include="CFria_HorasExtra_TemporaryKey.pfx" />
     <None Include="DSAnual.xsc">
       <DependentUpon>DSAnual.xsd</DependentUpon>

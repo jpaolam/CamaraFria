@@ -1,6 +1,6 @@
 ﻿namespace CFria_HorasExtra
 {
-    partial class FrmReporteMensual
+    partial class FrmReporteMensualGeneral
     {
         /// <summary>
         /// Required designer variable.
@@ -30,42 +30,113 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReporteMensual));
-            this.dataTableMensualBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dSReporteM = new CFria_HorasExtra.DSReporteM();
-            this.txtMes = new System.Windows.Forms.TextBox();
-            this.btnIngresar = new System.Windows.Forms.Button();
-            this.RVMensual = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataTableMensualTableAdapter = new CFria_HorasExtra.DSReporteMTableAdapters.DataTableMensualTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReporteMensualGeneral));
+            this.dataTableMensualGeneralBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSReporteM1 = new CFria_HorasExtra.DSReporteM();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.RVMensual = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMes = new System.Windows.Forms.TextBox();
+            this.btnIngresar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dTInformeMensualBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet11BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataTableMensualBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSReporteM)).BeginInit();
+            this.dataTableMensualGeneralTableAdapter = new CFria_HorasExtra.DSReporteMTableAdapters.DataTableMensualGeneralTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableMensualGeneralBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSReporteM1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dTInformeMensualBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataTableMensualBindingSource
+            // dataTableMensualGeneralBindingSource
             // 
-            this.dataTableMensualBindingSource.DataMember = "DataTableMensual";
-            this.dataTableMensualBindingSource.DataSource = this.dSReporteM;
+            this.dataTableMensualGeneralBindingSource.DataMember = "DataTableMensualGeneral";
+            this.dataTableMensualGeneralBindingSource.DataSource = this.dSReporteM1;
             // 
-            // dSReporteM
+            // dSReporteM1
             // 
-            this.dSReporteM.DataSetName = "DSReporteM";
-            this.dSReporteM.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dSReporteM1.DataSetName = "DSReporteM";
+            this.dSReporteM1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95.9368F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.063205F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 3);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.60452F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.39548F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 749);
+            this.tableLayoutPanel1.TabIndex = 39;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.RVMensual);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(23, 90);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1230, 626);
+            this.panel2.TabIndex = 39;
+            // 
+            // RVMensual
+            // 
+            this.RVMensual.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.dataTableMensualGeneralBindingSource;
+            this.RVMensual.LocalReport.DataSources.Add(reportDataSource1);
+            this.RVMensual.LocalReport.ReportEmbeddedResource = "CFria_HorasExtra.RMensualGeneral.rdlc";
+            this.RVMensual.Location = new System.Drawing.Point(0, 0);
+            this.RVMensual.Name = "RVMensual";
+            this.RVMensual.ServerReport.BearerToken = null;
+            this.RVMensual.Size = new System.Drawing.Size(1230, 626);
+            this.RVMensual.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CFria_HorasExtra.Properties.Resources.regreso;
+            this.pictureBox2.Location = new System.Drawing.Point(1259, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtMes);
+            this.panel1.Controls.Add(this.btnIngresar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(23, 23);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1230, 61);
+            this.panel1.TabIndex = 39;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(457, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(197, 20);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Ingrese el mes en número:";
             // 
             // txtMes
             // 
@@ -89,76 +160,6 @@
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
-            // RVMensual
-            // 
-            this.RVMensual.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.dataTableMensualBindingSource;
-            this.RVMensual.LocalReport.DataSources.Add(reportDataSource1);
-            this.RVMensual.LocalReport.ReportEmbeddedResource = "CFria_HorasExtra.Report1.rdlc";
-            this.RVMensual.Location = new System.Drawing.Point(0, 0);
-            this.RVMensual.Name = "RVMensual";
-            this.RVMensual.ServerReport.BearerToken = null;
-            this.RVMensual.Size = new System.Drawing.Size(1230, 626);
-            this.RVMensual.TabIndex = 3;
-            this.RVMensual.Load += new System.EventHandler(this.RVMensual_Load_1);
-            // 
-            // dataTableMensualTableAdapter
-            // 
-            this.dataTableMensualTableAdapter.ClearBeforeFill = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(457, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 20);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Ingrese el mes en número:";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 95.9368F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.063205F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 61F));
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 3);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.60452F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.39548F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 749);
-            this.tableLayoutPanel1.TabIndex = 38;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.RVMensual);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(23, 90);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1230, 626);
-            this.panel2.TabIndex = 39;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtMes);
-            this.panel1.Controls.Add(this.btnIngresar);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(23, 23);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1230, 61);
-            this.panel1.TabIndex = 39;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label3);
@@ -179,17 +180,11 @@
             this.label3.TabIndex = 40;
             this.label3.Text = "© 2023 - Jessie Martel";
             // 
-            // pictureBox2
+            // dataTableMensualGeneralTableAdapter
             // 
-            this.pictureBox2.Image = global::CFria_HorasExtra.Properties.Resources.regreso;
-            this.pictureBox2.Location = new System.Drawing.Point(1259, 23);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 35);
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.dataTableMensualGeneralTableAdapter.ClearBeforeFill = true;
             // 
-            // FrmReporteMensual
+            // FrmReporteMensualGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -198,39 +193,37 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "FrmReporteMensual";
+            this.Name = "FrmReporteMensualGeneral";
+            this.Text = "FrmReporteMensualGeneral";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FrmReporteMensual_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataTableMensualBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSReporteM)).EndInit();
+            this.Load += new System.EventHandler(this.FrmReporteMensualGeneral_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableMensualGeneralBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSReporteM1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dTInformeMensualBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtMes;
-        private System.Windows.Forms.Button btnIngresar;
-        private System.Windows.Forms.BindingSource dTInformeMensualBindingSource;
-        private System.Windows.Forms.BindingSource dataSet11BindingSource;
-        private Microsoft.Reporting.WinForms.ReportViewer RVMensual;
-        private System.Windows.Forms.BindingSource dataTableMensualBindingSource;
-        private DSReporteM dSReporteM;
-        private DSReporteMTableAdapters.DataTableMensualTableAdapter dataTableMensualTableAdapter;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
+
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
+        private Microsoft.Reporting.WinForms.ReportViewer RVMensual;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtMes;
+        private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.BindingSource dataTableMensualGeneralBindingSource;
+        private DSReporteM dSReporteM1;
+        private DSReporteMTableAdapters.DataTableMensualGeneralTableAdapter dataTableMensualGeneralTableAdapter;
     }
 }

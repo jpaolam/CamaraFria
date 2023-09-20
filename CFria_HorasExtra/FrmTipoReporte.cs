@@ -81,5 +81,47 @@ namespace CFria_HorasExtra
                 MessageBox.Show("Error de navegación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnRSemanalG_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmReporteSGeneral frm = new FrmReporteSGeneral();
+                frm.Show();
+                this.Hide();
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Error de navegación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnRMensualG_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmReporteMensualGeneral frm = new FrmReporteMensualGeneral();
+                frm.Show();
+                this.Hide();
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Error de navegación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnRAnualG_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmReporteAnualGeneral frm = new FrmReporteAnualGeneral();
+                frm.Show();
+                this.Hide();
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("Error de navegación", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
