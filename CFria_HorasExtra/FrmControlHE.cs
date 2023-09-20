@@ -155,7 +155,7 @@ namespace CFria_HorasExtra
                 int horaCorte1 = 19;  // 19:00
                 int horaCorte2 = 21;  // 21:00
                 int horaCorte3 = 24;  // 00:00 (medianoche)
-                int horaCorte4 = 6;   // 06:00
+                int horaCorte4 = 4;   // 04:00
 
                 // Inicializar las variables para contar las horas en cada rango
                 double horasHastaCorte1 = 0.0;
@@ -172,7 +172,7 @@ namespace CFria_HorasExtra
                  Entra a la condicional que evalua si la fecha extra es menor que la de corte
                  */
                 if (fechaSalida.Hour < horaCorte1)
-                {//15<19 SI
+                {
                     /*
                         Si la fecha extra es menor a la hora de corte 1 : 19:00 
                     horas hasta corte 1 agarra las horas de diferencia.

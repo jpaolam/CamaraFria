@@ -32,6 +32,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnRSemanalG = new System.Windows.Forms.Button();
+            this.btnRAnualG = new System.Windows.Forms.Button();
+            this.btnRMensualG = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -72,6 +77,11 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.btnRSemanalG);
+            this.panel1.Controls.Add(this.btnRAnualG);
+            this.panel1.Controls.Add(this.btnRMensualG);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button1);
@@ -81,6 +91,82 @@
             this.panel1.Size = new System.Drawing.Size(1252, 479);
             this.panel1.TabIndex = 42;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.label4.Location = new System.Drawing.Point(800, 33);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(211, 31);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "Planilla General";
+            // 
+            // btnRSemanalG
+            // 
+            this.btnRSemanalG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.btnRSemanalG.FlatAppearance.BorderSize = 0;
+            this.btnRSemanalG.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRSemanalG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
+            this.btnRSemanalG.Image = global::CFria_HorasExtra.Properties.Resources.semanal;
+            this.btnRSemanalG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRSemanalG.Location = new System.Drawing.Point(766, 77);
+            this.btnRSemanalG.Name = "btnRSemanalG";
+            this.btnRSemanalG.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnRSemanalG.Size = new System.Drawing.Size(280, 109);
+            this.btnRSemanalG.TabIndex = 44;
+            this.btnRSemanalG.Text = "Reporte Semanal";
+            this.btnRSemanalG.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRSemanalG.UseVisualStyleBackColor = false;
+            this.btnRSemanalG.Click += new System.EventHandler(this.btnRSemanalG_Click);
+            // 
+            // btnRAnualG
+            // 
+            this.btnRAnualG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.btnRAnualG.FlatAppearance.BorderSize = 0;
+            this.btnRAnualG.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRAnualG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
+            this.btnRAnualG.Image = global::CFria_HorasExtra.Properties.Resources.calendario_anual;
+            this.btnRAnualG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRAnualG.Location = new System.Drawing.Point(766, 335);
+            this.btnRAnualG.Name = "btnRAnualG";
+            this.btnRAnualG.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnRAnualG.Size = new System.Drawing.Size(280, 109);
+            this.btnRAnualG.TabIndex = 45;
+            this.btnRAnualG.Text = "Reporte Anual";
+            this.btnRAnualG.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRAnualG.UseVisualStyleBackColor = false;
+            this.btnRAnualG.Click += new System.EventHandler(this.btnRAnualG_Click);
+            // 
+            // btnRMensualG
+            // 
+            this.btnRMensualG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.btnRMensualG.FlatAppearance.BorderSize = 0;
+            this.btnRMensualG.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRMensualG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
+            this.btnRMensualG.Image = global::CFria_HorasExtra.Properties.Resources.calendario;
+            this.btnRMensualG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRMensualG.Location = new System.Drawing.Point(766, 205);
+            this.btnRMensualG.Name = "btnRMensualG";
+            this.btnRMensualG.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.btnRMensualG.Size = new System.Drawing.Size(280, 109);
+            this.btnRMensualG.TabIndex = 43;
+            this.btnRMensualG.Text = "Reporte Mensual";
+            this.btnRMensualG.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRMensualG.UseVisualStyleBackColor = false;
+            this.btnRMensualG.Click += new System.EventHandler(this.btnRMensualG_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.label2.Location = new System.Drawing.Point(195, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(269, 31);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Planilla Confidencial";
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
@@ -89,7 +175,7 @@
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
             this.button2.Image = global::CFria_HorasExtra.Properties.Resources.semanal;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(503, 18);
+            this.button2.Location = new System.Drawing.Point(184, 77);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.button2.Size = new System.Drawing.Size(280, 109);
@@ -107,7 +193,7 @@
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
             this.button3.Image = global::CFria_HorasExtra.Properties.Resources.calendario_anual;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(751, 158);
+            this.button3.Location = new System.Drawing.Point(184, 335);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.button3.Size = new System.Drawing.Size(280, 109);
@@ -125,7 +211,7 @@
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
             this.button1.Image = global::CFria_HorasExtra.Properties.Resources.calendario;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(253, 158);
+            this.button1.Location = new System.Drawing.Point(184, 205);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.button1.Size = new System.Drawing.Size(280, 109);
@@ -199,6 +285,7 @@
             this.Name = "FrmTipoReporte";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -221,5 +308,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnRSemanalG;
+        private System.Windows.Forms.Button btnRAnualG;
+        private System.Windows.Forms.Button btnRMensualG;
+        private System.Windows.Forms.Label label2;
     }
 }
