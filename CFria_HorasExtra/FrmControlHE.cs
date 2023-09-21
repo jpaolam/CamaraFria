@@ -135,13 +135,13 @@ namespace CFria_HorasExtra
                             fechaExtra = fechaExtra.AddHours(24);
                             break;
                         case 02:
-                            fechaExtra = fechaExtra.AddHours(25);
+                            fechaExtra = fechaExtra.AddHours(24);
                             break;
                         case 03:
-                            fechaExtra = fechaExtra.AddHours(26);
+                            fechaExtra = fechaExtra.AddHours(24);
                             break;
                         case 04:
-                            fechaExtra = fechaExtra.AddHours(27);
+                            fechaExtra = fechaExtra.AddHours(24);
                             break;
                     }
 
@@ -153,7 +153,6 @@ namespace CFria_HorasExtra
                     diferencia = fechaExtra - fechaSalida;
                     horasDiferencia = diferencia.TotalHours;
                 }
-                MessageBox.Show(fechaExtra.Hour.ToString());
                 
                 // Definir las horas de corte
                 int horaCorte1 = 19;  // 19:00
@@ -183,7 +182,26 @@ namespace CFria_HorasExtra
                      */
                     if (fechaExtra.Hour < horaCorte1)
                     {
-                        horasHastaCorte1 = horasDiferencia;
+                        if(fechaExtra.Hour == 0)
+                        {//0<4 SI
+                            horasHastaCorte1 = (horasDiferencia - horaCorte4) - 1;
+                        }else if(fechaExtra.Hour == 1)
+                        {
+                            horasHastaCorte1 = (horasDiferencia - horaCorte4) - 2;
+                        }
+                        else if (fechaExtra.Hour == 2)
+                        {
+                            horasHastaCorte1 = (horasDiferencia - horaCorte4) - 3;
+                        }
+                        else if (fechaExtra.Hour == 3)
+                        {
+                            horasHastaCorte1 = (horasDiferencia - horaCorte4) - 4;
+                        }
+                        else
+                        {
+                            horasHastaCorte1 = horasDiferencia;
+                        }
+                        //horasHastaCorte1 = horasDiferencia;
                     }
                     else if (fechaExtra.Hour < horaCorte2)
                     {
@@ -208,8 +226,14 @@ namespace CFria_HorasExtra
                 {
                     if (fechaExtra.Hour < horaCorte2)
                     {
-                        horasHastaCorte2 = horasDiferencia - horasHastaCorte1;
-
+                        if(fechaExtra.Hour < horaCorte4)
+                        {
+                            horasHastaCorte2 = (horaCorte2 - horaCorte1);
+                        }
+                        else
+                        {
+                            horasHastaCorte2 = horasDiferencia - horasHastaCorte1;
+                        }
                     }
                     else if (fechaExtra.Hour < horaCorte3)
                     {
@@ -242,19 +266,7 @@ namespace CFria_HorasExtra
                         horasHastaCorte3 = fechaExtra.Hour - horaCorte2;
                     }
                 }
-                if (fechaSalida.Hour < horaCorte3)
-                {
-                    if (fechaExtra.Hour < horaCorte3)
-                    {
-                        //horasHastaCorte3 = horasDiferencia;
-                        horasHastaCorte3 = horasDiferencia - (horasHastaCorte2 + horasHastaCorte1);
-
-                    }
-                    else
-                    {
-                        horasHastaCorte3 = fechaExtra.Hour - horaCorte2;
-                    }
-                }
+                
 
                 //Calcular sueldo diario del empleado
                 double sueldoDiario = Math.Round(Convert.ToDouble(TxtSueldo.Text) / 30, 2);
