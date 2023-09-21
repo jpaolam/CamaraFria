@@ -128,6 +128,9 @@ namespace CFria_HorasExtra
                 {
                     switch (fechaExtra.Hour)
                     {
+                        case 00:
+                            fechaExtra = fechaExtra.AddHours(24);
+                            break;
                         case 01:
                             fechaExtra = fechaExtra.AddHours(24);
                             break;
@@ -150,6 +153,7 @@ namespace CFria_HorasExtra
                     diferencia = fechaExtra - fechaSalida;
                     horasDiferencia = diferencia.TotalHours;
                 }
+                MessageBox.Show(fechaExtra.Hour.ToString());
                 
                 // Definir las horas de corte
                 int horaCorte1 = 19;  // 19:00
@@ -238,7 +242,20 @@ namespace CFria_HorasExtra
                         horasHastaCorte3 = fechaExtra.Hour - horaCorte2;
                     }
                 }
-                
+                if (fechaSalida.Hour < horaCorte3)
+                {
+                    if (fechaExtra.Hour < horaCorte3)
+                    {
+                        //horasHastaCorte3 = horasDiferencia;
+                        horasHastaCorte3 = horasDiferencia - (horasHastaCorte2 + horasHastaCorte1);
+
+                    }
+                    else
+                    {
+                        horasHastaCorte3 = fechaExtra.Hour - horaCorte2;
+                    }
+                }
+
                 //Calcular sueldo diario del empleado
                 double sueldoDiario = Math.Round(Convert.ToDouble(TxtSueldo.Text) / 30, 2);
 

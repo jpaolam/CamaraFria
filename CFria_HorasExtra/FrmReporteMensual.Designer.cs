@@ -40,19 +40,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dTInformeMensualBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet11BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataTableMensualBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSReporteM)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dTInformeMensualBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11BindingSource)).BeginInit();
             this.SuspendLayout();
@@ -99,7 +99,7 @@
             this.RVMensual.Location = new System.Drawing.Point(0, 0);
             this.RVMensual.Name = "RVMensual";
             this.RVMensual.ServerReport.BearerToken = null;
-            this.RVMensual.Size = new System.Drawing.Size(1230, 626);
+            this.RVMensual.Size = new System.Drawing.Size(1230, 608);
             this.RVMensual.TabIndex = 3;
             this.RVMensual.Load += new System.EventHandler(this.RVMensual_Load_1);
             // 
@@ -136,17 +136,27 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.60452F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.39548F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 749);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 729);
             this.tableLayoutPanel1.TabIndex = 38;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.RVMensual);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(23, 90);
+            this.panel2.Location = new System.Drawing.Point(23, 88);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1230, 626);
+            this.panel2.Size = new System.Drawing.Size(1230, 608);
             this.panel2.TabIndex = 39;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CFria_HorasExtra.Properties.Resources.regreso;
+            this.pictureBox2.Location = new System.Drawing.Point(1259, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox2.TabIndex = 36;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel1
             // 
@@ -156,14 +166,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(23, 23);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1230, 61);
+            this.panel1.Size = new System.Drawing.Size(1230, 59);
             this.panel1.TabIndex = 39;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(23, 722);
+            this.panel4.Location = new System.Drawing.Point(23, 702);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1230, 24);
             this.panel4.TabIndex = 45;
@@ -179,37 +189,26 @@
             this.label3.TabIndex = 40;
             this.label3.Text = "© 2023 - Jessie Martel";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::CFria_HorasExtra.Properties.Resources.regreso;
-            this.pictureBox2.Location = new System.Drawing.Point(1259, 23);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 35);
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // FrmReporteMensual
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 729);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "FrmReporteMensual";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmReporteMensual_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataTableMensualBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSReporteM)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dTInformeMensualBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11BindingSource)).EndInit();
             this.ResumeLayout(false);

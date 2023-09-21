@@ -72,7 +72,7 @@
             this.RVAnual.Location = new System.Drawing.Point(0, 0);
             this.RVAnual.Name = "RVAnual";
             this.RVAnual.ServerReport.BearerToken = null;
-            this.RVAnual.Size = new System.Drawing.Size(1277, 599);
+            this.RVAnual.Size = new System.Drawing.Size(1277, 582);
             this.RVAnual.TabIndex = 0;
             // 
             // pictureBox2
@@ -121,16 +121,16 @@
             this.panel1.Controls.Add(this.dtpYear);
             this.panel1.Location = new System.Drawing.Point(23, 16);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1228, 91);
+            this.panel1.Size = new System.Drawing.Size(1228, 88);
             this.panel1.TabIndex = 41;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.RVAnual);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(23, 113);
+            this.panel2.Location = new System.Drawing.Point(23, 110);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1277, 599);
+            this.panel2.Size = new System.Drawing.Size(1277, 582);
             this.panel2.TabIndex = 42;
             // 
             // tableLayoutPanel1
@@ -152,14 +152,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.84181F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.1582F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 749);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 729);
             this.tableLayoutPanel1.TabIndex = 43;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(23, 718);
+            this.panel3.Location = new System.Drawing.Point(23, 698);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1277, 28);
             this.panel3.TabIndex = 43;
@@ -181,12 +181,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 729);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "FrmReporteAnual";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmReporteAnual_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataTableAnualBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSAnual)).EndInit();

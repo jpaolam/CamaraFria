@@ -168,7 +168,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CFria_HorasExtra.Properties.Resources.regreso;
-            this.pictureBox2.Location = new System.Drawing.Point(1212, 42);
+            this.pictureBox2.Location = new System.Drawing.Point(1208, 42);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(36, 35);
             this.pictureBox2.TabIndex = 35;
@@ -210,7 +210,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 176F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 749);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1366, 729);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
             // panel2
@@ -218,7 +218,7 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Location = new System.Drawing.Point(23, 42);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1183, 223);
+            this.panel2.Size = new System.Drawing.Size(1179, 213);
             this.panel2.TabIndex = 37;
             // 
             // panel4
@@ -228,7 +228,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1183, 223);
+            this.panel4.Size = new System.Drawing.Size(1179, 213);
             this.panel4.TabIndex = 38;
             // 
             // panel1
@@ -237,9 +237,9 @@
             this.panel1.Controls.Add(this.TxtCodigo);
             this.panel1.Controls.Add(this.TxtPuesto);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(23, 271);
+            this.panel1.Location = new System.Drawing.Point(23, 261);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1183, 69);
+            this.panel1.Size = new System.Drawing.Size(1179, 69);
             this.panel1.TabIndex = 37;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -249,9 +249,9 @@
             this.panel3.Controls.Add(this.btnLimpiar);
             this.panel3.Controls.Add(this.btnGuardar);
             this.panel3.Controls.Add(this.btnEditar);
-            this.panel3.Location = new System.Drawing.Point(23, 346);
+            this.panel3.Location = new System.Drawing.Point(23, 336);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1183, 223);
+            this.panel3.Size = new System.Drawing.Size(1179, 213);
             this.panel3.TabIndex = 37;
             // 
             // label4
@@ -260,7 +260,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label4.Location = new System.Drawing.Point(515, 726);
+            this.label4.Location = new System.Drawing.Point(513, 706);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(198, 23);
             this.label4.TabIndex = 40;
@@ -271,14 +271,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1366, 729);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmPuestos";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmPuestos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuestos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

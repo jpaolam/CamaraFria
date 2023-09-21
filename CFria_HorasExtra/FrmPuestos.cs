@@ -109,6 +109,7 @@ namespace CFria_HorasExtra
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+            //Limpia los campos de texto y habilita el campo de codigo
             TxtCodigo.Clear();
             TxtPuesto.Clear();
             TxtCodigo.Enabled = true;
