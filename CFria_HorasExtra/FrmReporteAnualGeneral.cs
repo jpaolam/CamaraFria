@@ -53,6 +53,7 @@ namespace CFria_HorasExtra
             //Se instancia el formulario y se muestra
             FrmTipoReporte frm = new FrmTipoReporte();
             this.Close();
+            frm.Show();
         }
 
         private void FrmReporteAnualGeneral_Load(object sender, EventArgs e)

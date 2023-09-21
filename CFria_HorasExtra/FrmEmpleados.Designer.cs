@@ -79,7 +79,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Rockwell", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.label3.Location = new System.Drawing.Point(398, 39);
+            this.label3.Location = new System.Drawing.Point(398, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(455, 77);
             this.label3.TabIndex = 33;
@@ -214,7 +214,7 @@
             this.panel1.Controls.Add(this.rbActivo);
             this.panel1.Location = new System.Drawing.Point(516, 116);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(183, 65);
+            this.panel1.Size = new System.Drawing.Size(183, 60);
             this.panel1.TabIndex = 49;
             // 
             // cmbPuesto
@@ -253,9 +253,9 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::CFria_HorasExtra.Properties.Resources.Leyde_Logo1;
-            this.pictureBox1.Location = new System.Drawing.Point(80, -5);
+            this.pictureBox1.Location = new System.Drawing.Point(80, -21);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 172);
+            this.pictureBox1.Size = new System.Drawing.Size(270, 167);
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
@@ -283,17 +283,18 @@
             this.tableLayoutPanel1.Controls.Add(this.panel4, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel5, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 2, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 195F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 335F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 185F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 314F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 749);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 729);
             this.tableLayoutPanel1.TabIndex = 56;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -311,9 +312,9 @@
             this.panel3.Controls.Add(this.cmbPuesto);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(181, 182);
+            this.panel3.Location = new System.Drawing.Point(181, 164);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1074, 189);
+            this.panel3.Size = new System.Drawing.Size(1074, 179);
             this.panel3.TabIndex = 57;
             // 
             // panel4
@@ -323,9 +324,9 @@
             this.panel4.Controls.Add(this.BtnEditar);
             this.panel4.Controls.Add(this.dgvEmpleados);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(181, 377);
+            this.panel4.Location = new System.Drawing.Point(181, 349);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1074, 329);
+            this.panel4.Size = new System.Drawing.Size(1074, 308);
             this.panel4.TabIndex = 57;
             // 
             // button1
@@ -376,7 +377,7 @@
             // 
             this.dgvEmpleados.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpleados.Location = new System.Drawing.Point(39, 19);
+            this.dgvEmpleados.Location = new System.Drawing.Point(39, 9);
             this.dgvEmpleados.Name = "dgvEmpleados";
             this.dgvEmpleados.Size = new System.Drawing.Size(734, 293);
             this.dgvEmpleados.TabIndex = 53;
@@ -389,7 +390,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(181, 19);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1074, 157);
+            this.panel5.Size = new System.Drawing.Size(1074, 139);
             this.panel5.TabIndex = 58;
             // 
             // label9
@@ -398,7 +399,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label9.Location = new System.Drawing.Point(619, 717);
+            this.label9.Location = new System.Drawing.Point(619, 697);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(198, 23);
             this.label9.TabIndex = 59;
@@ -409,13 +410,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 729);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label8);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "FrmEmpleados";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmEmpleados_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

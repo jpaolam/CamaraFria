@@ -82,16 +82,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.60452F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.39548F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 749);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 729);
             this.tableLayoutPanel1.TabIndex = 39;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.RVMensual);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(23, 90);
+            this.panel2.Location = new System.Drawing.Point(23, 88);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1230, 626);
+            this.panel2.Size = new System.Drawing.Size(1230, 608);
             this.panel2.TabIndex = 39;
             // 
             // RVMensual
@@ -104,7 +104,7 @@
             this.RVMensual.Location = new System.Drawing.Point(0, 0);
             this.RVMensual.Name = "RVMensual";
             this.RVMensual.ServerReport.BearerToken = null;
-            this.RVMensual.Size = new System.Drawing.Size(1230, 626);
+            this.RVMensual.Size = new System.Drawing.Size(1230, 608);
             this.RVMensual.TabIndex = 3;
             // 
             // pictureBox2
@@ -125,7 +125,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(23, 23);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1230, 61);
+            this.panel1.Size = new System.Drawing.Size(1230, 59);
             this.panel1.TabIndex = 39;
             // 
             // label1
@@ -164,7 +164,7 @@
             // 
             this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(23, 722);
+            this.panel4.Location = new System.Drawing.Point(23, 702);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1230, 24);
             this.panel4.TabIndex = 45;
@@ -189,13 +189,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 729);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "FrmReporteMensualGeneral";
-            this.Text = "FrmReporteMensualGeneral";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmReporteMensualGeneral_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataTableMensualGeneralBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSReporteM1)).EndInit();

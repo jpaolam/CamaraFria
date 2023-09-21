@@ -126,7 +126,7 @@
             this.RVSemanal.Location = new System.Drawing.Point(0, 0);
             this.RVSemanal.Name = "RVSemanal";
             this.RVSemanal.ServerReport.BearerToken = null;
-            this.RVSemanal.Size = new System.Drawing.Size(1278, 610);
+            this.RVSemanal.Size = new System.Drawing.Size(1278, 592);
             this.RVSemanal.TabIndex = 5;
             // 
             // dataTableSemanalTableAdapter1
@@ -153,16 +153,16 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(23, 23);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1278, 75);
+            this.panel1.Size = new System.Drawing.Size(1278, 73);
             this.panel1.TabIndex = 38;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.RVSemanal);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(23, 104);
+            this.panel2.Location = new System.Drawing.Point(23, 102);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1278, 610);
+            this.panel2.Size = new System.Drawing.Size(1278, 592);
             this.panel2.TabIndex = 39;
             // 
             // tableLayoutPanel1
@@ -184,7 +184,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.72316F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.27683F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 749);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 729);
             this.tableLayoutPanel1.TabIndex = 40;
             // 
             // label4
@@ -193,7 +193,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label4.Location = new System.Drawing.Point(563, 721);
+            this.label4.Location = new System.Drawing.Point(563, 701);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(198, 23);
             this.label4.TabIndex = 41;
@@ -204,12 +204,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 729);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "FrmReporteSemanal";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmReporteSemanal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataTableSemanalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSReporteSemanal)).EndInit();

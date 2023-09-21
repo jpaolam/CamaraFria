@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReporteAnualGeneral));
+            this.dataTableAnualGeneralBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSAnual = new CFria_HorasExtra.DSAnual();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnIngresar = new System.Windows.Forms.Button();
@@ -40,17 +42,25 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dSAnual = new CFria_HorasExtra.DSAnual();
-            this.dataTableAnualGeneralBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTableAnualGeneralTableAdapter = new CFria_HorasExtra.DSAnualTableAdapters.DataTableAnualGeneralTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableAnualGeneralBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAnual)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAnual)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTableAnualGeneralBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataTableAnualGeneralBindingSource
+            // 
+            this.dataTableAnualGeneralBindingSource.DataMember = "DataTableAnualGeneral";
+            this.dataTableAnualGeneralBindingSource.DataSource = this.dSAnual;
+            // 
+            // dSAnual
+            // 
+            this.dSAnual.DataSetName = "DSAnual";
+            this.dSAnual.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tableLayoutPanel1
             // 
@@ -71,7 +81,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.84181F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.1582F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 749);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 729);
             this.tableLayoutPanel1.TabIndex = 44;
             // 
             // panel1
@@ -80,7 +90,7 @@
             this.panel1.Controls.Add(this.dtpYear);
             this.panel1.Location = new System.Drawing.Point(23, 16);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1228, 91);
+            this.panel1.Size = new System.Drawing.Size(1228, 88);
             this.panel1.TabIndex = 41;
             // 
             // btnIngresar
@@ -113,9 +123,9 @@
             // 
             this.panel2.Controls.Add(this.RVAnual);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(23, 113);
+            this.panel2.Location = new System.Drawing.Point(23, 110);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1277, 599);
+            this.panel2.Size = new System.Drawing.Size(1277, 582);
             this.panel2.TabIndex = 42;
             // 
             // RVAnual
@@ -128,7 +138,7 @@
             this.RVAnual.Location = new System.Drawing.Point(0, 0);
             this.RVAnual.Name = "RVAnual";
             this.RVAnual.ServerReport.BearerToken = null;
-            this.RVAnual.Size = new System.Drawing.Size(1277, 599);
+            this.RVAnual.Size = new System.Drawing.Size(1277, 582);
             this.RVAnual.TabIndex = 0;
             // 
             // pictureBox2
@@ -145,7 +155,7 @@
             // 
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(23, 718);
+            this.panel3.Location = new System.Drawing.Point(23, 698);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1277, 28);
             this.panel3.TabIndex = 43;
@@ -162,16 +172,6 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "© 2023 - Jessie Martel";
             // 
-            // dSAnual
-            // 
-            this.dSAnual.DataSetName = "DSAnual";
-            this.dSAnual.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataTableAnualGeneralBindingSource
-            // 
-            this.dataTableAnualGeneralBindingSource.DataMember = "DataTableAnualGeneral";
-            this.dataTableAnualGeneralBindingSource.DataSource = this.dSAnual;
-            // 
             // dataTableAnualGeneralTableAdapter
             // 
             this.dataTableAnualGeneralTableAdapter.ClearBeforeFill = true;
@@ -181,21 +181,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 729);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.Name = "FrmReporteAnualGeneral";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmReporteAnualGeneral_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataTableAnualGeneralBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSAnual)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dSAnual)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTableAnualGeneralBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
