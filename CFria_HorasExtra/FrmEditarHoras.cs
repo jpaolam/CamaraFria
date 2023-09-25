@@ -15,13 +15,14 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CFria_HorasExtra
 {
-    public partial class FrmControlHE : Form
+    public partial class FrmEditarHoras : Form
     {
-        public FrmControlHE()
+        public FrmEditarHoras()
         {
             //Inicializar los componentes
             InitializeComponent();
             InitializeTimePickers();
+            //conexion.cargarDatosExtras(dgvNombre);
         }
 
         ClConexion conexion = new ClConexion();
@@ -62,13 +63,48 @@ namespace CFria_HorasExtra
 
         }
 
-        private void FrmControlHE_Load(object sender, EventArgs e)
+        private void FrmEditarHoras_Load(object sender, EventArgs e)
         {
-            this.leer_datos("SELECT dbo.Empleados.EmpleadoNombreCompleto AS Nombre FROM Empleados", ref resultados, "Empleados");
+            this.leer_datos("SELECT dbo.Bitacora.Id_Empleado AS NoPersonal, dbo.Bitacora.Id_Puesto, dbo.Puestos.Nombre_Puesto AS Puesto, dbo.Empleados.EmpleadoNombreCompleto AS Nombre, dbo.Empleados.EmpleadoSalarioMensual AS Salario, dbo.Bitacora.HoraEntrada, dbo.Bitacora.HoraSalida, dbo.Bitacora.HoraExtraordinaria, dbo.Bitacora.FechaRegistro, dbo.Bitacora.JustificacionEmpleado AS Justificacion FROM dbo.Bitacora INNER JOIN dbo.Empleados ON dbo.Bitacora.Id_Empleado = dbo.Empleados.Id_Empleado INNER JOIN dbo.Puestos ON dbo.Bitacora.Id_Puesto = dbo.Puestos.Id_Puesto AND dbo.Empleados.PuestoId = dbo.Puestos.Id_Puesto", ref resultados, "Empleados");
 
             this.filtro = ((DataTable)resultados.Tables["Empleados"]).DefaultView;
 
             this.dgvNombre.DataSource = filtro;
+        }
+        private void TxtNombreE_KeyUp(object sender, KeyEventArgs e)
+        {
+            string salida_datos = "";
+            string[] palabras_busqueda = this.TxtNombreE.Text.Split(' ');
+
+            foreach (string palabra in palabras_busqueda)
+            {
+                if (salida_datos.Length == 0)
+                {
+                    salida_datos = " (Nombre LIKE '%" + palabra + "%' )";
+                }
+                else
+                {
+                    salida_datos += " AND (Nombre LIKE '%" + palabra + "%')";
+                }
+            }
+            this.filtro.RowFilter = salida_datos;
+        }
+        public void leer_datos(string query, ref DataSet dstprincipal, string tabla)
+        {
+            try
+            {
+                conexion.abrir();
+                SqlCommand cmd = new SqlCommand(query, conexion.Sc);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dstprincipal, tabla);
+                da.Dispose();
+
+                conexion.cerrar();
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show("No se pudo realizar la consulta");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -95,14 +131,15 @@ namespace CFria_HorasExtra
                     TxtPuesto.Text = reader["Nombre_Puesto"].ToString();
                     TxtSueldo.Text = reader["EmpleadoSalarioMensual"].ToString();
                     TxtCodPuesto.Text = reader["PuestoId"].ToString();
-                } else
+                }
+                else
                     //en caso de que no exista el registro enviará este mensaje para notificarlo
                     MessageBox.Show("No existe");
             }
             catch (Exception x)
             {
                 //en caso de que falle y no se ejecute la sentencia SQL enviará este mensaje
-                MessageBox.Show("Ingrese el No Personal","Campo Incompleto",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Ingrese el No Personal", "Campo Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             finally
             {
@@ -158,7 +195,7 @@ namespace CFria_HorasExtra
                     diferencia = fechaExtra - fechaSalida;
                     horasDiferencia = diferencia.TotalHours;
                 }
-                
+
                 // Definir las horas de corte
                 int horaCorte1 = 19;  // 19:00
                 int horaCorte2 = 21;  // 21:00
@@ -187,10 +224,11 @@ namespace CFria_HorasExtra
                      */
                     if (fechaExtra.Hour < horaCorte1)
                     {
-                        if(fechaExtra.Hour == 0)
+                        if (fechaExtra.Hour == 0)
                         {
                             horasHastaCorte1 = (horasDiferencia - horaCorte4) - 1;
-                        }else if(fechaExtra.Hour == 1)
+                        }
+                        else if (fechaExtra.Hour == 1)
                         {
                             horasHastaCorte1 = (horasDiferencia - horaCorte4) - 2;
                         }
@@ -215,13 +253,13 @@ namespace CFria_HorasExtra
                     else if (fechaExtra.Hour < horaCorte3)
                     {
                         horasHastaCorte1 = (horaCorte1 - fechaSalida.Hour);
-                        
+
                         horasHastaCorte2 = fechaExtra.Hour - horaCorte2;
-                        
+
                     }
                     else
                     {
-                        
+
                         horasHastaCorte1 = (horaCorte1 - fechaSalida.Hour) + (horaCorte2 - horaCorte1);
                         horasHastaCorte2 = horaCorte3 - horaCorte2;
                         horasHastaCorte3 = fechaExtra.Hour - horaCorte3;
@@ -231,7 +269,7 @@ namespace CFria_HorasExtra
                 {
                     if (fechaExtra.Hour < horaCorte2)
                     {
-                        if(fechaExtra.Hour < horaCorte4)
+                        if (fechaExtra.Hour < horaCorte4)
                         {
                             horasHastaCorte2 = (horaCorte2 - horaCorte1);
                         }
@@ -242,14 +280,14 @@ namespace CFria_HorasExtra
                     }
                     else if (fechaExtra.Hour < horaCorte3)
                     {
-                        if(fechaExtra.Hour == horaCorte2)
+                        if (fechaExtra.Hour == horaCorte2)
                         {
                             horasHastaCorte2 = fechaExtra.Hour - horaCorte1;
                         }
                         else
                         {
                             horasHastaCorte2 = fechaExtra.Hour - (horaCorte2 - 1);
-                            
+
                         }
                     }
                     else
@@ -271,7 +309,7 @@ namespace CFria_HorasExtra
                         horasHastaCorte3 = fechaExtra.Hour - horaCorte2;
                     }
                 }
-                
+
 
                 //Calcular sueldo diario del empleado
                 double sueldoDiario = Math.Round(Convert.ToDouble(TxtSueldo.Text) / 30, 2);
@@ -301,12 +339,12 @@ namespace CFria_HorasExtra
                 TxtHasta12.Text = horasHastaCorte3.ToString();
                 TxtDiferencia.Text = horasDiferencia.ToString();
             }
-            catch(Exception x)
+            catch (Exception x)
             {
-                MessageBox.Show("Error al realizar cálculos","Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al realizar cálculos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            
+
 
         }
 
@@ -319,9 +357,9 @@ namespace CFria_HorasExtra
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            FrmPrincipal frmPrincipal = new FrmPrincipal("Leyde");
             this.Close();
-            frmPrincipal.Show();
+            FrmControlHE frmControlHE = new FrmControlHE();
+            frmControlHE.Show();
         }
 
         private void BtnGuardarRegistro_Click(object sender, EventArgs e)
@@ -346,7 +384,7 @@ namespace CFria_HorasExtra
                 SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[Bitacora] ([Id_Empleado], [Id_Puesto], [HoraEntrada], [HoraSalida] ,[HoraExtraordinaria], [HorasHasta25], [HorasHasta50], [HorasHasta75], [Pago_HrsExtra25], [Pago_HrsExtra50], [Pago_HrsExtra75], [Pago_HrsExtra], [HorasExtras], [FechaRegistro], [JustificacionEmpleado]) " +
                     "VALUES ("+ Convert.ToInt32(TxtBuscar.Text) +","+ Convert.ToInt32(TxtCodPuesto.Text) +",'"+ horaEntrada +"','"+ horaSalida +"','"+ horaExtra +"',"+ Convert.ToDouble(TxtHasta7.Text) +","+ Convert.ToDouble(TxtHasta9.Text) +","+ Convert.ToDouble(TxtHasta12.Text) +","+ Convert.ToDouble(TxtPagoCorte1.Text) +","+ Convert.ToDouble(TxtPagoCorte2.Text) + ","+ Convert.ToDouble(TxtPagoCorte3.Text) + ","+ Convert.ToDouble(TxtPagoHorasE.Text) + ","+ Convert.ToDouble(TxtDiferencia.Text) +",'"+ fechaFormateada +"','" + txtJustificacion.Text + "')", conexion.Sc);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Registro guardado");
+                MessageBox.Show("Registro actualizado");
                 TxtBuscar.Clear();
                 TxtCodPuesto.Clear();
                 TxtCostoHora.Clear();
@@ -405,42 +443,7 @@ namespace CFria_HorasExtra
         {
             
         }
-
-        private void TxtNombreE_KeyUp(object sender, KeyEventArgs e)
-        {
-            string salida_datos = "";
-            string[] palabras_busqueda = this.TxtNombreE.Text.Split(' ');
-
-            foreach (string palabra in palabras_busqueda)
-            {
-                if (salida_datos.Length == 0)
-                {
-                    salida_datos = " (Nombre LIKE '%" + palabra + "%' )";
-                }
-                else
-                {
-                    salida_datos += " AND (Nombre LIKE '%" + palabra + "%')";
-                }
-            }
-            this.filtro.RowFilter = salida_datos;
-        }
-        public void leer_datos(string query, ref DataSet dstprincipal, string tabla)
-        {
-            try
-            {
-                conexion.abrir();
-                SqlCommand cmd = new SqlCommand(query, conexion.Sc);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dstprincipal, tabla);
-                da.Dispose();
-
-                conexion.cerrar();
-            }
-            catch (Exception x)
-            {
-                MessageBox.Show("No se pudo realizar la consulta");
-            }
-        }
+        
         int i;
         private void dgvNombre_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -448,10 +451,16 @@ namespace CFria_HorasExtra
             {
                 //obtener los datos de la fila seleccionada
                 i = e.RowIndex;
-                TxtNombreE.Text = dgvNombre.CurrentRow.Cells[0].Value.ToString();
-                //TxtSueldo.Text = dgvNombre.CurrentRow.Cells[2].Value.ToString();
-                //TxtPuesto.Text = dgvNombre.CurrentRow.Cells[3].Value.ToString();
-                //TxtCodPuesto.Text = dgvNombre.CurrentRow.Cells[4].Value.ToString();
+                TxtBuscar.Text = dgvNombre.CurrentRow.Cells[0].Value.ToString();
+                TxtCodPuesto.Text = dgvNombre.CurrentRow.Cells[1].Value.ToString();
+                TxtPuesto.Text = dgvNombre.CurrentRow.Cells[2].Value.ToString();
+                TxtNombreE.Text = dgvNombre.CurrentRow.Cells[3].Value.ToString();
+                TxtSueldo.Text = dgvNombre.CurrentRow.Cells[4].Value.ToString();
+                dtpHoraEntrada.Value = Convert.ToDateTime(dgvNombre.CurrentRow.Cells[5].Value.ToString());
+                dtpHoraSalida.Value = Convert.ToDateTime(dgvNombre.CurrentRow.Cells[6].Value.ToString());
+                dtpHoraExtra.Value = Convert.ToDateTime(dgvNombre.CurrentRow.Cells[7].Value.ToString());
+                dtpDiaRegistro.Value = (DateTime)dgvNombre.CurrentRow.Cells[8].Value;
+                txtJustificacion.Text = dgvNombre.CurrentRow.Cells[9].Value.ToString();
             }
             catch (Exception x)
             {
@@ -471,13 +480,6 @@ namespace CFria_HorasExtra
         private void dtpDiaRegistro_ValueChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            FrmEditarHoras frmEditarHoras = new FrmEditarHoras();
-            frmEditarHoras.Show();
         }
     }
 }

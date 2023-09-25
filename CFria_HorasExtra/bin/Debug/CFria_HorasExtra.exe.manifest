@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CFria_HorasExtra.exe" size="1665968">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CFria_HorasExtra.exe" size="1759664">
       <assemblyIdentity name="CFria_HorasExtra" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7kPbeEP/NBrbW/eHPIZoQz9A6ggU5ycEe9lPA0ufPC4=</dsig:DigestValue>
+        <dsig:DigestValue>/AwtDE2Fy9GPq8eeMpBFtJmHxG8mVP8bjQrSKZh0HNw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

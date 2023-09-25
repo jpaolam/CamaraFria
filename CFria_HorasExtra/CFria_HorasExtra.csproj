@@ -125,6 +125,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSReporteSemanal.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FrmEditarHoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditarHoras.Designer.cs">
+      <DependentUpon>FrmEditarHoras.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmControlHE.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +205,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmEditarHoras.resx">
+      <DependentUpon>FrmEditarHoras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmControlHE.resx">
       <DependentUpon>FrmControlHE.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,6 +332,7 @@
     <Content Include="milk-amber_109466.ico" />
     <None Include="Resources\flecha.png" />
     <None Include="Resources\cerrar.png" />
+    <None Include="Resources\usuario.png" />
     <Content Include="Scripts\script.sql" />
   </ItemGroup>
   <ItemGroup>

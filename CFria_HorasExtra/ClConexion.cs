@@ -73,5 +73,20 @@ namespace CFria_HorasExtra
                 MessageBox.Show("No se pueden cargar los datos", "Error");
             } 
         }
+        public void cargarDatosExtras(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("SELECT dbo.Bitacora.Id_Empleado AS NoPersonal, dbo.Bitacora.Id_Puesto, dbo.Puestos.Nombre_Puesto AS Puesto, dbo.Empleados.EmpleadoNombreCompleto AS Nombre, dbo.Empleados.EmpleadoSalarioMensual AS Salario, dbo.Bitacora.HoraEntrada, dbo.Bitacora.HoraSalida, dbo.Bitacora.HoraExtraordinaria, dbo.Bitacora.FechaRegistro, dbo.Bitacora.JustificacionEmpleado AS Justificacion FROM dbo.Bitacora INNER JOIN dbo.Empleados ON dbo.Bitacora.Id_Empleado = dbo.Empleados.Id_Empleado INNER JOIN dbo.Puestos ON dbo.Bitacora.Id_Puesto = dbo.Puestos.Id_Puesto AND dbo.Empleados.PuestoId = dbo.Puestos.Id_Puesto", conexion);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+
+            catch (Exception x)
+            {
+                MessageBox.Show("No se pueden cargar los datos", "Error");
+            }
+        }
     }
 }

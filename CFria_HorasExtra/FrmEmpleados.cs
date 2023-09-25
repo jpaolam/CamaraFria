@@ -17,7 +17,6 @@ namespace CFria_HorasExtra
         public FrmEmpleados()
         {
             InitializeComponent();
-            //conexion.cargarDatos(dgvEmpleados, "Empleados");
             conexion.cargarDatosEmpleado(dgvEmpleados);
         }
         //instanciar la clase ClConexion
@@ -247,6 +246,18 @@ namespace CFria_HorasExtra
                 else
                 {
                     rbInactivo.Checked = true;
+                }
+                // Obtén el valor de la celda específica (por ejemplo, la primera fila y la segunda columna)
+                object cellValue = dgvEmpleados.CurrentRow.Cells[5].Value;
+
+                if (cellValue != null)
+                {
+                    // Busca el valor en el ComboBox y selecciónalo si existe
+                    int index = cmbPuesto.FindStringExact(cellValue.ToString());
+                    if (index != -1)
+                    {
+                        cmbPuesto.SelectedIndex = index;
+                    }
                 }
             }
             catch (Exception x)
