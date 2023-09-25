@@ -17,7 +17,6 @@ namespace CFria_HorasExtra
         public FrmEmpleados()
         {
             InitializeComponent();
-            //conexion.cargarDatos(dgvEmpleados, "Empleados");
             conexion.cargarDatosEmpleado(dgvEmpleados);
         }
         //instanciar la clase ClConexion
