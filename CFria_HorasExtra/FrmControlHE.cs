@@ -22,6 +22,9 @@ namespace CFria_HorasExtra
             //Inicializar los componentes
             InitializeComponent();
             InitializeTimePickers();
+            dtpHoraEntrada.Value = DateTime.Today + TimeSpan.Zero;
+            dtpHoraSalida.Value = DateTime.Today + TimeSpan.Zero;
+            dtpHoraExtra.Value = DateTime.Today + TimeSpan.Zero;
         }
 
         ClConexion conexion = new ClConexion();
@@ -42,13 +45,11 @@ namespace CFria_HorasExtra
             //DATETIMEPICKER DE SALIDA
             dtpHoraSalida.Format = DateTimePickerFormat.Time;
             dtpHoraSalida.ShowUpDown = true;
-            //dtpHoraSalida.Location = new Point(549, 201);
             dtpHoraSalida.Width = 100;
 
             //DATETIMEPICKER DE SALIDA EXTRAORDINARIA
             dtpHoraExtra.Format = DateTimePickerFormat.Time;
             dtpHoraExtra.ShowUpDown = true;
-            //dtpHoraExtra.Location = new Point(482, 256);
             dtpHoraExtra.Width = 100;
         }
 
@@ -280,11 +281,11 @@ namespace CFria_HorasExtra
                 double sueldoHora = Math.Round(sueldoDiario / 8, 2);
 
                 // Aplicar los recargos a las horas trabajadas en cada rango
-                double sueldoConRecargoCorte1 = ((sueldoHora * recargoCorte1) + sueldoHora) * horasHastaCorte1;
-                double sueldoConRecargoCorte2 = ((sueldoHora * recargoCorte2) + sueldoHora) * horasHastaCorte2;
-                double sueldoConRecargoCorte3 = ((sueldoHora * recargoCorte3) + sueldoHora) * horasHastaCorte3;
+                double sueldoConRecargoCorte1 = Math.Round(((sueldoHora * recargoCorte1) + sueldoHora) * horasHastaCorte1, 2);
+                double sueldoConRecargoCorte2 = Math.Round(((sueldoHora * recargoCorte2) + sueldoHora) * horasHastaCorte2, 2);
+                double sueldoConRecargoCorte3 = Math.Round(((sueldoHora * recargoCorte3) + sueldoHora) * horasHastaCorte3, 2);
 
-                double pagoHorasExtra = sueldoConRecargoCorte1 + sueldoConRecargoCorte2 + sueldoConRecargoCorte3;
+                double pagoHorasExtra = Math.Round(sueldoConRecargoCorte1 + sueldoConRecargoCorte2 + sueldoConRecargoCorte3, 2);
 
                 // Redondear el resultado al número entero más cercano
                 double sueldoRedondeado = Convert.ToDouble(TxtSueldo.Text) + pagoHorasExtra;

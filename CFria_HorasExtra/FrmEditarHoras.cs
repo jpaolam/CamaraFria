@@ -22,7 +22,7 @@ namespace CFria_HorasExtra
             //Inicializar los componentes
             InitializeComponent();
             InitializeTimePickers();
-            //conexion.cargarDatosExtras(dgvNombre);
+
         }
 
         ClConexion conexion = new ClConexion();
