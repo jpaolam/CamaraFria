@@ -16,6 +16,7 @@ namespace CFria_HorasExtra
         DataTable dt;
 
         string conexion = "Data Source = MARTELG\\SQLEXPRESS; Initial catalog = DeptCamaraFria; Integrated Security = true";
+        //string conexion = @"Data Source = L-LCE-SSOIHET\\SQLEXPRESS; Initial catalog = DeptCamaraFria; Integrated Security = true; User ID=ssoihet; Password=leyde2023;";
 
         public SqlConnection Sc = new SqlConnection();
 

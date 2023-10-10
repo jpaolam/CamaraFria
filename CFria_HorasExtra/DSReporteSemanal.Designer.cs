@@ -324,12 +324,6 @@ namespace CFria_HorasExtra {
             
             private global::System.Data.DataColumn columnHoraExtraordinaria;
             
-            private global::System.Data.DataColumn columnHorasHasta25;
-            
-            private global::System.Data.DataColumn columnHorasHasta50;
-            
-            private global::System.Data.DataColumn columnHorasHasta75;
-            
             private global::System.Data.DataColumn columnPago_HrsExtra25;
             
             private global::System.Data.DataColumn columnPago_HrsExtra50;
@@ -338,9 +332,15 @@ namespace CFria_HorasExtra {
             
             private global::System.Data.DataColumn columnPago_HrsExtra;
             
-            private global::System.Data.DataColumn columnHorasExtras;
-            
             private global::System.Data.DataColumn columnFechaRegistro;
+            
+            private global::System.Data.DataColumn columnHorasHasta25;
+            
+            private global::System.Data.DataColumn columnHorasHasta50;
+            
+            private global::System.Data.DataColumn columnHorasHasta75;
+            
+            private global::System.Data.DataColumn columnHorasExtras;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -417,30 +417,6 @@ namespace CFria_HorasExtra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn HorasHasta25Column {
-                get {
-                    return this.columnHorasHasta25;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn HorasHasta50Column {
-                get {
-                    return this.columnHorasHasta50;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn HorasHasta75Column {
-                get {
-                    return this.columnHorasHasta75;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn Pago_HrsExtra25Column {
                 get {
                     return this.columnPago_HrsExtra25;
@@ -473,17 +449,41 @@ namespace CFria_HorasExtra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn HorasExtrasColumn {
+            public global::System.Data.DataColumn FechaRegistroColumn {
                 get {
-                    return this.columnHorasExtras;
+                    return this.columnFechaRegistro;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn FechaRegistroColumn {
+            public global::System.Data.DataColumn HorasHasta25Column {
                 get {
-                    return this.columnFechaRegistro;
+                    return this.columnHorasHasta25;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn HorasHasta50Column {
+                get {
+                    return this.columnHorasHasta50;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn HorasHasta75Column {
+                get {
+                    return this.columnHorasHasta75;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn HorasExtrasColumn {
+                get {
+                    return this.columnHorasExtras;
                 }
             }
             
@@ -524,7 +524,7 @@ namespace CFria_HorasExtra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTableSemanalRow AddDataTableSemanalRow(string EmpleadoNombreCompleto, string Nombre_Puesto, System.TimeSpan HoraEntrada, System.TimeSpan HoraSalida, System.TimeSpan HoraExtraordinaria, int HorasHasta25, int HorasHasta50, int HorasHasta75, double Pago_HrsExtra25, double Pago_HrsExtra50, double Pago_HrsExtra75, double Pago_HrsExtra, int HorasExtras, System.DateTime FechaRegistro) {
+            public DataTableSemanalRow AddDataTableSemanalRow(string EmpleadoNombreCompleto, string Nombre_Puesto, System.TimeSpan HoraEntrada, System.TimeSpan HoraSalida, System.TimeSpan HoraExtraordinaria, double Pago_HrsExtra25, double Pago_HrsExtra50, double Pago_HrsExtra75, double Pago_HrsExtra, System.DateTime FechaRegistro, double HorasHasta25, double HorasHasta50, double HorasHasta75, double HorasExtras) {
                 DataTableSemanalRow rowDataTableSemanalRow = ((DataTableSemanalRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EmpleadoNombreCompleto,
@@ -532,15 +532,15 @@ namespace CFria_HorasExtra {
                         HoraEntrada,
                         HoraSalida,
                         HoraExtraordinaria,
-                        HorasHasta25,
-                        HorasHasta50,
-                        HorasHasta75,
                         Pago_HrsExtra25,
                         Pago_HrsExtra50,
                         Pago_HrsExtra75,
                         Pago_HrsExtra,
-                        HorasExtras,
-                        FechaRegistro};
+                        FechaRegistro,
+                        HorasHasta25,
+                        HorasHasta50,
+                        HorasHasta75,
+                        HorasExtras};
                 rowDataTableSemanalRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTableSemanalRow);
                 return rowDataTableSemanalRow;
@@ -568,15 +568,15 @@ namespace CFria_HorasExtra {
                 this.columnHoraEntrada = base.Columns["HoraEntrada"];
                 this.columnHoraSalida = base.Columns["HoraSalida"];
                 this.columnHoraExtraordinaria = base.Columns["HoraExtraordinaria"];
-                this.columnHorasHasta25 = base.Columns["HorasHasta25"];
-                this.columnHorasHasta50 = base.Columns["HorasHasta50"];
-                this.columnHorasHasta75 = base.Columns["HorasHasta75"];
                 this.columnPago_HrsExtra25 = base.Columns["Pago_HrsExtra25"];
                 this.columnPago_HrsExtra50 = base.Columns["Pago_HrsExtra50"];
                 this.columnPago_HrsExtra75 = base.Columns["Pago_HrsExtra75"];
                 this.columnPago_HrsExtra = base.Columns["Pago_HrsExtra"];
-                this.columnHorasExtras = base.Columns["HorasExtras"];
                 this.columnFechaRegistro = base.Columns["FechaRegistro"];
+                this.columnHorasHasta25 = base.Columns["HorasHasta25"];
+                this.columnHorasHasta50 = base.Columns["HorasHasta50"];
+                this.columnHorasHasta75 = base.Columns["HorasHasta75"];
+                this.columnHorasExtras = base.Columns["HorasExtras"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -592,12 +592,6 @@ namespace CFria_HorasExtra {
                 base.Columns.Add(this.columnHoraSalida);
                 this.columnHoraExtraordinaria = new global::System.Data.DataColumn("HoraExtraordinaria", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHoraExtraordinaria);
-                this.columnHorasHasta25 = new global::System.Data.DataColumn("HorasHasta25", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHorasHasta25);
-                this.columnHorasHasta50 = new global::System.Data.DataColumn("HorasHasta50", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHorasHasta50);
-                this.columnHorasHasta75 = new global::System.Data.DataColumn("HorasHasta75", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHorasHasta75);
                 this.columnPago_HrsExtra25 = new global::System.Data.DataColumn("Pago_HrsExtra25", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPago_HrsExtra25);
                 this.columnPago_HrsExtra50 = new global::System.Data.DataColumn("Pago_HrsExtra50", typeof(double), null, global::System.Data.MappingType.Element);
@@ -606,10 +600,16 @@ namespace CFria_HorasExtra {
                 base.Columns.Add(this.columnPago_HrsExtra75);
                 this.columnPago_HrsExtra = new global::System.Data.DataColumn("Pago_HrsExtra", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPago_HrsExtra);
-                this.columnHorasExtras = new global::System.Data.DataColumn("HorasExtras", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHorasExtras);
                 this.columnFechaRegistro = new global::System.Data.DataColumn("FechaRegistro", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFechaRegistro);
+                this.columnHorasHasta25 = new global::System.Data.DataColumn("HorasHasta25", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHorasHasta25);
+                this.columnHorasHasta50 = new global::System.Data.DataColumn("HorasHasta50", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHorasHasta50);
+                this.columnHorasHasta75 = new global::System.Data.DataColumn("HorasHasta75", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHorasHasta75);
+                this.columnHorasExtras = new global::System.Data.DataColumn("HorasExtras", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHorasExtras);
                 this.columnEmpleadoNombreCompleto.MaxLength = 150;
                 this.columnNombre_Puesto.MaxLength = 70;
             }
@@ -755,12 +755,6 @@ namespace CFria_HorasExtra {
             
             private global::System.Data.DataColumn columnHoraExtraordinaria;
             
-            private global::System.Data.DataColumn columnHorasHasta25;
-            
-            private global::System.Data.DataColumn columnHorasHasta50;
-            
-            private global::System.Data.DataColumn columnHorasHasta75;
-            
             private global::System.Data.DataColumn columnPago_HrsExtra25;
             
             private global::System.Data.DataColumn columnPago_HrsExtra50;
@@ -769,9 +763,15 @@ namespace CFria_HorasExtra {
             
             private global::System.Data.DataColumn columnPago_HrsExtra;
             
-            private global::System.Data.DataColumn columnHorasExtras;
-            
             private global::System.Data.DataColumn columnFechaRegistro;
+            
+            private global::System.Data.DataColumn columnHorasHasta25;
+            
+            private global::System.Data.DataColumn columnHorasHasta50;
+            
+            private global::System.Data.DataColumn columnHorasHasta75;
+            
+            private global::System.Data.DataColumn columnHorasExtras;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -848,30 +848,6 @@ namespace CFria_HorasExtra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn HorasHasta25Column {
-                get {
-                    return this.columnHorasHasta25;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn HorasHasta50Column {
-                get {
-                    return this.columnHorasHasta50;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn HorasHasta75Column {
-                get {
-                    return this.columnHorasHasta75;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn Pago_HrsExtra25Column {
                 get {
                     return this.columnPago_HrsExtra25;
@@ -904,17 +880,41 @@ namespace CFria_HorasExtra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn HorasExtrasColumn {
+            public global::System.Data.DataColumn FechaRegistroColumn {
                 get {
-                    return this.columnHorasExtras;
+                    return this.columnFechaRegistro;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn FechaRegistroColumn {
+            public global::System.Data.DataColumn HorasHasta25Column {
                 get {
-                    return this.columnFechaRegistro;
+                    return this.columnHorasHasta25;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn HorasHasta50Column {
+                get {
+                    return this.columnHorasHasta50;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn HorasHasta75Column {
+                get {
+                    return this.columnHorasHasta75;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn HorasExtrasColumn {
+                get {
+                    return this.columnHorasExtras;
                 }
             }
             
@@ -955,7 +955,7 @@ namespace CFria_HorasExtra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DataTableSemanalGeneralRow AddDataTableSemanalGeneralRow(string EmpleadoNombreCompleto, string Nombre_Puesto, System.TimeSpan HoraEntrada, System.TimeSpan HoraSalida, System.TimeSpan HoraExtraordinaria, int HorasHasta25, int HorasHasta50, int HorasHasta75, double Pago_HrsExtra25, double Pago_HrsExtra50, double Pago_HrsExtra75, double Pago_HrsExtra, int HorasExtras, System.DateTime FechaRegistro) {
+            public DataTableSemanalGeneralRow AddDataTableSemanalGeneralRow(string EmpleadoNombreCompleto, string Nombre_Puesto, System.TimeSpan HoraEntrada, System.TimeSpan HoraSalida, System.TimeSpan HoraExtraordinaria, double Pago_HrsExtra25, double Pago_HrsExtra50, double Pago_HrsExtra75, double Pago_HrsExtra, System.DateTime FechaRegistro, double HorasHasta25, double HorasHasta50, double HorasHasta75, double HorasExtras) {
                 DataTableSemanalGeneralRow rowDataTableSemanalGeneralRow = ((DataTableSemanalGeneralRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EmpleadoNombreCompleto,
@@ -963,15 +963,15 @@ namespace CFria_HorasExtra {
                         HoraEntrada,
                         HoraSalida,
                         HoraExtraordinaria,
-                        HorasHasta25,
-                        HorasHasta50,
-                        HorasHasta75,
                         Pago_HrsExtra25,
                         Pago_HrsExtra50,
                         Pago_HrsExtra75,
                         Pago_HrsExtra,
-                        HorasExtras,
-                        FechaRegistro};
+                        FechaRegistro,
+                        HorasHasta25,
+                        HorasHasta50,
+                        HorasHasta75,
+                        HorasExtras};
                 rowDataTableSemanalGeneralRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTableSemanalGeneralRow);
                 return rowDataTableSemanalGeneralRow;
@@ -999,15 +999,15 @@ namespace CFria_HorasExtra {
                 this.columnHoraEntrada = base.Columns["HoraEntrada"];
                 this.columnHoraSalida = base.Columns["HoraSalida"];
                 this.columnHoraExtraordinaria = base.Columns["HoraExtraordinaria"];
-                this.columnHorasHasta25 = base.Columns["HorasHasta25"];
-                this.columnHorasHasta50 = base.Columns["HorasHasta50"];
-                this.columnHorasHasta75 = base.Columns["HorasHasta75"];
                 this.columnPago_HrsExtra25 = base.Columns["Pago_HrsExtra25"];
                 this.columnPago_HrsExtra50 = base.Columns["Pago_HrsExtra50"];
                 this.columnPago_HrsExtra75 = base.Columns["Pago_HrsExtra75"];
                 this.columnPago_HrsExtra = base.Columns["Pago_HrsExtra"];
-                this.columnHorasExtras = base.Columns["HorasExtras"];
                 this.columnFechaRegistro = base.Columns["FechaRegistro"];
+                this.columnHorasHasta25 = base.Columns["HorasHasta25"];
+                this.columnHorasHasta50 = base.Columns["HorasHasta50"];
+                this.columnHorasHasta75 = base.Columns["HorasHasta75"];
+                this.columnHorasExtras = base.Columns["HorasExtras"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1023,12 +1023,6 @@ namespace CFria_HorasExtra {
                 base.Columns.Add(this.columnHoraSalida);
                 this.columnHoraExtraordinaria = new global::System.Data.DataColumn("HoraExtraordinaria", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHoraExtraordinaria);
-                this.columnHorasHasta25 = new global::System.Data.DataColumn("HorasHasta25", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHorasHasta25);
-                this.columnHorasHasta50 = new global::System.Data.DataColumn("HorasHasta50", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHorasHasta50);
-                this.columnHorasHasta75 = new global::System.Data.DataColumn("HorasHasta75", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHorasHasta75);
                 this.columnPago_HrsExtra25 = new global::System.Data.DataColumn("Pago_HrsExtra25", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPago_HrsExtra25);
                 this.columnPago_HrsExtra50 = new global::System.Data.DataColumn("Pago_HrsExtra50", typeof(double), null, global::System.Data.MappingType.Element);
@@ -1037,10 +1031,16 @@ namespace CFria_HorasExtra {
                 base.Columns.Add(this.columnPago_HrsExtra75);
                 this.columnPago_HrsExtra = new global::System.Data.DataColumn("Pago_HrsExtra", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPago_HrsExtra);
-                this.columnHorasExtras = new global::System.Data.DataColumn("HorasExtras", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHorasExtras);
                 this.columnFechaRegistro = new global::System.Data.DataColumn("FechaRegistro", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFechaRegistro);
+                this.columnHorasHasta25 = new global::System.Data.DataColumn("HorasHasta25", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHorasHasta25);
+                this.columnHorasHasta50 = new global::System.Data.DataColumn("HorasHasta50", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHorasHasta50);
+                this.columnHorasHasta75 = new global::System.Data.DataColumn("HorasHasta75", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHorasHasta75);
+                this.columnHorasExtras = new global::System.Data.DataColumn("HorasExtras", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHorasExtras);
                 this.columnEmpleadoNombreCompleto.MaxLength = 150;
                 this.columnNombre_Puesto.MaxLength = 70;
             }
@@ -1267,54 +1267,6 @@ namespace CFria_HorasExtra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int HorasHasta25 {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTableSemanal.HorasHasta25Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasHasta25\' de la tabla \'DataTableSemanal\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTableSemanal.HorasHasta25Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int HorasHasta50 {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTableSemanal.HorasHasta50Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasHasta50\' de la tabla \'DataTableSemanal\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTableSemanal.HorasHasta50Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int HorasHasta75 {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTableSemanal.HorasHasta75Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasHasta75\' de la tabla \'DataTableSemanal\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTableSemanal.HorasHasta75Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public double Pago_HrsExtra25 {
                 get {
                     try {
@@ -1382,22 +1334,6 @@ namespace CFria_HorasExtra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int HorasExtras {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTableSemanal.HorasExtrasColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasExtras\' de la tabla \'DataTableSemanal\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTableSemanal.HorasExtrasColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime FechaRegistro {
                 get {
                     try {
@@ -1409,6 +1345,70 @@ namespace CFria_HorasExtra {
                 }
                 set {
                     this[this.tableDataTableSemanal.FechaRegistroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double HorasHasta25 {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTableSemanal.HorasHasta25Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasHasta25\' de la tabla \'DataTableSemanal\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTableSemanal.HorasHasta25Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double HorasHasta50 {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTableSemanal.HorasHasta50Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasHasta50\' de la tabla \'DataTableSemanal\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTableSemanal.HorasHasta50Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double HorasHasta75 {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTableSemanal.HorasHasta75Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasHasta75\' de la tabla \'DataTableSemanal\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTableSemanal.HorasHasta75Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double HorasExtras {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTableSemanal.HorasExtrasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasExtras\' de la tabla \'DataTableSemanal\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTableSemanal.HorasExtrasColumn] = value;
                 }
             }
             
@@ -1474,42 +1474,6 @@ namespace CFria_HorasExtra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsHorasHasta25Null() {
-                return this.IsNull(this.tableDataTableSemanal.HorasHasta25Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetHorasHasta25Null() {
-                this[this.tableDataTableSemanal.HorasHasta25Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsHorasHasta50Null() {
-                return this.IsNull(this.tableDataTableSemanal.HorasHasta50Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetHorasHasta50Null() {
-                this[this.tableDataTableSemanal.HorasHasta50Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsHorasHasta75Null() {
-                return this.IsNull(this.tableDataTableSemanal.HorasHasta75Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetHorasHasta75Null() {
-                this[this.tableDataTableSemanal.HorasHasta75Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsPago_HrsExtra25Null() {
                 return this.IsNull(this.tableDataTableSemanal.Pago_HrsExtra25Column);
             }
@@ -1558,18 +1522,6 @@ namespace CFria_HorasExtra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsHorasExtrasNull() {
-                return this.IsNull(this.tableDataTableSemanal.HorasExtrasColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetHorasExtrasNull() {
-                this[this.tableDataTableSemanal.HorasExtrasColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsFechaRegistroNull() {
                 return this.IsNull(this.tableDataTableSemanal.FechaRegistroColumn);
             }
@@ -1578,6 +1530,54 @@ namespace CFria_HorasExtra {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetFechaRegistroNull() {
                 this[this.tableDataTableSemanal.FechaRegistroColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsHorasHasta25Null() {
+                return this.IsNull(this.tableDataTableSemanal.HorasHasta25Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetHorasHasta25Null() {
+                this[this.tableDataTableSemanal.HorasHasta25Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsHorasHasta50Null() {
+                return this.IsNull(this.tableDataTableSemanal.HorasHasta50Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetHorasHasta50Null() {
+                this[this.tableDataTableSemanal.HorasHasta50Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsHorasHasta75Null() {
+                return this.IsNull(this.tableDataTableSemanal.HorasHasta75Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetHorasHasta75Null() {
+                this[this.tableDataTableSemanal.HorasHasta75Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsHorasExtrasNull() {
+                return this.IsNull(this.tableDataTableSemanal.HorasExtrasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetHorasExtrasNull() {
+                this[this.tableDataTableSemanal.HorasExtrasColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1682,57 +1682,6 @@ namespace CFria_HorasExtra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int HorasHasta25 {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTableSemanalGeneral.HorasHasta25Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasHasta25\' de la tabla \'DataTableSemanalGeneral\' es DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTableSemanalGeneral.HorasHasta25Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int HorasHasta50 {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTableSemanalGeneral.HorasHasta50Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasHasta50\' de la tabla \'DataTableSemanalGeneral\' es DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTableSemanalGeneral.HorasHasta50Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int HorasHasta75 {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTableSemanalGeneral.HorasHasta75Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasHasta75\' de la tabla \'DataTableSemanalGeneral\' es DB" +
-                                "Null.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTableSemanalGeneral.HorasHasta75Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public double Pago_HrsExtra25 {
                 get {
                     try {
@@ -1801,23 +1750,6 @@ namespace CFria_HorasExtra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int HorasExtras {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTableSemanalGeneral.HorasExtrasColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasExtras\' de la tabla \'DataTableSemanalGeneral\' es DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTableSemanalGeneral.HorasExtrasColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public System.DateTime FechaRegistro {
                 get {
                     try {
@@ -1830,6 +1762,74 @@ namespace CFria_HorasExtra {
                 }
                 set {
                     this[this.tableDataTableSemanalGeneral.FechaRegistroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double HorasHasta25 {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTableSemanalGeneral.HorasHasta25Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasHasta25\' de la tabla \'DataTableSemanalGeneral\' es DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTableSemanalGeneral.HorasHasta25Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double HorasHasta50 {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTableSemanalGeneral.HorasHasta50Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasHasta50\' de la tabla \'DataTableSemanalGeneral\' es DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTableSemanalGeneral.HorasHasta50Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double HorasHasta75 {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTableSemanalGeneral.HorasHasta75Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasHasta75\' de la tabla \'DataTableSemanalGeneral\' es DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTableSemanalGeneral.HorasHasta75Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public double HorasExtras {
+                get {
+                    try {
+                        return ((double)(this[this.tableDataTableSemanalGeneral.HorasExtrasColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HorasExtras\' de la tabla \'DataTableSemanalGeneral\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTableSemanalGeneral.HorasExtrasColumn] = value;
                 }
             }
             
@@ -1895,42 +1895,6 @@ namespace CFria_HorasExtra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsHorasHasta25Null() {
-                return this.IsNull(this.tableDataTableSemanalGeneral.HorasHasta25Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetHorasHasta25Null() {
-                this[this.tableDataTableSemanalGeneral.HorasHasta25Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsHorasHasta50Null() {
-                return this.IsNull(this.tableDataTableSemanalGeneral.HorasHasta50Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetHorasHasta50Null() {
-                this[this.tableDataTableSemanalGeneral.HorasHasta50Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsHorasHasta75Null() {
-                return this.IsNull(this.tableDataTableSemanalGeneral.HorasHasta75Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetHorasHasta75Null() {
-                this[this.tableDataTableSemanalGeneral.HorasHasta75Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsPago_HrsExtra25Null() {
                 return this.IsNull(this.tableDataTableSemanalGeneral.Pago_HrsExtra25Column);
             }
@@ -1979,18 +1943,6 @@ namespace CFria_HorasExtra {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsHorasExtrasNull() {
-                return this.IsNull(this.tableDataTableSemanalGeneral.HorasExtrasColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetHorasExtrasNull() {
-                this[this.tableDataTableSemanalGeneral.HorasExtrasColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsFechaRegistroNull() {
                 return this.IsNull(this.tableDataTableSemanalGeneral.FechaRegistroColumn);
             }
@@ -1999,6 +1951,54 @@ namespace CFria_HorasExtra {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetFechaRegistroNull() {
                 this[this.tableDataTableSemanalGeneral.FechaRegistroColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsHorasHasta25Null() {
+                return this.IsNull(this.tableDataTableSemanalGeneral.HorasHasta25Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetHorasHasta25Null() {
+                this[this.tableDataTableSemanalGeneral.HorasHasta25Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsHorasHasta50Null() {
+                return this.IsNull(this.tableDataTableSemanalGeneral.HorasHasta50Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetHorasHasta50Null() {
+                this[this.tableDataTableSemanalGeneral.HorasHasta50Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsHorasHasta75Null() {
+                return this.IsNull(this.tableDataTableSemanalGeneral.HorasHasta75Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetHorasHasta75Null() {
+                this[this.tableDataTableSemanalGeneral.HorasHasta75Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsHorasExtrasNull() {
+                return this.IsNull(this.tableDataTableSemanalGeneral.HorasExtrasColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetHorasExtrasNull() {
+                this[this.tableDataTableSemanalGeneral.HorasExtrasColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2200,15 +2200,15 @@ namespace CFria_HorasExtra.DSReporteSemanalTableAdapters {
             tableMapping.ColumnMappings.Add("HoraEntrada", "HoraEntrada");
             tableMapping.ColumnMappings.Add("HoraSalida", "HoraSalida");
             tableMapping.ColumnMappings.Add("HoraExtraordinaria", "HoraExtraordinaria");
-            tableMapping.ColumnMappings.Add("HorasHasta25", "HorasHasta25");
-            tableMapping.ColumnMappings.Add("HorasHasta50", "HorasHasta50");
-            tableMapping.ColumnMappings.Add("HorasHasta75", "HorasHasta75");
             tableMapping.ColumnMappings.Add("Pago_HrsExtra25", "Pago_HrsExtra25");
             tableMapping.ColumnMappings.Add("Pago_HrsExtra50", "Pago_HrsExtra50");
             tableMapping.ColumnMappings.Add("Pago_HrsExtra75", "Pago_HrsExtra75");
             tableMapping.ColumnMappings.Add("Pago_HrsExtra", "Pago_HrsExtra");
-            tableMapping.ColumnMappings.Add("HorasExtras", "HorasExtras");
             tableMapping.ColumnMappings.Add("FechaRegistro", "FechaRegistro");
+            tableMapping.ColumnMappings.Add("HorasHasta25", "HorasHasta25");
+            tableMapping.ColumnMappings.Add("HorasHasta50", "HorasHasta50");
+            tableMapping.ColumnMappings.Add("HorasHasta75", "HorasHasta75");
+            tableMapping.ColumnMappings.Add("HorasExtras", "HorasExtras");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -2411,15 +2411,15 @@ WHERE        (Bitacora.FechaRegistro BETWEEN @fechafinal AND @fechaFin) AND(dbo.
             tableMapping.ColumnMappings.Add("HoraEntrada", "HoraEntrada");
             tableMapping.ColumnMappings.Add("HoraSalida", "HoraSalida");
             tableMapping.ColumnMappings.Add("HoraExtraordinaria", "HoraExtraordinaria");
-            tableMapping.ColumnMappings.Add("HorasHasta25", "HorasHasta25");
-            tableMapping.ColumnMappings.Add("HorasHasta50", "HorasHasta50");
-            tableMapping.ColumnMappings.Add("HorasHasta75", "HorasHasta75");
             tableMapping.ColumnMappings.Add("Pago_HrsExtra25", "Pago_HrsExtra25");
             tableMapping.ColumnMappings.Add("Pago_HrsExtra50", "Pago_HrsExtra50");
             tableMapping.ColumnMappings.Add("Pago_HrsExtra75", "Pago_HrsExtra75");
             tableMapping.ColumnMappings.Add("Pago_HrsExtra", "Pago_HrsExtra");
-            tableMapping.ColumnMappings.Add("HorasExtras", "HorasExtras");
             tableMapping.ColumnMappings.Add("FechaRegistro", "FechaRegistro");
+            tableMapping.ColumnMappings.Add("HorasHasta25", "HorasHasta25");
+            tableMapping.ColumnMappings.Add("HorasHasta50", "HorasHasta50");
+            tableMapping.ColumnMappings.Add("HorasHasta75", "HorasHasta75");
+            tableMapping.ColumnMappings.Add("HorasExtras", "HorasExtras");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

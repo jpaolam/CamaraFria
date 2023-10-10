@@ -97,6 +97,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtJustificacion = new System.Windows.Forms.TextBox();
             this.lblJustificacion = new System.Windows.Forms.Label();
+            this.CBAll = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNombre)).BeginInit();
@@ -330,7 +331,7 @@
             this.TxtPagoHorasE.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TxtPagoHorasE.Enabled = false;
             this.TxtPagoHorasE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPagoHorasE.Location = new System.Drawing.Point(218, 126);
+            this.TxtPagoHorasE.Location = new System.Drawing.Point(218, 140);
             this.TxtPagoHorasE.Name = "TxtPagoHorasE";
             this.TxtPagoHorasE.Size = new System.Drawing.Size(118, 26);
             this.TxtPagoHorasE.TabIndex = 23;
@@ -340,7 +341,7 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(18, 129);
+            this.label12.Location = new System.Drawing.Point(18, 143);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(179, 20);
             this.label12.TabIndex = 22;
@@ -410,7 +411,7 @@
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(4, 9);
+            this.label14.Location = new System.Drawing.Point(4, 12);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(207, 20);
             this.label14.TabIndex = 26;
@@ -421,7 +422,7 @@
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(4, 89);
+            this.label15.Location = new System.Drawing.Point(4, 98);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(207, 20);
             this.label15.TabIndex = 30;
@@ -442,7 +443,7 @@
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(4, 49);
+            this.label16.Location = new System.Drawing.Point(4, 55);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(207, 20);
             this.label16.TabIndex = 32;
@@ -474,7 +475,7 @@
             this.TxtPagoCorte1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TxtPagoCorte1.Enabled = false;
             this.TxtPagoCorte1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPagoCorte1.Location = new System.Drawing.Point(218, 6);
+            this.TxtPagoCorte1.Location = new System.Drawing.Point(218, 9);
             this.TxtPagoCorte1.Name = "TxtPagoCorte1";
             this.TxtPagoCorte1.Size = new System.Drawing.Size(118, 26);
             this.TxtPagoCorte1.TabIndex = 35;
@@ -495,7 +496,7 @@
             this.TxtPagoCorte2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TxtPagoCorte2.Enabled = false;
             this.TxtPagoCorte2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPagoCorte2.Location = new System.Drawing.Point(218, 46);
+            this.TxtPagoCorte2.Location = new System.Drawing.Point(218, 52);
             this.TxtPagoCorte2.Name = "TxtPagoCorte2";
             this.TxtPagoCorte2.Size = new System.Drawing.Size(118, 26);
             this.TxtPagoCorte2.TabIndex = 37;
@@ -516,7 +517,7 @@
             this.TxtPagoCorte3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TxtPagoCorte3.Enabled = false;
             this.TxtPagoCorte3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPagoCorte3.Location = new System.Drawing.Point(218, 86);
+            this.TxtPagoCorte3.Location = new System.Drawing.Point(218, 95);
             this.TxtPagoCorte3.Name = "TxtPagoCorte3";
             this.TxtPagoCorte3.Size = new System.Drawing.Size(118, 26);
             this.TxtPagoCorte3.TabIndex = 39;
@@ -794,6 +795,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.CBAll);
             this.panel2.Controls.Add(this.tableLayoutPanel8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(936, 226);
@@ -813,7 +815,7 @@
             this.tableLayoutPanel8.Controls.Add(this.dtpHoraSalida, 1, 1);
             this.tableLayoutPanel8.Controls.Add(this.dtpHoraExtra, 1, 2);
             this.tableLayoutPanel8.Controls.Add(this.lblHE, 0, 2);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(39, 22);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(41, 34);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 3;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -854,19 +856,20 @@
             this.tableLayoutPanel2.Controls.Add(this.label15, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label16, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.TxtPagoHorasE, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.TxtPagoCorte1, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label12, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.TxtPagoCorte2, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.TxtPagoCorte3, 1, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(67, 12);
+            this.tableLayoutPanel2.Controls.Add(this.label12, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.TxtPagoHorasE, 1, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(67, -3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(341, 162);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(341, 177);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -921,6 +924,16 @@
             this.lblJustificacion.TabIndex = 0;
             this.lblJustificacion.Text = "Justificación:";
             // 
+            // CBAll
+            // 
+            this.CBAll.AutoSize = true;
+            this.CBAll.Location = new System.Drawing.Point(53, 7);
+            this.CBAll.Name = "CBAll";
+            this.CBAll.Size = new System.Drawing.Size(132, 24);
+            this.CBAll.TabIndex = 20;
+            this.CBAll.Text = "Horas al 100%";
+            this.CBAll.UseVisualStyleBackColor = true;
+            // 
             // FrmControlHE
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
@@ -953,6 +966,7 @@
             this.tableLayoutPanel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -1038,6 +1052,7 @@
         private System.Windows.Forms.TextBox txtJustificacion;
         private System.Windows.Forms.Label lblJustificacion;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.CheckBox CBAll;
     }
 }
 

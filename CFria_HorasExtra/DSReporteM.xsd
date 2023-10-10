@@ -31,15 +31,15 @@ WHERE        (MONTH(Bitacora.FechaRegistro) = @mes) AND(dbo.Bitacora.Id_Puesto &
               <Mapping SourceColumn="HoraEntrada" DataSetColumn="HoraEntrada" />
               <Mapping SourceColumn="HoraSalida" DataSetColumn="HoraSalida" />
               <Mapping SourceColumn="HoraExtraordinaria" DataSetColumn="HoraExtraordinaria" />
-              <Mapping SourceColumn="HorasHasta25" DataSetColumn="HorasHasta25" />
-              <Mapping SourceColumn="HorasHasta50" DataSetColumn="HorasHasta50" />
-              <Mapping SourceColumn="HorasHasta75" DataSetColumn="HorasHasta75" />
               <Mapping SourceColumn="Pago_HrsExtra25" DataSetColumn="Pago_HrsExtra25" />
               <Mapping SourceColumn="Pago_HrsExtra50" DataSetColumn="Pago_HrsExtra50" />
               <Mapping SourceColumn="Pago_HrsExtra75" DataSetColumn="Pago_HrsExtra75" />
               <Mapping SourceColumn="Pago_HrsExtra" DataSetColumn="Pago_HrsExtra" />
-              <Mapping SourceColumn="HorasExtras" DataSetColumn="HorasExtras" />
               <Mapping SourceColumn="FechaRegistro" DataSetColumn="FechaRegistro" />
+              <Mapping SourceColumn="HorasHasta25" DataSetColumn="HorasHasta25" />
+              <Mapping SourceColumn="HorasHasta50" DataSetColumn="HorasHasta50" />
+              <Mapping SourceColumn="HorasHasta75" DataSetColumn="HorasHasta75" />
+              <Mapping SourceColumn="HorasExtras" DataSetColumn="HorasExtras" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -67,15 +67,15 @@ WHERE        (MONTH(Bitacora.FechaRegistro) = @mes) AND(dbo.Bitacora.Id_Puesto =
               <Mapping SourceColumn="HoraEntrada" DataSetColumn="HoraEntrada" />
               <Mapping SourceColumn="HoraSalida" DataSetColumn="HoraSalida" />
               <Mapping SourceColumn="HoraExtraordinaria" DataSetColumn="HoraExtraordinaria" />
-              <Mapping SourceColumn="HorasHasta25" DataSetColumn="HorasHasta25" />
-              <Mapping SourceColumn="HorasHasta50" DataSetColumn="HorasHasta50" />
-              <Mapping SourceColumn="HorasHasta75" DataSetColumn="HorasHasta75" />
               <Mapping SourceColumn="Pago_HrsExtra25" DataSetColumn="Pago_HrsExtra25" />
               <Mapping SourceColumn="Pago_HrsExtra50" DataSetColumn="Pago_HrsExtra50" />
               <Mapping SourceColumn="Pago_HrsExtra75" DataSetColumn="Pago_HrsExtra75" />
               <Mapping SourceColumn="Pago_HrsExtra" DataSetColumn="Pago_HrsExtra" />
-              <Mapping SourceColumn="HorasExtras" DataSetColumn="HorasExtras" />
               <Mapping SourceColumn="FechaRegistro" DataSetColumn="FechaRegistro" />
+              <Mapping SourceColumn="HorasHasta25" DataSetColumn="HorasHasta25" />
+              <Mapping SourceColumn="HorasHasta50" DataSetColumn="HorasHasta50" />
+              <Mapping SourceColumn="HorasHasta75" DataSetColumn="HorasHasta75" />
+              <Mapping SourceColumn="HorasExtras" DataSetColumn="HorasExtras" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -107,47 +107,47 @@ WHERE        (MONTH(Bitacora.FechaRegistro) = @mes) AND(dbo.Bitacora.Id_Puesto =
               <xs:element name="HoraEntrada" msprop:Generator_ColumnPropNameInTable="HoraEntradaColumn" msprop:Generator_ColumnPropNameInRow="HoraEntrada" msprop:Generator_UserColumnName="HoraEntrada" msprop:Generator_ColumnVarNameInTable="columnHoraEntrada" type="xs:duration" minOccurs="0" />
               <xs:element name="HoraSalida" msprop:Generator_ColumnPropNameInTable="HoraSalidaColumn" msprop:Generator_ColumnPropNameInRow="HoraSalida" msprop:Generator_UserColumnName="HoraSalida" msprop:Generator_ColumnVarNameInTable="columnHoraSalida" type="xs:duration" minOccurs="0" />
               <xs:element name="HoraExtraordinaria" msprop:Generator_ColumnPropNameInTable="HoraExtraordinariaColumn" msprop:Generator_ColumnPropNameInRow="HoraExtraordinaria" msprop:Generator_UserColumnName="HoraExtraordinaria" msprop:Generator_ColumnVarNameInTable="columnHoraExtraordinaria" type="xs:duration" minOccurs="0" />
-              <xs:element name="HorasHasta25" msprop:Generator_ColumnPropNameInTable="HorasHasta25Column" msprop:Generator_ColumnPropNameInRow="HorasHasta25" msprop:Generator_UserColumnName="HorasHasta25" msprop:Generator_ColumnVarNameInTable="columnHorasHasta25" type="xs:int" minOccurs="0" />
-              <xs:element name="HorasHasta50" msprop:Generator_ColumnPropNameInTable="HorasHasta50Column" msprop:Generator_ColumnPropNameInRow="HorasHasta50" msprop:Generator_UserColumnName="HorasHasta50" msprop:Generator_ColumnVarNameInTable="columnHorasHasta50" type="xs:int" minOccurs="0" />
-              <xs:element name="HorasHasta75" msprop:Generator_ColumnPropNameInTable="HorasHasta75Column" msprop:Generator_ColumnPropNameInRow="HorasHasta75" msprop:Generator_UserColumnName="HorasHasta75" msprop:Generator_ColumnVarNameInTable="columnHorasHasta75" type="xs:int" minOccurs="0" />
               <xs:element name="Pago_HrsExtra25" msprop:Generator_ColumnPropNameInTable="Pago_HrsExtra25Column" msprop:Generator_ColumnPropNameInRow="Pago_HrsExtra25" msprop:Generator_UserColumnName="Pago_HrsExtra25" msprop:Generator_ColumnVarNameInTable="columnPago_HrsExtra25" type="xs:double" minOccurs="0" />
               <xs:element name="Pago_HrsExtra50" msprop:Generator_ColumnPropNameInTable="Pago_HrsExtra50Column" msprop:Generator_ColumnPropNameInRow="Pago_HrsExtra50" msprop:Generator_UserColumnName="Pago_HrsExtra50" msprop:Generator_ColumnVarNameInTable="columnPago_HrsExtra50" type="xs:double" minOccurs="0" />
               <xs:element name="Pago_HrsExtra75" msprop:Generator_ColumnPropNameInTable="Pago_HrsExtra75Column" msprop:Generator_ColumnPropNameInRow="Pago_HrsExtra75" msprop:Generator_UserColumnName="Pago_HrsExtra75" msprop:Generator_ColumnVarNameInTable="columnPago_HrsExtra75" type="xs:double" minOccurs="0" />
               <xs:element name="Pago_HrsExtra" msprop:Generator_ColumnPropNameInTable="Pago_HrsExtraColumn" msprop:Generator_ColumnPropNameInRow="Pago_HrsExtra" msprop:Generator_UserColumnName="Pago_HrsExtra" msprop:Generator_ColumnVarNameInTable="columnPago_HrsExtra" type="xs:double" minOccurs="0" />
-              <xs:element name="HorasExtras" msprop:Generator_ColumnPropNameInTable="HorasExtrasColumn" msprop:Generator_ColumnPropNameInRow="HorasExtras" msprop:Generator_UserColumnName="HorasExtras" msprop:Generator_ColumnVarNameInTable="columnHorasExtras" type="xs:int" minOccurs="0" />
               <xs:element name="FechaRegistro" msprop:Generator_ColumnPropNameInTable="FechaRegistroColumn" msprop:Generator_ColumnPropNameInRow="FechaRegistro" msprop:Generator_UserColumnName="FechaRegistro" msprop:Generator_ColumnVarNameInTable="columnFechaRegistro" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HorasHasta25" msprop:Generator_UserColumnName="HorasHasta25" msprop:Generator_ColumnPropNameInTable="HorasHasta25Column" msprop:Generator_ColumnPropNameInRow="HorasHasta25" msprop:Generator_ColumnVarNameInTable="columnHorasHasta25" type="xs:double" minOccurs="0" />
+              <xs:element name="HorasHasta50" msprop:Generator_UserColumnName="HorasHasta50" msprop:Generator_ColumnPropNameInTable="HorasHasta50Column" msprop:Generator_ColumnPropNameInRow="HorasHasta50" msprop:Generator_ColumnVarNameInTable="columnHorasHasta50" type="xs:double" minOccurs="0" />
+              <xs:element name="HorasHasta75" msprop:Generator_UserColumnName="HorasHasta75" msprop:Generator_ColumnPropNameInTable="HorasHasta75Column" msprop:Generator_ColumnPropNameInRow="HorasHasta75" msprop:Generator_ColumnVarNameInTable="columnHorasHasta75" type="xs:double" minOccurs="0" />
+              <xs:element name="HorasExtras" msprop:Generator_UserColumnName="HorasExtras" msprop:Generator_ColumnPropNameInTable="HorasExtrasColumn" msprop:Generator_ColumnPropNameInRow="HorasExtras" msprop:Generator_ColumnVarNameInTable="columnHorasExtras" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTableMensualGeneral" msprop:Generator_RowClassName="DataTableMensualGeneralRow" msprop:Generator_RowEvHandlerName="DataTableMensualGeneralRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableMensualGeneralRowDeleted" msprop:Generator_RowDeletingName="DataTableMensualGeneralRowDeleting" msprop:Generator_RowEvArgName="DataTableMensualGeneralRowChangeEvent" msprop:Generator_TablePropName="DataTableMensualGeneral" msprop:Generator_RowChangedName="DataTableMensualGeneralRowChanged" msprop:Generator_UserTableName="DataTableMensualGeneral" msprop:Generator_RowChangingName="DataTableMensualGeneralRowChanging" msprop:Generator_TableClassName="DataTableMensualGeneralDataTable" msprop:Generator_TableVarName="tableDataTableMensualGeneral">
+        <xs:element name="DataTableMensualGeneral" msprop:Generator_RowEvHandlerName="DataTableMensualGeneralRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableMensualGeneralRowDeleted" msprop:Generator_RowDeletingName="DataTableMensualGeneralRowDeleting" msprop:Generator_RowEvArgName="DataTableMensualGeneralRowChangeEvent" msprop:Generator_TablePropName="DataTableMensualGeneral" msprop:Generator_RowChangedName="DataTableMensualGeneralRowChanged" msprop:Generator_UserTableName="DataTableMensualGeneral" msprop:Generator_RowChangingName="DataTableMensualGeneralRowChanging" msprop:Generator_RowClassName="DataTableMensualGeneralRow" msprop:Generator_TableClassName="DataTableMensualGeneralDataTable" msprop:Generator_TableVarName="tableDataTableMensualGeneral">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="EmpleadoNombreCompleto" msprop:Generator_UserColumnName="EmpleadoNombreCompleto" msprop:Generator_ColumnPropNameInTable="EmpleadoNombreCompletoColumn" msprop:Generator_ColumnPropNameInRow="EmpleadoNombreCompleto" msprop:Generator_ColumnVarNameInTable="columnEmpleadoNombreCompleto" minOccurs="0">
+              <xs:element name="EmpleadoNombreCompleto" msprop:Generator_ColumnPropNameInTable="EmpleadoNombreCompletoColumn" msprop:Generator_ColumnPropNameInRow="EmpleadoNombreCompleto" msprop:Generator_UserColumnName="EmpleadoNombreCompleto" msprop:Generator_ColumnVarNameInTable="columnEmpleadoNombreCompleto" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Nombre_Puesto" msprop:Generator_UserColumnName="Nombre_Puesto" msprop:Generator_ColumnPropNameInTable="Nombre_PuestoColumn" msprop:Generator_ColumnPropNameInRow="Nombre_Puesto" msprop:Generator_ColumnVarNameInTable="columnNombre_Puesto" minOccurs="0">
+              <xs:element name="Nombre_Puesto" msprop:Generator_ColumnPropNameInTable="Nombre_PuestoColumn" msprop:Generator_ColumnPropNameInRow="Nombre_Puesto" msprop:Generator_UserColumnName="Nombre_Puesto" msprop:Generator_ColumnVarNameInTable="columnNombre_Puesto" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="70" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="HoraEntrada" msprop:Generator_UserColumnName="HoraEntrada" msprop:Generator_ColumnPropNameInTable="HoraEntradaColumn" msprop:Generator_ColumnPropNameInRow="HoraEntrada" msprop:Generator_ColumnVarNameInTable="columnHoraEntrada" type="xs:duration" minOccurs="0" />
-              <xs:element name="HoraSalida" msprop:Generator_UserColumnName="HoraSalida" msprop:Generator_ColumnPropNameInTable="HoraSalidaColumn" msprop:Generator_ColumnPropNameInRow="HoraSalida" msprop:Generator_ColumnVarNameInTable="columnHoraSalida" type="xs:duration" minOccurs="0" />
-              <xs:element name="HoraExtraordinaria" msprop:Generator_UserColumnName="HoraExtraordinaria" msprop:Generator_ColumnPropNameInTable="HoraExtraordinariaColumn" msprop:Generator_ColumnPropNameInRow="HoraExtraordinaria" msprop:Generator_ColumnVarNameInTable="columnHoraExtraordinaria" type="xs:duration" minOccurs="0" />
-              <xs:element name="HorasHasta25" msprop:Generator_UserColumnName="HorasHasta25" msprop:Generator_ColumnPropNameInTable="HorasHasta25Column" msprop:Generator_ColumnPropNameInRow="HorasHasta25" msprop:Generator_ColumnVarNameInTable="columnHorasHasta25" type="xs:int" minOccurs="0" />
-              <xs:element name="HorasHasta50" msprop:Generator_UserColumnName="HorasHasta50" msprop:Generator_ColumnPropNameInTable="HorasHasta50Column" msprop:Generator_ColumnPropNameInRow="HorasHasta50" msprop:Generator_ColumnVarNameInTable="columnHorasHasta50" type="xs:int" minOccurs="0" />
-              <xs:element name="HorasHasta75" msprop:Generator_UserColumnName="HorasHasta75" msprop:Generator_ColumnPropNameInTable="HorasHasta75Column" msprop:Generator_ColumnPropNameInRow="HorasHasta75" msprop:Generator_ColumnVarNameInTable="columnHorasHasta75" type="xs:int" minOccurs="0" />
-              <xs:element name="Pago_HrsExtra25" msprop:Generator_UserColumnName="Pago_HrsExtra25" msprop:Generator_ColumnPropNameInTable="Pago_HrsExtra25Column" msprop:Generator_ColumnPropNameInRow="Pago_HrsExtra25" msprop:Generator_ColumnVarNameInTable="columnPago_HrsExtra25" type="xs:double" minOccurs="0" />
-              <xs:element name="Pago_HrsExtra50" msprop:Generator_UserColumnName="Pago_HrsExtra50" msprop:Generator_ColumnPropNameInTable="Pago_HrsExtra50Column" msprop:Generator_ColumnPropNameInRow="Pago_HrsExtra50" msprop:Generator_ColumnVarNameInTable="columnPago_HrsExtra50" type="xs:double" minOccurs="0" />
-              <xs:element name="Pago_HrsExtra75" msprop:Generator_UserColumnName="Pago_HrsExtra75" msprop:Generator_ColumnPropNameInTable="Pago_HrsExtra75Column" msprop:Generator_ColumnPropNameInRow="Pago_HrsExtra75" msprop:Generator_ColumnVarNameInTable="columnPago_HrsExtra75" type="xs:double" minOccurs="0" />
-              <xs:element name="Pago_HrsExtra" msprop:Generator_UserColumnName="Pago_HrsExtra" msprop:Generator_ColumnPropNameInTable="Pago_HrsExtraColumn" msprop:Generator_ColumnPropNameInRow="Pago_HrsExtra" msprop:Generator_ColumnVarNameInTable="columnPago_HrsExtra" type="xs:double" minOccurs="0" />
-              <xs:element name="HorasExtras" msprop:Generator_UserColumnName="HorasExtras" msprop:Generator_ColumnPropNameInTable="HorasExtrasColumn" msprop:Generator_ColumnPropNameInRow="HorasExtras" msprop:Generator_ColumnVarNameInTable="columnHorasExtras" type="xs:int" minOccurs="0" />
-              <xs:element name="FechaRegistro" msprop:Generator_UserColumnName="FechaRegistro" msprop:Generator_ColumnPropNameInTable="FechaRegistroColumn" msprop:Generator_ColumnPropNameInRow="FechaRegistro" msprop:Generator_ColumnVarNameInTable="columnFechaRegistro" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HoraEntrada" msprop:Generator_ColumnPropNameInTable="HoraEntradaColumn" msprop:Generator_ColumnPropNameInRow="HoraEntrada" msprop:Generator_UserColumnName="HoraEntrada" msprop:Generator_ColumnVarNameInTable="columnHoraEntrada" type="xs:duration" minOccurs="0" />
+              <xs:element name="HoraSalida" msprop:Generator_ColumnPropNameInTable="HoraSalidaColumn" msprop:Generator_ColumnPropNameInRow="HoraSalida" msprop:Generator_UserColumnName="HoraSalida" msprop:Generator_ColumnVarNameInTable="columnHoraSalida" type="xs:duration" minOccurs="0" />
+              <xs:element name="HoraExtraordinaria" msprop:Generator_ColumnPropNameInTable="HoraExtraordinariaColumn" msprop:Generator_ColumnPropNameInRow="HoraExtraordinaria" msprop:Generator_UserColumnName="HoraExtraordinaria" msprop:Generator_ColumnVarNameInTable="columnHoraExtraordinaria" type="xs:duration" minOccurs="0" />
+              <xs:element name="Pago_HrsExtra25" msprop:Generator_ColumnPropNameInTable="Pago_HrsExtra25Column" msprop:Generator_ColumnPropNameInRow="Pago_HrsExtra25" msprop:Generator_UserColumnName="Pago_HrsExtra25" msprop:Generator_ColumnVarNameInTable="columnPago_HrsExtra25" type="xs:double" minOccurs="0" />
+              <xs:element name="Pago_HrsExtra50" msprop:Generator_ColumnPropNameInTable="Pago_HrsExtra50Column" msprop:Generator_ColumnPropNameInRow="Pago_HrsExtra50" msprop:Generator_UserColumnName="Pago_HrsExtra50" msprop:Generator_ColumnVarNameInTable="columnPago_HrsExtra50" type="xs:double" minOccurs="0" />
+              <xs:element name="Pago_HrsExtra75" msprop:Generator_ColumnPropNameInTable="Pago_HrsExtra75Column" msprop:Generator_ColumnPropNameInRow="Pago_HrsExtra75" msprop:Generator_UserColumnName="Pago_HrsExtra75" msprop:Generator_ColumnVarNameInTable="columnPago_HrsExtra75" type="xs:double" minOccurs="0" />
+              <xs:element name="Pago_HrsExtra" msprop:Generator_ColumnPropNameInTable="Pago_HrsExtraColumn" msprop:Generator_ColumnPropNameInRow="Pago_HrsExtra" msprop:Generator_UserColumnName="Pago_HrsExtra" msprop:Generator_ColumnVarNameInTable="columnPago_HrsExtra" type="xs:double" minOccurs="0" />
+              <xs:element name="FechaRegistro" msprop:Generator_ColumnPropNameInTable="FechaRegistroColumn" msprop:Generator_ColumnPropNameInRow="FechaRegistro" msprop:Generator_UserColumnName="FechaRegistro" msprop:Generator_ColumnVarNameInTable="columnFechaRegistro" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HorasHasta25" msprop:Generator_UserColumnName="HorasHasta25" msprop:Generator_ColumnPropNameInTable="HorasHasta25Column" msprop:Generator_ColumnPropNameInRow="HorasHasta25" msprop:Generator_ColumnVarNameInTable="columnHorasHasta25" type="xs:double" minOccurs="0" />
+              <xs:element name="HorasHasta50" msprop:Generator_UserColumnName="HorasHasta50" msprop:Generator_ColumnPropNameInTable="HorasHasta50Column" msprop:Generator_ColumnPropNameInRow="HorasHasta50" msprop:Generator_ColumnVarNameInTable="columnHorasHasta50" type="xs:double" minOccurs="0" />
+              <xs:element name="HorasHasta75" msprop:Generator_UserColumnName="HorasHasta75" msprop:Generator_ColumnPropNameInTable="HorasHasta75Column" msprop:Generator_ColumnPropNameInRow="HorasHasta75" msprop:Generator_ColumnVarNameInTable="columnHorasHasta75" type="xs:double" minOccurs="0" />
+              <xs:element name="HorasExtras" msprop:Generator_UserColumnName="HorasExtras" msprop:Generator_ColumnPropNameInTable="HorasExtrasColumn" msprop:Generator_ColumnPropNameInRow="HorasExtras" msprop:Generator_ColumnVarNameInTable="columnHorasExtras" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
