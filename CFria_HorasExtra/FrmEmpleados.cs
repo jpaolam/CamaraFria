@@ -26,7 +26,7 @@ namespace CFria_HorasExtra
         //instanciar la clase ClValidaciones
         ClValidaciones validaciones = new ClValidaciones();
         //declarar variables para las validaciones
-        bool errorcod, errorNombre, errorSueldo;
+        bool errorcod, errorNombre;
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {

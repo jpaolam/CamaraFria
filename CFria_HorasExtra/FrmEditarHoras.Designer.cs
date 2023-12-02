@@ -75,15 +75,20 @@
             this.tableAdapterManager1 = new CFria_HorasExtra.DSAnualTableAdapters.TableAdapterManager();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblBitacora = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.TxtNombreE = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.CBAll = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label23 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -92,9 +97,10 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtJustificacion = new System.Windows.Forms.TextBox();
             this.lblJustificacion = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.TxtHrs100 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNombre)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -103,15 +109,16 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -545,9 +552,9 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.label22.Location = new System.Drawing.Point(567, 18);
+            this.label22.Location = new System.Drawing.Point(571, 18);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(346, 66);
+            this.label22.Size = new System.Drawing.Size(339, 66);
             this.label22.TabIndex = 46;
             this.label22.Text = "EDICIÓN DE CONTROL HORAS EXTRAS";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -598,14 +605,16 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
+            this.tableLayoutPanel1.Controls.Add(this.lblBitacora, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.BtnGuardarRegistro, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.label23, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel6, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.BtnGuardarRegistro, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.panel7, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -619,6 +628,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 729);
             this.tableLayoutPanel1.TabIndex = 51;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // lblBitacora
+            // 
+            this.lblBitacora.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblBitacora.AutoSize = true;
+            this.lblBitacora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBitacora.Location = new System.Drawing.Point(19, 0);
+            this.lblBitacora.Name = "lblBitacora";
+            this.lblBitacora.Size = new System.Drawing.Size(0, 20);
+            this.lblBitacora.TabIndex = 55;
             // 
             // tableLayoutPanel4
             // 
@@ -644,15 +663,16 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.93277F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.06723F));
             this.tableLayoutPanel5.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.panel4, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.panel5, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 105);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(531, 89);
             this.tableLayoutPanel5.TabIndex = 47;
             // 
@@ -685,13 +705,27 @@
             this.panel5.Size = new System.Drawing.Size(356, 38);
             this.panel5.TabIndex = 54;
             // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::CFria_HorasExtra.Properties.Resources.buscar;
+            this.button1.Location = new System.Drawing.Point(221, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 26);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TxtBuscar
             // 
             this.TxtBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TxtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtBuscar.Location = new System.Drawing.Point(58, 6);
             this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.ReadOnly = true;
             this.TxtBuscar.Size = new System.Drawing.Size(122, 26);
             this.TxtBuscar.TabIndex = 22;
             // 
@@ -712,6 +746,16 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(401, 89);
             this.tableLayoutPanel6.TabIndex = 48;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::CFria_HorasExtra.Properties.Resources.LogoLeydeSmall;
+            this.pictureBox1.Location = new System.Drawing.Point(190, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(156, 96);
+            this.pictureBox1.TabIndex = 42;
+            this.pictureBox1.TabStop = false;
+            // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 2;
@@ -730,14 +774,35 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(356, 197);
             this.tableLayoutPanel7.TabIndex = 3;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CFria_HorasExtra.Properties.Resources.regreso;
+            this.pictureBox2.Location = new System.Drawing.Point(309, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox2.TabIndex = 45;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.CBAll);
             this.panel2.Controls.Add(this.tableLayoutPanel8);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(991, 226);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(356, 189);
             this.panel2.TabIndex = 50;
+            // 
+            // CBAll
+            // 
+            this.CBAll.AutoSize = true;
+            this.CBAll.Location = new System.Drawing.Point(30, 7);
+            this.CBAll.Name = "CBAll";
+            this.CBAll.Size = new System.Drawing.Size(132, 24);
+            this.CBAll.TabIndex = 21;
+            this.CBAll.Text = "Horas al 100%";
+            this.CBAll.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel8
             // 
@@ -751,7 +816,7 @@
             this.tableLayoutPanel8.Controls.Add(this.dtpHoraSalida, 1, 1);
             this.tableLayoutPanel8.Controls.Add(this.dtpHoraExtra, 1, 2);
             this.tableLayoutPanel8.Controls.Add(this.lblHE, 0, 2);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(21, 14);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(18, 31);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 3;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -859,40 +924,51 @@
             this.lblJustificacion.TabIndex = 0;
             this.lblJustificacion.Text = "Justificación:";
             // 
-            // button1
+            // panel7
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::CFria_HorasExtra.Properties.Resources.buscar;
-            this.button1.Location = new System.Drawing.Point(221, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 26);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.panel7.Controls.Add(this.TxtHrs100);
+            this.panel7.Controls.Add(this.label10);
+            this.panel7.Controls.Add(this.btnLimpiar);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(41, 606);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(944, 71);
+            this.panel7.TabIndex = 56;
             // 
-            // pictureBox1
+            // TxtHrs100
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::CFria_HorasExtra.Properties.Resources.LogoLeydeSmall;
-            this.pictureBox1.Location = new System.Drawing.Point(190, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(156, 96);
-            this.pictureBox1.TabIndex = 42;
-            this.pictureBox1.TabStop = false;
+            this.TxtHrs100.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TxtHrs100.Enabled = false;
+            this.TxtHrs100.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtHrs100.Location = new System.Drawing.Point(313, 24);
+            this.TxtHrs100.Name = "TxtHrs100";
+            this.TxtHrs100.Size = new System.Drawing.Size(118, 26);
+            this.TxtHrs100.TabIndex = 56;
             // 
-            // pictureBox2
+            // label10
             // 
-            this.pictureBox2.Image = global::CFria_HorasExtra.Properties.Resources.regreso;
-            this.pictureBox2.Location = new System.Drawing.Point(309, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 35);
-            this.pictureBox2.TabIndex = 45;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(90, 27);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(216, 20);
+            this.label10.TabIndex = 55;
+            this.label10.Text = "Pago de horas extra al 100%:";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
+            this.btnLimpiar.Location = new System.Drawing.Point(589, 12);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(119, 46);
+            this.btnLimpiar.TabIndex = 54;
+            this.btnLimpiar.Text = "Limpiar Campos";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
             // 
             // FrmEditarHoras
             // 
@@ -920,9 +996,12 @@
             this.panel5.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel8.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -932,8 +1011,8 @@
             this.tableLayoutPanel3.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1008,6 +1087,12 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txtJustificacion;
         private System.Windows.Forms.Label lblJustificacion;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Label lblBitacora;
+        private System.Windows.Forms.CheckBox CBAll;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox TxtHrs100;
+        private System.Windows.Forms.Label label10;
     }
 }
 

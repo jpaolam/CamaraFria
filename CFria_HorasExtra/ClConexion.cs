@@ -15,7 +15,9 @@ namespace CFria_HorasExtra
         SqlDataAdapter da;
         DataTable dt;
 
-        string conexion = "Data Source = MARTELG\\SQLEXPRESS; Initial catalog = DeptCamaraFria; Integrated Security = true";
+        string conexion = "Data Source=192.168.120.42,1433;Initial Catalog=DeptCamaraFria;User ID=soihet;Password=Leyde2023";
+        //string conexion = 192.168.120.42"Server = DC01\\SQLEXPRESS; Database = DeptCamaraFria;User Id=soihet;Password=Leyde2023;";
+        //string conexion = "Data Source = L-LCE-SSOIHET\\SQLEXPRESS; Initial catalog = DeptCamaraFria; Integrated Security = true;";
 
         public SqlConnection Sc = new SqlConnection();
 
