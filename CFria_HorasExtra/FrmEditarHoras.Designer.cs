@@ -88,6 +88,7 @@
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.CBAll = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label23 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -96,8 +97,10 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtJustificacion = new System.Windows.Forms.TextBox();
             this.lblJustificacion = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.TxtHrs100 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.CBAll = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNombre)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -115,6 +118,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -609,8 +613,8 @@
             this.tableLayoutPanel1.Controls.Add(this.label23, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel6, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnLimpiar, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.BtnGuardarRegistro, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.panel7, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -790,6 +794,16 @@
             this.panel2.Size = new System.Drawing.Size(356, 189);
             this.panel2.TabIndex = 50;
             // 
+            // CBAll
+            // 
+            this.CBAll.AutoSize = true;
+            this.CBAll.Location = new System.Drawing.Point(30, 7);
+            this.CBAll.Name = "CBAll";
+            this.CBAll.Size = new System.Drawing.Size(132, 24);
+            this.CBAll.TabIndex = 21;
+            this.CBAll.Text = "Horas al 100%";
+            this.CBAll.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -910,29 +924,51 @@
             this.lblJustificacion.TabIndex = 0;
             this.lblJustificacion.Text = "Justificación:";
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.TxtHrs100);
+            this.panel7.Controls.Add(this.label10);
+            this.panel7.Controls.Add(this.btnLimpiar);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(41, 606);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(944, 71);
+            this.panel7.TabIndex = 56;
+            // 
+            // TxtHrs100
+            // 
+            this.TxtHrs100.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TxtHrs100.Enabled = false;
+            this.TxtHrs100.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtHrs100.Location = new System.Drawing.Point(313, 24);
+            this.TxtHrs100.Name = "TxtHrs100";
+            this.TxtHrs100.Size = new System.Drawing.Size(118, 26);
+            this.TxtHrs100.TabIndex = 56;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(90, 27);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(216, 20);
+            this.label10.TabIndex = 55;
+            this.label10.Text = "Pago de horas extra al 100%:";
+            // 
             // btnLimpiar
             // 
             this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
-            this.btnLimpiar.Location = new System.Drawing.Point(453, 618);
+            this.btnLimpiar.Location = new System.Drawing.Point(589, 12);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(119, 46);
             this.btnLimpiar.TabIndex = 54;
             this.btnLimpiar.Text = "Limpiar Campos";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
-            // 
-            // CBAll
-            // 
-            this.CBAll.AutoSize = true;
-            this.CBAll.Location = new System.Drawing.Point(30, 7);
-            this.CBAll.Name = "CBAll";
-            this.CBAll.Size = new System.Drawing.Size(132, 24);
-            this.CBAll.TabIndex = 21;
-            this.CBAll.Text = "Horas al 100%";
-            this.CBAll.UseVisualStyleBackColor = true;
             // 
             // FrmEditarHoras
             // 
@@ -975,6 +1011,8 @@
             this.tableLayoutPanel3.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1052,6 +1090,9 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Label lblBitacora;
         private System.Windows.Forms.CheckBox CBAll;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.TextBox TxtHrs100;
+        private System.Windows.Forms.Label label10;
     }
 }
 

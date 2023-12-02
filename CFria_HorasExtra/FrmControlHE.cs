@@ -298,6 +298,7 @@ namespace CFria_HorasExtra
                 if (CBAll.Checked)
                 {
                     pagoHorasExtra = Math.Round(((sueldoHora * recargoTotal) + sueldoHora) * (horasHastaCorte1 + horasHastaCorte2 + horasHastaCorte3), 2);
+                    TxtPago100.Text = pagoHorasExtra.ToString();
                 }
                 else
                 {
@@ -306,6 +307,7 @@ namespace CFria_HorasExtra
                     sueldoConRecargoCorte2 = Math.Round(((sueldoHora * recargoCorte2) + sueldoHora) * horasHastaCorte2, 2);
                     sueldoConRecargoCorte3 = Math.Round(((sueldoHora * recargoCorte3) + sueldoHora) * horasHastaCorte3, 2);
                     pagoHorasExtra = Math.Round(sueldoConRecargoCorte1 + sueldoConRecargoCorte2 + sueldoConRecargoCorte3, 2);
+                    TxtPago100.Text = "0";
                 }
 
 
@@ -366,8 +368,8 @@ namespace CFria_HorasExtra
                 string horaSalida = horaSeleccionadaSalida.ToString("HH:mm");
                 string horaExtra = horaSeleccionadaExtra.ToString("HH:mm");
                 conexion.abrir();
-                SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[Bitacora] ([Id_Empleado], [Id_Puesto], [HoraEntrada], [HoraSalida] ,[HoraExtraordinaria], [HorasHasta25], [HorasHasta50], [HorasHasta75], [Pago_HrsExtra25], [Pago_HrsExtra50], [Pago_HrsExtra75], [Pago_HrsExtra], [HorasExtras], [FechaRegistro], [JustificacionEmpleado]) " +
-                    "VALUES ("+ Convert.ToInt32(TxtBuscar.Text) +","+ Convert.ToInt32(TxtCodPuesto.Text) +",'"+ horaEntrada +"','"+ horaSalida +"','"+ horaExtra +"',"+ Convert.ToDouble(TxtHasta7.Text) +","+ Convert.ToDouble(TxtHasta9.Text) +","+ Convert.ToDouble(TxtHasta12.Text) +","+ Convert.ToDouble(TxtPagoCorte1.Text) +","+ Convert.ToDouble(TxtPagoCorte2.Text) + ","+ Convert.ToDouble(TxtPagoCorte3.Text) + ","+ Convert.ToDouble(TxtPagoHorasE.Text) + ","+ Convert.ToDouble(TxtDiferencia.Text) +",'"+ fechaFormateada +"','" + txtJustificacion.Text + "')", conexion.Sc);
+                SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[Bitacora] ([Id_Empleado], [Id_Puesto], [HoraEntrada], [HoraSalida] ,[HoraExtraordinaria], [HorasHasta25], [HorasHasta50], [HorasHasta75], [Pago_HrsExtra25], [Pago_HrsExtra50], [Pago_HrsExtra75],[Pago_HrsExtra100], [Pago_HrsExtra], [HorasExtras], [FechaRegistro], [JustificacionEmpleado]) " +
+                    "VALUES ("+ Convert.ToInt32(TxtBuscar.Text) +","+ Convert.ToInt32(TxtCodPuesto.Text) +",'"+ horaEntrada +"','"+ horaSalida +"','"+ horaExtra +"',"+ Convert.ToDouble(TxtHasta7.Text) +","+ Convert.ToDouble(TxtHasta9.Text) +","+ Convert.ToDouble(TxtHasta12.Text) +","+ Convert.ToDouble(TxtPagoCorte1.Text) +","+ Convert.ToDouble(TxtPagoCorte2.Text) + ","+ Convert.ToDouble(TxtPagoCorte3.Text) + ","+ Convert.ToDouble(TxtPago100.Text) +", "+ Convert.ToDouble(TxtPagoHorasE.Text) + ","+ Convert.ToDouble(TxtDiferencia.Text) +",'"+ fechaFormateada +"','" + txtJustificacion.Text + "')", conexion.Sc);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Registro guardado");
                 TxtBuscar.Clear();
@@ -387,6 +389,7 @@ namespace CFria_HorasExtra
                 TxtSueldo.Clear();
                 TxtSueldoNeto.Clear();
                 txtJustificacion.Clear();
+                TxtPago100.Clear();
             }
             catch (Exception x)
             {

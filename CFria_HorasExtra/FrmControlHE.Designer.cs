@@ -89,6 +89,7 @@
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.CBAll = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label23 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -97,7 +98,9 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtJustificacion = new System.Windows.Forms.TextBox();
             this.lblJustificacion = new System.Windows.Forms.Label();
-            this.CBAll = new System.Windows.Forms.CheckBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.TxtPago100 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNombre)).BeginInit();
@@ -116,6 +119,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -610,7 +614,7 @@
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(247)))), ((int)(((byte)(212)))));
-            this.btnLimpiar.Location = new System.Drawing.Point(426, 618);
+            this.btnLimpiar.Location = new System.Drawing.Point(500, 12);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(119, 46);
             this.btnLimpiar.TabIndex = 50;
@@ -630,10 +634,10 @@
             this.tableLayoutPanel1.Controls.Add(this.BtnGuardarRegistro, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnLimpiar, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label23, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel6, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panel7, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -803,6 +807,16 @@
             this.panel2.Size = new System.Drawing.Size(431, 189);
             this.panel2.TabIndex = 50;
             // 
+            // CBAll
+            // 
+            this.CBAll.AutoSize = true;
+            this.CBAll.Location = new System.Drawing.Point(53, 7);
+            this.CBAll.Name = "CBAll";
+            this.CBAll.Size = new System.Drawing.Size(132, 24);
+            this.CBAll.TabIndex = 20;
+            this.CBAll.Text = "Horas al 100%";
+            this.CBAll.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -924,15 +938,37 @@
             this.lblJustificacion.TabIndex = 0;
             this.lblJustificacion.Text = "Justificación:";
             // 
-            // CBAll
+            // panel7
             // 
-            this.CBAll.AutoSize = true;
-            this.CBAll.Location = new System.Drawing.Point(53, 7);
-            this.CBAll.Name = "CBAll";
-            this.CBAll.Size = new System.Drawing.Size(132, 24);
-            this.CBAll.TabIndex = 20;
-            this.CBAll.Text = "Horas al 100%";
-            this.CBAll.UseVisualStyleBackColor = true;
+            this.panel7.Controls.Add(this.label10);
+            this.panel7.Controls.Add(this.TxtPago100);
+            this.panel7.Controls.Add(this.btnLimpiar);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(41, 606);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(889, 71);
+            this.panel7.TabIndex = 54;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(62, 27);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(216, 20);
+            this.label10.TabIndex = 51;
+            this.label10.Text = "Pago de horas extra al 100%:";
+            // 
+            // TxtPago100
+            // 
+            this.TxtPago100.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TxtPago100.Enabled = false;
+            this.TxtPago100.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPago100.Location = new System.Drawing.Point(285, 24);
+            this.TxtPago100.Name = "TxtPago100";
+            this.TxtPago100.Size = new System.Drawing.Size(118, 26);
+            this.TxtPago100.TabIndex = 52;
             // 
             // FrmControlHE
             // 
@@ -976,6 +1012,8 @@
             this.tableLayoutPanel3.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1053,6 +1091,9 @@
         private System.Windows.Forms.Label lblJustificacion;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.CheckBox CBAll;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox TxtPago100;
     }
 }
 
